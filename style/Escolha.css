@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+img{
+    width: 200px;
+    height: 200px;
+    border: none;
+
+}
+fieldset p{
+    text-align: center;
+
+}
+fieldset{
+    width: 200px;
+    cursor: pointer;
+    padding: 20px;
+    border: 1px solid /** teste **/ black;
+    border-radius: 10px;
+}
+fieldset:hover{
+    transition: all 1s;
+    transform: rotateY(360deg);
+}
+.Informações fieldset{
+    display: inline-block;
+
+}
+.Informações{
+    position: absolute;
+    top: 10%;
+    left: 15%;
+
+}
+.Informações fieldset{
+    margin-right: 2cm;
+}
+fieldset:hover{
+    transition: all 1s;
+    box-shadow: 5px 5px 5px 5px white;
+}
+.box{
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(t)
+}
