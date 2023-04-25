@@ -9,6 +9,25 @@ body{
     margin: 0;
     padding:0;
 }
+
+.button{
+    position: absolute;
+    top: 7cm;
+    right: 3cm;
+    padding: 20px;
+    border: 2px solid cyan;
+    border-radius: 10px;
+    background-color: cyan;
+    color: #333;
+    font-weight: 700;
+    cursor: pointer;
+}
+.button:hover{
+    opacity: 0.8;
+    transition: all 0.5s;
+    transform: scale(1.5);
+    text-shadow: cyan;
+}
 .text{
     position: absolute;
     top: 50%;
@@ -48,7 +67,7 @@ footer{
 footer p:hover{
     opacity: 0.7;
 }
-/**.Anuncio{
+.Anuncio{
     float: right;
     border: 2px solid cyan;
     padding: 20px;
