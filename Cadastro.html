@@ -7,60 +7,34 @@
     <title>Document</title>
     <script src="https://kit.fontawesome.com/7bcc76ecaf.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style/estilo.css">
-    <link rel="stylesheet" href="style/Guia_jovem_cabeçario.css">
-    <link rel="stylesheet" href="style/Escolha.css">
+
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="img/guia_jovem_home.png">
-            </div>
-            <div class="Menu">
-                <nav>
-                    <ul>
-                        <li><a> Home </a></li>
-                        <li><a> Enem</a></li>
-                        <li><a> Fies</a></li>
-                        <li><a> Prouni</a></li>
-                        <li><a> Cursos Técnicos </a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="redes_sociais_Escolha">
-                <button><i class="fa-brands fa-facebook"></i></button>
-                <button><i class="fa-brands fa-twitter"></i></button>
-                <button><i class="fa-brands fa-tiktok"></i></button>
-            </div>
-            <div class="exit">
-                <button><a href="Guia_Jovem.html"><i class="fa-solid fa-house"></i></a></button>
-            </div>
-        </div>
-    </header>
     <div class="box">
-        <div id="form">
-            <form method="POST" action="PHP CADASTRO/index.php">
-                <h2> CADASTRAR </h2>
-                <label for="username"> Nome: </label>
-                <div class="input">
+        <form action="">
+            <fieldset>
+                <legend><b> Formulario de Cadastramento </b></legend>
+                <div class="inputBox">
                     <i class="fa-solid fa-user"></i>
-                    <input id="username" name="username" placeholder="Insira o seu Nome " type="text">
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <label for="nome" class="labelInput"> Nome Completo </label>
                 </div>
-                <label for="email"> E-mail: </label>
-                <div class="input">
+                
+                <div class="inputBox">
                     <i class="fa-solid fa-envelope"></i>
-                    <input id="email" name="email" placeholder="Insira seu E-mail" type="email">
+                    <input type="email" name="email" id="email" class="inputUser" required>
+                    <label for="email" class="labelInput"> E-mail </label>
                 </div>
-                <label for="Senha"> Senha: </label>
-                <div class="input">
+                
+                <div class="inputBox">
                     <i class="fa-solid fa-lock"></i>
-                    <input id="Senha" name="senha" placeholder="Crie uma Senha" type="password">
+                    <input type="password" name="senha" id="senha" class="inputUser" required>
+                    <label for="senha" class="labelInput"> Crie uma Senha: </label>
                 </div>
-                <div id="btn">
-                    <button type="submit"> CADASTRAR </button>
-                </div>
-            </form>
-        </div>
+                 <input type="submit" value="Cadastrar">
+            </fieldset>
+        </form>
+    </div>
     </div>
 </body>
 </html>

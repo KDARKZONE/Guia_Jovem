@@ -1,8 +1,8 @@
 <?php
 
-    $nome = $_POST['username'];
-    $email = $_POST['email'];
-    $senha = $_POST['senha'];
+    @$nome = $_POST['username'];
+    @$email = $_POST['email'];
+    @$senha = $_POST['senha'];
     Function Nome($nome){
         if(isset($nome) && !empty($nome)){
             return $nome;

@@ -2,31 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Poppins:wght@300&family=Schibsted+Grotesk&display=swap');
 
 body{
-    background-color: #333;
+    background-color: whitesmoke    ;
     color: cyan;
     font-family: 'Poppins', sans-serif;
     height: 100%;
     margin: 0;
     padding:0;
-}
-
-.button{
-    position: absolute;
-    top: 7cm;
-    right: 3cm;
-    padding: 20px;
-    border: 2px solid cyan;
-    border-radius: 10px;
-    background-color: cyan;
-    color: #333;
-    font-weight: 700;
-    cursor: pointer;
-}
-.button:hover{
-    opacity: 0.8;
-    transition: all 0.5s;
-    transform: scale(1.5);
-    text-shadow: cyan;
 }
 .text{
     position: absolute;
@@ -67,7 +48,7 @@ footer{
 footer p:hover{
     opacity: 0.7;
 }
-.Anuncio{
+/**.Anuncio{
     float: right;
     border: 2px solid cyan;
     padding: 20px;

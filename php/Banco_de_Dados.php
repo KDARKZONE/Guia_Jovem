@@ -3,7 +3,7 @@ require_once("index.php");
     /** CONEXÃO COM BANCO DE DADOS WORKBENCH */
     $host = 'localhost';
     $user = 'root';
-    $password = '';
+    $password = 'anderson24062004';
     $Banco_de_Dados = 'guia_jovem';
 
     try{
@@ -22,7 +22,7 @@ require_once("index.php");
 
     $teste = $stmt->execute();
     if($teste){
-        echo " <br> USUARIO CADASTRADO COM SUCESSO";
+        echo " <br> USUARIO INSERIDO COM SUCESSO";
     }
     else{
         echo " ERROR";

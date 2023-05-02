@@ -1,7 +1,7 @@
 <?php
     $host = 'localhost';
     $user = 'root';
-    $password = 'anderson24062004';
+    $password = '';
     $dbname = 'guia_jovem';
 
     try{

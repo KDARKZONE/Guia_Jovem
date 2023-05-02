@@ -1,27 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing:border-box;
 }
-body{
-    width: 100%;
-    height: 100%;
-    
+
+p{
+    font-weight: 700;
+    -webkit-text-stroke-width: 1px;
+    -webkit-teext-stroke-color: blue;
+    color: cyan;
+    margin-bottom: 40px;
 }
-.Informações{
-    margin: 4cm 0 0 8cm;
+fieldset i{
+    width: 200px;
+    height: 200px;
+    border: none;
+    color: black;
+
 }
-.Informações  .Info{
-    border: 2px solid;
-    width: 10cm;
-    height: 10cm;
-    
-}
-.Info{
-    display: inline-block;
+fieldset p{
+    text-align: center;
+
 }
 fieldset{
-    border:none;
+    width: 200px;
+    cursor: pointer;
+    padding: 20px;
+    border: 1px solid /** teste **/ cyan;
+    border-radius: 10px;
+    background-color: #333;
+}
+.Informações fieldset{
+    display: inline-block;
+
+}
+.Informações {
+    max-width: 100%;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    
+}
+.Informações fieldset{
+    color: black; 
+    margin-right: 10px;
+    
+}
+.Informações fieldset i{
+    font-size: 90px;
+    color: cyan;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: blue;
     text-align: center;
-    margin: 20px;
+    
+}
+fieldset:hover{
+    transition: all 1s;
+    /*box-shadow: 5px 5px 5px 5px cyan;*/
+}
+.redes_sociais_Escolha{
+    padding-right: 3cm;
+}
+.redes_sociais_Escolha button{
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(45deg, cyan , rgba(19, 100, 100));
+    border: none;
+    border-radius: 8px;
+    margin-right: 20px;
+    cursor:pointer;
+}
+.redes_sociais_Escolha button i{
+    font-size: 20px;
+    color: white;
+}
+.redes_sociais_Escolha button:hover{
+    transition: all 0.5s;
+    transform: scale(1.5);
+}
+.exit button{
+    padding: none;
+    border: none;
+    border-radius: none;
+    background: #333;
+}
+.exit a {
+    text-decoration: none;
+}
+.exit a i{
+    font-size: 40px;
+    color: cyan;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: blue;
+}
+
+.box{
+    width: 100%;
+    height: 100vh;
+    padding: 300px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to left, black , rgb(127, 221, 221));
+    background-size: 500% 100%;
+    animation: Animação 10s  infinite alternate;
+}
+@keyframes Animação {
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position: 100%;
+    }
 }
