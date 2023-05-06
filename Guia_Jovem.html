@@ -5,56 +5,238 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GUIA JOVEM</title>
-    <link rel="stylesheet" href="style/Guia_jovem_cabeçario.css">
+    <link rel="stylesheet" href="style/cabeçario.css">
     <script src="https://kit.fontawesome.com/7bcc76ecaf.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style/Guia_Jovem_fundo.css">
+    <link rel="stylesheet" href="style/body.css">
+    <link rel="icon" href="img/logooo.png" type="image/png">
+    <link rel="stylesheet" href="style/pop_up.css">
+    <link rel="stylesheet" href="style/pop_up_1.css">
+    <link rel="stylesheet" href="style/fomulario.css">
 </head>
 <body>
-    <header>
+    <header class="cabeçario">
         <div class="container">
             <div class="logo"> 
             <img src="img/guia_jovem_home.png">
-            </div>
-            <div class="Menu">
-                <nav>
-                    <ul>
-                        <li><a href="Guia_Jovem.html"> Home </a></li>
-                        <li><a> Enem </a></li>
-                        <li><a> Fies </a></li>
-                        <li><a> Prouni </a></li>
-                        <li><a> Cursos Técnicos </a></li>
-                    </ul>
-                </nav>
-            </div> 
-            <div class="redes_sociais">
-                <button><i class="fa-brands fa-facebook"></i></button>
-                <button><i class="fa-brands fa-twitter"></i></button>
-                <button><i class="fa-brands fa-tiktok"></i></button>
-            </div>
-            <div class="Login">
-                <div class="DropDown">
-                    <button class="Droplogo"><img src="img/logooo.png"></button>
-                    <div class="DropDown_Menu">
-                        <a href="#"> Entrar </a>
-                        <a href="#"> Cadastrar </a>
-                    </div>
-                </div>
-            </div>
-
-        </div> 
-    </header>
-    <section>
-        <div class="text">
-            <p><h2> BEM - VINDO </h2></p>
         </div>
-    </section>
-    <section>
-        <fieldset>
-            <p>AREA DE NOTICÍAS</p>
-        </fieldset>
-    </section>
+                <div class="Menu">
+                    <nav>
+                        <ul>
+                            <li><a href="Guia_Jovem.html"> Home </a></li>
+                            <li><a> Enem </a></li>
+                            <li><a> Fies </a></li>
+                            <li><a> Prouni </a></li>
+                            <li><a> Cursos Técnicos </a></li>
+                        </ul>
+                    </nav>
+                    </div> 
+                </div>
+        <div class="anuncie">
+            <button><a href="Anunciar.html">Anuncie Aqui</a></button>
+        </div>
+        <div class="Login">
+            <button><a class="modal-link"><img src="img/logooo.png" title="Entrar"></a></button>
+        </div>
+       
+    </header>
+    
+    <div class="overlay"></div>
+
+    <div class="modal">
+            <form action="">
+                <fieldset class="envolver">
+                    <legend class="item"><b> Formulario de Login </b></legend>
+                    <div class="inputBox">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" name="email" id="email" class="inputUser" required>
+                        <label for="email" class="labelInput"> E-mail </label>
+                    </div>
+                    
+                    <div class="inputBox">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="senha" id="senha" class="inputUser" required>
+                        <label for="senha" class="labelInput"> Senha: </label>
+                    </div>
+                     <input type="submit" value="Entrar">
+                     <a href="#" class="modal-link_1"> Não tem uma Conta ?</a>
+                </fieldset>
+            </form>
+    </div>
+    <div class="overlay_1"></div>
+    <div class="modal_1">
+        <form method="POST" action="php/index.php">
+            <fieldset class="envolver">
+                <legend class="item"><b> Formulario de Cadastramento </b></legend>
+                <div class="inputBox">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <label for="nome" class="labelInput"> Nome Completo </label>
+                </div>
+                
+                <div class="inputBox">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" name="email" id="email" class="inputUser" required>
+                    <label for="email" class="labelInput"> E-mail </label>
+                </div>
+                
+                <div class="inputBox">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" name="senha" id="senha" class="inputUser" required>
+                    <label for="senha" class="labelInput"> Crie uma Senha: </label>
+                </div>
+                 <input type="submit" value="Cadastrar">
+            </fieldset>
+        </form>
+    </div>
+    <!--INICIO SESSÃO SESSÃO DE ARTIGOS-->
+<header class="post">
+    <section class="noticias">
+            <article>
+            <a href="#">
+                <img src="img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
+            </a>
+            <p><a href="" class="category">Categoria</a></p>
+            <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
+                    error dolorem. Recusandae,
+                    quo ex laborum voluptate pariatur praesentium error doloremque cumque, mollitia laboriosam vel
+                    aut
+                    et eveniet eaque quaerat!</a></h2>
+        </article>
+
+        <article>
+            <a href="#">
+                <img src="img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
+            </a>
+            <p><a href="" class="category">Categoria</a></p>
+            <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
+                    error dolorem. Recusandae,
+                    quo ex laborum voluptate pariatur praesentium error doloremque cumque, mollitia laboriosam vel
+                    aut
+                    et eveniet eaque quaerat!</a></h2>
+        </article>
+
+        <article>
+            <a href="#">
+                <img src="img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
+            </a>
+            <p><a href="" class="category">Categoria</a></p>
+            <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
+                    error dolorem. Recusandae,
+                    quo ex laborum voluptate pariatur praesentium error doloremque cumque, mollitia laboriosam vel
+                    aut
+                    et eveniet eaque quaerat!</a></h2>
+        </article>
+
+        <article>
+            <a href="#">
+                <img src="img/post.jpg" width="" alt="Imagem post" title="Imagem Post">
+            </a>
+            <p><a href="" class="category">Categoria</a></p>
+            <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
+                    error dolorem. Recusandae,
+                    quo ex laborum voluptate pariatur praesentium error doloremque cumque, mollitia laboriosam vel
+                    aut
+                    et eveniet eaque quaerat!</a></h2>
+        </article>
+
+        <article>
+            <a href="#">
+                <img src="img/post.jpg" width="" alt="Imagem post" title="Imagem Post">
+            </a>
+            <p><a href="" class="category">Categoria</a></p>
+            <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
+                    error dolorem. Recusandae,
+                    quo ex laborum voluptate pariatur praesentium error doloremque cumque, mollitia laboriosam vel
+                    aut
+                    et eveniet eaque quaerat!</a></h2>
+        </article>
+
+        <article>
+            <a href="#">
+                <img src="img/post.jpg" width="" alt="Imagem post" title="Imagem Post">
+            </a>
+            <p><a href="" class="category">Categoria</a></p>
+            <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
+                    error dolorem. Recusandae,
+                    quo ex laborum voluptate pariatur praesentium error doloremque cumque, mollitia laboriosam vel
+                    aut
+                    et eveniet eaque quaerat!</a></h2>
+        </article>
+
+        <article>
+            <a href="#">
+                <img src="img/post.jpg" width="" alt="Imagem post" title="Imagem Post">
+            </a>
+            <p><a href="" class="category">Categoria</a></p>
+            <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
+                    error dolorem. Recusandae,
+                    quo ex laborum voluptate pariatur praesentium error doloremque cumque, mollitia laboriosam vel
+                    aut
+                    et eveniet eaque quaerat!</a></h2>
+        </article>
+
+        <article>
+            <a href="#">
+                <img src="img/post.jpg" width="" alt="Imagem post" title="Imagem Post">
+            </a>
+            <p><a href="" class="category">Categoria</a></p>
+            <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
+                    error dolorem. Recusandae,
+                    quo ex laborum voluptate pariatur praesentium error doloremque cumque, mollitia laboriosam vel
+                    aut
+                    et eveniet eaque quaerat!</a></h2>
+        </article>
+    </header>
+
+    <!--FIM SESSÃO SESSÃO DE ARTIGOS-->
+    
+    <!-- Rodapé -->
     <footer>
-        <p>RODAPÉ</p>
+        <div class="redes_sociais">
+            <button><i class="fa-brands fa-facebook"></i></button>
+            <button><i class="fa-brands fa-twitter"></i></button>
+            <button><i class="fa-brands fa-tiktok"></i></button>
     </footer>
 </body>
+<!-- Fim do Rodapé -->
+<script>
+    // Seleciona o link e a janela modal
+    var link = document.querySelector('.modal-link');
+    var modal = document.querySelector('.modal');
+    var overlay = document.querySelector('.overlay');
+
+    // Adiciona um listener de evento para o link
+    link.addEventListener('click', function (event) {
+        event.preventDefault(); // previne o comportamento padrão do link (navegar para outra página)
+
+        overlay.style.display = 'block'; // exibe a camada escura
+        modal.style.display = 'block'; // exibe a janela modal
+    });
+
+    // Adiciona um listener de evento para a camada escura
+    overlay.addEventListener('click', function () {
+        overlay.style.display = 'none'; // oculta a camada escura
+        modal.style.display = 'none'; // oculta a janela modal
+    });
+</script>
+<script>
+    // Seleciona o link e a janela modal
+    var link_1 = document.querySelector('.modal-link_1');
+    var modal_1 = document.querySelector('.modal_1');
+    var overlay_1 = document.querySelector('.overlay_1');
+
+    // Adiciona um listener de evento para o link
+    link_1.addEventListener('click', function (event) {
+        event.preventDefault(); // previne o comportamento padrão do link (navegar para outra página)
+
+        overlay_1.style.display = 'block'; // exibe a camada escura
+        modal_1.style.display = 'block'; // exibe a janela modal
+    });
+
+    // Adiciona um listener de evento para a camada escura
+    overlay_1.addEventListener('click', function () {
+        overlay_1.style.display = 'none'; // oculta a camada escura
+        modal_1.style.display = 'none'; // oculta a janela modal
+    });
+</script>
 </html>

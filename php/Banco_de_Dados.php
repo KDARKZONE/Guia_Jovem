@@ -3,7 +3,7 @@ require_once("index.php");
     /** CONEXÃO COM BANCO DE DADOS WORKBENCH */
     $host = 'localhost';
     $user = 'root';
-    $password = 'anderson24062004';
+    $password = '';
     $Banco_de_Dados = 'guia_jovem';
 
     try{
@@ -12,7 +12,7 @@ require_once("index.php");
     }catch(PDOException $E){
         echo "ERROR".$E->getMessage();
     }
-    $sql = "INSERT INTO dados_cadastrais (nome,email,senha) VALUES (:nome,:email,:senha) ";
+    $sql = "INSERT INTO usuarios (nome,email,senha) VALUES (:nome,:email,:senha) ";
     $stmt = $BANCO_DE_DADOS->prepare($sql);
     $stmt->bindParam(":nome",$NOME_DO_USUARIO);
 

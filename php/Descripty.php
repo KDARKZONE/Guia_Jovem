@@ -12,7 +12,7 @@
         echo "ERROR".$E->getMessage();
     }
 
-    $sql = "SELECT * FROM dados_cadastrais";
+    $sql = "SELECT * FROM usuarios";
     $stmt = $BANCO->query($sql); 
     echo "<br><table border='1px solid'><tr><th>Nome:</th><th>E-mail:</th><th>Senha:</th></tr>";
     while($bd = $stmt->fetch()){

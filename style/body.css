@@ -1,0 +1,88 @@
+/** FUNDO DO SITE **/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Poppins:wght@300&family=Schibsted+Grotesk&display=swap');
+body{
+    background-color: white;
+}
+footer{
+    border: 2px solid cyan;
+    padding: 10px;
+    font-weight: 700;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #333;
+    background-color: cyan;
+    
+}
+footer p:hover{
+    opacity: 0.7;
+}
+
+/*INICIO SESSÃO DE ARTIGOS*/
+.post{
+    position: relative;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    margin-bottom: 2%;
+    
+}
+.noticias{
+    max-width: calc(1300px - 40px);
+    padding:0 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.noticias article{
+flex-basis: calc(25% - 20px);
+margin-bottom: 30px;
+opacity: 0.7;
+}
+
+
+.noticias article:hover{
+     opacity:1;
+    }
+
+    
+.noticias article p{
+   margin: 10px 0;
+  
+}
+
+.noticias article img{
+    width: 100%;
+}
+
+.category{
+    margin: 10px 0;
+    font-size: 0.875em;
+    color:#d36833;
+}
+
+.noticias article h2{
+    font-weight: 300;
+    color:#333;
+    font-size: 1.2em;
+}
+
+.noticias article h2 a{
+    color:#333;
+}
+/*FIM SESSÃO DE ARTIGOS*/
+
+/* .Anuncio{
+    float: right;
+    border: 2px solid cyan;
+    padding: 20px;
+    width: 10cm;
+    height: 100vh;
+    background-color: #333;
+} */
+
+
+
+
