@@ -35,7 +35,7 @@
     require_once("insert.php");
     try{
         $NOME_DO_USUARIO;
-        $sql = "SELECT * FROM perfis WHERE nome_usuario = :nome";
+        $sql = "SELECT * FROM perfis WHERE nome = :nome";
         $stmt = $BANCO_DE_DADOS->prepare($sql);
         $stmt->bindParam(':nome',$NOME_DO_USUARIO);
         $stmt->execute();
