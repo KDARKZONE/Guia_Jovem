@@ -1,32 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-*{
+
+* {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
 }
-a{
+
+a {
     text-decoration: none;
     color: cyan;
 }
-body{
-    font-family: 'Poppins',sans-serif;
+
+body {
+    font-family: 'Poppins', sans-serif;
     height: 100vh;
 }
-header{
+
+.menu_vertical{
     height: 100%;
     position: 'relative';
 }
-ul{
-    list-style:none;
+
+ul {
+    list-style: none;
 }
-label i{
+
+label i {
     font-size: 30px;
     color: cyan;
 }
-input[type=checkbox]{
+
+input[type=checkbox] {
     display: none;
 }
-nav{
+
+.Login_adm button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.Login_adm button img {
+    border-radius: 50%;
+}
+
+.Login_adm button img {
+    width: 50px;
+}
+
+.DropDown_Menu input[type=submit] {
+    width: 90px;
+    border: 8px;
+    background: cyan;
+    color: black;
+    padding: 5px;
+    cursor: pointer;
+}
+nav {
     background-color: black;
     width: 350px;
     left: -350px;
@@ -34,65 +64,83 @@ nav{
     position: fixed;
     padding: 0px;
     transition: all 0.5s;
-    z-index: 2;
+    z-index: 9999;
 }
-ul{
+
+ul {
     top: 65px;
     position: absolute;
     width: 98%;
     background-color: black;
 
 }
-ul li{
+
+ul li {
     margin-bottom: 5px;
 }
-a{
+
+a {
     background-color: #333;
     display: block;
     padding: 20px 5px;
 }
-a:hover{
+
+a:hover {
     opacity: 0.7;
 
 }
-label{
-    background-color: #2d3142;
-    padding: 15px;
+
+label {
+    background-color: none;
+    padding-left: 20px;
+    padding-top: 5px;
     position: fixed;
-    z-index: 3;
-    cursor:pointer;
+    z-index: 99999;
+    cursor: pointer;
+    border-radius: 50%;
+
 }
-input[type=checkbox]:checked ~ nav{
+
+input[type=checkbox]:checked~nav {
     transform: translateX(350px);
 }
-input[type=checkbox]:checked ~ label{
+
+input[type=checkbox]:checked~label {
     background-color: black;
 }
-fieldset{
+
+fieldset {
     border: none;
     background-color: #2d3142;
     text-align: center;
     color: white;
-    padding: 50px;
+    padding: 0px;
     position: fixed;
     width: 100%;
 }
-section{
+
+div button {
+    border-radius: 20000px;
+}
+
+section {
     position: absolute;
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     width: 100%;
     top: 25%;
-    
+
 }
-table{
+
+table {
     background-color: white;
     font-size: 17px;
     border: none;
 }
-table th{
+
+table th {
     background-color: #333;
     padding-left: 4cm;
     padding-right: 4cm;
@@ -102,22 +150,25 @@ table th{
     border-radius: 10px;
     font-size: 18px;
     position: sticky;
-    top:0;
+    top: 0;
 }
-table td{
+
+table td {
     text-align: center;
     color: black;
     border: 2px solid black;
     border-radius: 8px;
     cursor: pointer;
 }
-table td:hover{
+
+table td:hover {
     background-color: #2d3142;
     color: cyan;
     transition: all 0.5s;
     transform: scale(1.1);
 }
-footer{
+
+footer {
     padding: 15px;
     position: fixed;
     bottom: 0;
@@ -125,7 +176,8 @@ footer{
     width: 100%;
 
 }
-footer input{
+
+footer input {
     background-color: cyan;
     font-weight: 700;
     width: 200px;
@@ -134,11 +186,16 @@ footer input{
     padding: 10px;
     cursor: pointer;
 }
-footer{
+
+footer {
     text-align: center;
     color: cyan;
-    
+
 }
-footer input:hover{
+
+footer input:hover {
     box-shadow: 5px 10px 15px 20px cyan;
+}
+h1,.Login_adm{
+    display: inline-block;
 }

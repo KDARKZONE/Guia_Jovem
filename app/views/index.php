@@ -3,26 +3,25 @@
         require_once("controllers/pdo/index.php");
     }
 ?>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guia Jovem</title>
-    <script src="https://kit.fontawesome.com/7bcc76ecaf.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="style/img/logooo.png">
-    <link rel="stylesheet" href="style/site/cabeçario.css">
-    <link rel="stylesheet" href="style/site/cabeçario_vertical.css">
-    <link rel="stylesheet" href="style/site/body.css">
-    <link rel="stylesheet" href="js/style/style_pop_up/layout_pop_up.css">
-    <link rel="stylesheet" href="js/style/style_pop_up/cadastro.css">
-    <link rel="stylesheet" href="js/style/style_pop_up/cadastro_responsive.css">
-    <link rel="stylesheet" href="js/style/style_pop_up/login.css">
-    <link rel="stylesheet" href="js/style/style_pop_up/login_responsive.css">
-      
-    
-</head>
+
+<?php
+    # para trabalhar com sessões sempre iniciamos com session_start.
+    session_start();
+
+    # inclui os arquivos header, menu e login.
+    require_once 'layouts/site/header.php';
+    require_once 'layouts/site/menu.php';
+    require_once 'login.php';
+?>
+
+<?php
+        # verifica se a variavel $_GET error existe. Se sim, exibe mensagem de error.
+        # se não passa direto.
+        if(isset($_GET['error'])) {
+            echo "<script>alert(". $_GET['error'] .")</script>";
+        }
+    ?>
+
 <body>
     <header class="cabeçario">
         <!-- MENU RESPONSIVO -->
@@ -102,7 +101,7 @@
     <!-- MENU POP - UP CADASTRAMENTO -->
     <div class="overlay_1"></div>
     <div class="modal_1">
-        <form method="POST" action="inicio.php">
+        <form method="POST" action="index.php">
             <fieldset class="envolver">
                 <legend class="item"><b> Formulario de Cadastramento </b></legend>
                 <div class="inputBox">
@@ -129,7 +128,7 @@
     <!-- MENU POP - UP LOGIN RESPONSIVE -->
     <div class="overlay_responsive_Login"></div>
     <div class="modal_responsive_Login">
-            <form method="POST" action="index.php">
+            <form method="POST" action="../Guia_Jovem/index.php">
                 <fieldset class="envolver">
                     <legend class="item"><b> Formulario de Login </b></legend>
                     <div class="inputBox">
@@ -151,7 +150,7 @@
     <!-- MENU POP - UP CADASTRAMENTO RESPOSIVE-->
     <div class="overlay_responsive_Cadastro"></div>
     <div class="modal_responsive_Cadastro">
-        <form method="POST" action="index.php">
+        <form method="POST" action="../Guia_Jovem/index.php">
             <fieldset class="envolver">
                 <legend class="item"><b> Formulario de Cadastramento </b></legend>
                 <div class="inputBox">
@@ -290,15 +289,11 @@
                 <li> Insira a Informação</li>
                 <li> Insira a Informação</li>
                 <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
             </ul>
         </nav>
         <nav class="S_C">
             <b> Titulo </b>
             <ul>
-                <li>Insira a Informação</li>
-                <li>Insira a Informação</li>
                 <li>Insira a Informação</li>
                 <li>Insira a Informação</li>
                 <li>Insira a Informação</li>
@@ -316,15 +311,11 @@
                 <li> Insira a Informação</li>
                 <li> Insira a Informação</li>
                 <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
             </ul>
         </nav>
         <nav class="Q_C">
             <b> Titulo </b>
             <ul>
-                <li>Insira a Informação</li>
-                <li>Insira a Informação</li>
                 <li>Insira a Informação</li>
                 <li>Insira a Informação</li>
                 <li>Insira a Informação</li>
@@ -342,15 +333,11 @@
                 <li> Insira a Informação</li>
                 <li> Insira a Informação</li>
                 <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
             </ul>
         </nav>
         <nav class="S_C">
             <b> Titulo </b>
             <ul>
-                <li>Insira a Informação</li>
-                <li>Insira a Informação</li>
                 <li>Insira a Informação</li>
                 <li>Insira a Informação</li>
                 <li>Insira a Informação</li>
@@ -368,8 +355,6 @@
                 <li> Insira a Informação</li>
                 <li> Insira a Informação</li>
                 <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
             </ul>
         </nav>
     </footer>
@@ -380,5 +365,5 @@
     <script type="text/javascript" src="js/pop_up/cadastro.js"></script>
     <script type="text/javascript" src="js/pop_up/login_responsivo.js"></script>
     <script type="text/javascript" src="js/pop_up/cadastro responsivo.js"></script>
-    <script type="text/javascript" src="js/cpf.js"></script>
+    <script type="text/javascript" src="js/pop_up/cpf.js"></script>
 </html>

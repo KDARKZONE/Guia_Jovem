@@ -33,7 +33,7 @@
         width: 350px;
         height: 100%;
         left: -350px;
-        position: relative;
+        position: fixed;
         transition: all 0.5s;
     }
     .Icone_Menu .opções a{
@@ -43,6 +43,7 @@
         color: cyan;
         cursor: pointer;
         margin-bottom: 1%;
+        text-decoration: none;
 
     }
     .Icone_Menu .opções a:hover{
@@ -54,11 +55,15 @@
         padding: 15px;
         position: absolute;
         z-index: 1;
+        cursor: pointer;
     }
     .Icone_Menu .opções ul{
         top: 55px;
         position: absolute;
         width: 98%;
+    }
+    .Icone_Menu .opções ul li a{
+        text-decoration: none;
     }
     .Icone_Menu label i{
         color: cyan;

@@ -1,4 +1,4 @@
-.Icone_Menu{
+.Icone_Menu_user{
     display: none;
 }
 @media screen and (max-width: 1000px){
@@ -7,13 +7,13 @@
         padding: 0;
         box-sizing: border-box;
     }
-    .container{
+    .container_user{
         display:none;
     }
     .Menu_Vertical{
         display: block;
     }
-    .Icone_Menu{
+    .Icone_Menu_user{
         display: block; 
     }
     .cabeçario{
@@ -21,22 +21,23 @@
         border:none;
         height: 100%;
         padding: 0;
+        position:relative;
     }
-    .Icone_Menu input[type=checkbox]{
+    .Icone_Menu_user input[type=checkbox]{
         display: none;
     }
-    .Icone_Menu .opções{
+    .Icone_Menu_user .opções_user{
         padding-left: 5px;
     }
-    .Icone_Menu nav{
+    .Icone_Menu_user .opções_user{
         background-color:black;
         width: 350px;
         height: 100%;
         left: -350px;
-        position: relative;
+        position: fixed;
         transition: all 0.5s;
     }
-    .Icone_Menu .opções a{
+    .Icone_Menu_user .opções_user a{
         background-color: #333;
         display: block;
         padding: 20px 5px;
@@ -45,25 +46,28 @@
         margin-bottom: 1%;
 
     }
-    .Icone_Menu .opções a:hover{
+    .Icone_Menu_user .opções_user ul li a{
+        text-decoration: none;
+    }
+    .Icone_Menu_user .opções_user a:hover{
         opacity: 0.9;
 
     }
-    .Icone_Menu label{
+    .Icone_Menu_user label{
         background-color: black;
         padding: 15px;
         position: absolute;
         z-index: 1;
     }
-    .Icone_Menu .opções ul{
+    .Icone_Menu_user .opções_user ul{
         top: 55px;
         position: absolute;
         width: 98%;
     }
-    .Icone_Menu label i{
+    .Icone_Menu_user label i{
         color: cyan;
     }
-    .Icone_Menu nav .redes_sociais button{
+    .Icone_Menu_user nav .redes_sociais button{
         width: 40px;
         height: 40px;
         background: cyan;
@@ -72,38 +76,38 @@
         margin-right: 20px;
         cursor:pointer;
     }
-    .Icone_Menu nav button i{
+    .Icone_Menu_user nav button i{
         font-size: 20px;
         color: white;
     }
-    /*.Icone_Menu nav .botão{
+    /*.Icone_Menu_user nav .botão{
         margin-top: 10%;
         margin-bottom: 2%;
     }*/
-    .Icone_Menu nav .redes_sociais{
+    .Icone_Menu_user nav .redes_sociais{
         width: 100%;
         padding-left: 70.99px;;
         padding-right:0;
         padding-top: 20px;
     }
-    .Icone_Menu nav .botão{
+    .Icone_Menu_user nav .botão{
         display: inline;
         width: 40px;
         padding-left:0;
     }
-    .Icone_Menu nav .login{
+    .Icone_Menu_user nav .login{
         background: none;
         width: 100%;
         padding-left: 119.99px;
     }
-    .Icone_Menu nav .login .img_login a{
+    .Icone_Menu_user nav .login .img_login a{
         background: none;
     }
-    .Icone_Menu nav .login .img_login button{
+    .Icone_Menu_user nav .login .img_login button{
         background: none;
         border: none;
     }
-    .Icone_Menu nav .login .img_login button img{
+    .Icone_Menu_user nav .login .img_login button img{
         width: 50px;
     }
     input[type=checkbox]:checked ~ nav{
