@@ -9,10 +9,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guia Jovem</title>
+    <title>Guia Jovem</title> 
     <script src="https://kit.fontawesome.com/7bcc76ecaf.js" crossorigin="anonymous"></script>
     <link rel="icon" href="style/img/logooo.png">
-    <link rel="stylesheet" href="style/site/cabeçario.css">
+    <link rel="stylesheet" href="style/site/body.css">
+    <link rel="stylesheet" href="style/site/cabeçario.css"> 
     <link rel="stylesheet" href="style/site/cabeçario_vertical.css">
     <link rel="stylesheet" href="style/site/body.css">
     <link rel="stylesheet" href="js/style/style_pop_up/layout_pop_up.css">
@@ -20,8 +21,7 @@
     <link rel="stylesheet" href="js/style/style_pop_up/cadastro_responsive.css">
     <link rel="stylesheet" href="js/style/style_pop_up/login.css">
     <link rel="stylesheet" href="js/style/style_pop_up/login_responsive.css">
-      
-    
+        
 </head>
 <body>
     <header class="cabeçario">
@@ -53,12 +53,12 @@
         <!-- MENU TOTAL -->
         <div class="container">
             <div class="logo"> 
-            <img src="style/img/guia_jovem_home.png">
+            <img src="../Guia_Jovem/style/img/guia_jovem_home.png">
             </div>
             <div class="Menu">
                 <nav>
                     <ul>
-                        <li><a href="index.php"> Home </a></li>
+                        <li><a href="../Guia_Jovem/index.php"> Home </a></li>
                         <li><a href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem"> Enem </a></li>
                         <li><a href="https://sisfiesportal.mec.gov.br/"> Fies </a></li>
                         <li><a href="https://acessounico.mec.gov.br/prouni"> Prouni </a></li>
@@ -71,7 +71,7 @@
                 <button><i class="fa-brands fa-instagram"></i></button>
             </div>
             <div class="Login">
-                <button><a class="modal-link"><img src="style/img/logooo.png" title="Entrar"></a></button>
+                <button><a class="modal-link"><img src="../Guia_Jovem/style/img/logooo.png" title="Entrar"></a></button>
             </div>
         </div>
     </header>
@@ -102,7 +102,7 @@
     <!-- MENU POP - UP CADASTRAMENTO -->
     <div class="overlay_1"></div>
     <div class="modal_1">
-        <form method="POST" action="inicio.php">
+        <form method="POST" action="index.php">
             <fieldset class="envolver">
                 <legend class="item"><b> Formulario de Cadastramento </b></legend>
                 <div class="inputBox">
@@ -129,7 +129,7 @@
     <!-- MENU POP - UP LOGIN RESPONSIVE -->
     <div class="overlay_responsive_Login"></div>
     <div class="modal_responsive_Login">
-            <form method="POST" action="index.php">
+            <form method="POST" action="../Guia_Jovem/index.php">
                 <fieldset class="envolver">
                     <legend class="item"><b> Formulario de Login </b></legend>
                     <div class="inputBox">
@@ -151,7 +151,7 @@
     <!-- MENU POP - UP CADASTRAMENTO RESPOSIVE-->
     <div class="overlay_responsive_Cadastro"></div>
     <div class="modal_responsive_Cadastro">
-        <form method="POST" action="index.php">
+        <form method="POST" action="../Guia_Jovem/index.php">
             <fieldset class="envolver">
                 <legend class="item"><b> Formulario de Cadastramento </b></legend>
                 <div class="inputBox">
@@ -180,7 +180,7 @@
     <section class="noticias">
             <article>
             <a href="#">
-                <img src="style/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
+                <img src="../Guia_Jovem/style/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
             </a>
             <p><a href="" class="category">Categoria</a></p>
             <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
@@ -192,7 +192,7 @@
 
         <article>
             <a href="#">
-                <img src="style/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
+                <img src="../Guia_Jovem/style/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
             </a>
             <p><a href="" class="category">Categoria</a></p>
             <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
@@ -203,19 +203,7 @@
         </article>
         <article>
             <a href="#">
-                <img src="style/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
-            </a>
-            <p><a href="" class="category">Categoria</a></p>
-            <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
-                    error dolorem. Recusandae,
-                    quo ex laborum voluptate pariatur praesentium error doloremque cumque, mollitia laboriosam vel
-                    aut
-                    et eveniet eaque quaerat!</a></h2>
-        </article>
-
-        <article>
-            <a href="#">
-                <img src="style/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
+                <img src="../Guia_Jovem/style/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
             </a>
             <p><a href="" class="category">Categoria</a></p>
             <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
@@ -227,7 +215,7 @@
 
         <article>
             <a href="#">
-                <img src="style/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
+                <img src="../Guia_Jovem/style/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
             </a>
             <p><a href="" class="category">Categoria</a></p>
             <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
@@ -239,7 +227,7 @@
 
         <article>
             <a href="#">
-                <img src="style/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
+                <img src="../Guia_Jovem/style/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
             </a>
             <p><a href="" class="category">Categoria</a></p>
             <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
@@ -251,7 +239,19 @@
 
         <article>
             <a href="#">
-                <img src="style/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
+                <img src="../Guia_Jovem/style/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
+            </a>
+            <p><a href="" class="category">Categoria</a></p>
+            <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
+                    error dolorem. Recusandae,
+                    quo ex laborum voluptate pariatur praesentium error doloremque cumque, mollitia laboriosam vel
+                    aut
+                    et eveniet eaque quaerat!</a></h2>
+        </article>
+
+        <article>
+            <a href="#">
+                <img src="../Guia_Jovem/style/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
             </a>
             <p><a href="" class="category">Categoria</a></p>
             <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
@@ -263,7 +263,7 @@
         
         <article>
             <a href="#">
-                <img src="style/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
+                <img src="../Guia_Jovem/style/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
             </a>
             <p><a href="" class="category">Categoria</a></p>
             <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
@@ -290,15 +290,11 @@
                 <li> Insira a Informação</li>
                 <li> Insira a Informação</li>
                 <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
             </ul>
         </nav>
         <nav class="S_C">
             <b> Titulo </b>
             <ul>
-                <li>Insira a Informação</li>
-                <li>Insira a Informação</li>
                 <li>Insira a Informação</li>
                 <li>Insira a Informação</li>
                 <li>Insira a Informação</li>
@@ -316,15 +312,11 @@
                 <li> Insira a Informação</li>
                 <li> Insira a Informação</li>
                 <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
             </ul>
         </nav>
         <nav class="Q_C">
             <b> Titulo </b>
             <ul>
-                <li>Insira a Informação</li>
-                <li>Insira a Informação</li>
                 <li>Insira a Informação</li>
                 <li>Insira a Informação</li>
                 <li>Insira a Informação</li>
@@ -342,15 +334,11 @@
                 <li> Insira a Informação</li>
                 <li> Insira a Informação</li>
                 <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
             </ul>
         </nav>
         <nav class="S_C">
             <b> Titulo </b>
             <ul>
-                <li>Insira a Informação</li>
-                <li>Insira a Informação</li>
                 <li>Insira a Informação</li>
                 <li>Insira a Informação</li>
                 <li>Insira a Informação</li>
@@ -368,17 +356,15 @@
                 <li> Insira a Informação</li>
                 <li> Insira a Informação</li>
                 <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
             </ul>
         </nav>
     </footer>
     <!-- FIM DO RODAPÉ -->
     
 </body>
-    <script type="text/javascript" src="js/pop_up/login.js"></script>
-    <script type="text/javascript" src="js/pop_up/cadastro.js"></script>
-    <script type="text/javascript" src="js/pop_up/login_responsivo.js"></script>
-    <script type="text/javascript" src="js/pop_up/cadastro responsivo.js"></script>
-    <script type="text/javascript" src="js/cpf.js"></script>
+    <script type="text/javascript" src="../Guia_Jovem/js/pop_up/login.js"></script>
+    <script type="text/javascript" src="../Guia_Jovem/js/pop_up/cadastro.js"></script>
+    <script type="text/javascript" src="../Guia_Jovem/js/pop_up/login_responsivo.js"></script>
+    <script type="text/javascript" src="../Guia_Jovem/js/pop_up/cadastro responsivo.js"></script>
+    <script type="text/javascript" src="../Guia_Jovem/js/pop_up/cpf.js"></script>
 </html>

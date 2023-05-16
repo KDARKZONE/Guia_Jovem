@@ -1,4 +1,4 @@
- /** COMEÇANDO A ESTILIZAÇÃO DO MENU (HEADER) **/
+/** COMEÇANDO A ESTILIZAÇÃO DO MENU (HEADER) **/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Poppins:wght@300&family=Schibsted+Grotesk&display=swap');
 *{
     margin: 0;
@@ -8,7 +8,7 @@
 body{
   font-family: 'Poppins',sans-serif;
 }
-.container_user{
+.container_adm{
     max-width: 10000px;
     margin: 0 auto;
     display: flex;
@@ -18,13 +18,13 @@ body{
     width: 100%;
 
 }
-.cabeçario_user{
+.cabeçario_adm{
     background-color: #333;
     width: 100%;
     border: 2px solid cyan;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    padding: 10px;
+    padding: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -34,22 +34,22 @@ body{
     margin-bottom: 20%;
     z-index: 9999;
 }
-.Menu{
+.Menu_adm{
     width: 50%;
     padding-left: 10%;
 }
-.Menu ul li{
+.Menu_adm ul li{
     list-style: none;
     display: inline-block;
 }
-.logo{
+.logo_adm{
     width: 20%;
 }
-.logo img{
+.logo_adm img{
   width: 100%;
 
 }
-.Menu nav a{
+.Menu_adm .op a{
     color: rgba(11, 241, 241);
     text-decoration: none;
     padding-right: 50px;
@@ -58,7 +58,7 @@ body{
     position: relative;
     
 }
-.Menu nav a::after{
+.Menu_adm .op a::after{
     content: " ";
     width: 0;
     height: 4px;
@@ -68,13 +68,13 @@ body{
     left:0;
     transition: width 0.5s;
 }
-.Menu nav a:hover::after{
+.Menu_adm .op a:hover::after{
     width: 50px;
 }
-.redes_sociais{
+.redes_sociais_adm{
     padding-right: 3cm;
 }
-.redes_sociais button{
+.redes_sociais_adm button{
     width: 40px;
     height: 40px;
     background: linear-gradient(45deg , cyan , rgb(19, 100, 100));
@@ -83,43 +83,44 @@ body{
     margin-right:20px;
     cursor:pointer;
 }
-.redes_sociais button i{
+.redes_sociais_adm button i{
     font-size: 20px;
     color: white;
 
 }
-.redes_sociais button:hover{
+.redes_sociais_adm button:hover{
     transition: all 0.5s;
     transform: scale(1.5);
 }
-.Login_user button{
+
+.Login_adm {
+  border-radius: 50%;
   background: none;
   border: none;
-  cursor:pointer;
+  
 }
-.Login_user button img{
+.Login_adm img{
+  width: 50px;
+  /* height: 50px; */
+  cursor:pointer;
   border-radius: 50%;
 }
-.Login_user button img{
-  width: 50px;
+.DropDown_Menu{
+    display: none;
 }
 .DropDown_Menu input[type=submit]{
-  width: 90px;
-  border: 8px;
-  background: cyan;
-  color: black;
-  padding: 5px;
-  cursor:pointer;
-  border-radius: 10%;
-}
-.DropDown_Menu{
-  display: none;
+    border-radius: 10px;
 }
 .DropDown:hover .DropDown_Menu{
-  display: block;
-  position: absolute;
-  right: 20px;
+    display: block;
+    position: absolute;
+    right: 20px;
 }
+@keyframes slow{
+  from{opacity: 0;}
+  to {opacity: 1;}
+}
+
 @media only screen and (max-width: 1000px) {
     /* Define as regras CSS para telas menores que 768px */
     .logo {
