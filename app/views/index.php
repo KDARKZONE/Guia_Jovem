@@ -43,7 +43,7 @@
                                 </div>
                             <div class="login">
                                 <li class="img_login">
-                                    <button class="botão_login"><a class="modal-link-responsive"><img src="style/img/logooo.png" title="Entrar"></a></button>
+                                    <button class="botão_login"><a class="modal-link-responsive"><img src="assets/img/logooo.png" title="Entrar"></a></button>
                                 </li>
                             </div>
                         </ul>
@@ -52,7 +52,7 @@
         <!-- MENU TOTAL -->
         <div class="container">
             <div class="logo"> 
-            <img src="style/img/guia_jovem_home.png">
+            <img src="assets/img/guia_jovem_home.png">
             </div>
             <div class="Menu">
                 <nav>
@@ -70,7 +70,7 @@
                 <button><i class="fa-brands fa-instagram"></i></button>
             </div>
             <div class="Login">
-                <button><a class="modal-link"><img src="style/img/logooo.png" title="Entrar"></a></button>
+                <button><a class="modal-link"><img src="assets/img/logooo.png" title="Entrar"></a></button>
             </div>
         </div>
     </header>
@@ -179,7 +179,7 @@
     <section class="noticias">
             <article>
             <a href="#">
-                <img src="style/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
+                <img src="assets/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
             </a>
             <p><a href="" class="category">Categoria</a></p>
             <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
@@ -191,7 +191,7 @@
 
         <article>
             <a href="#">
-                <img src="style/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
+                <img src="assets/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
             </a>
             <p><a href="" class="category">Categoria</a></p>
             <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
@@ -202,19 +202,7 @@
         </article>
         <article>
             <a href="#">
-                <img src="style/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
-            </a>
-            <p><a href="" class="category">Categoria</a></p>
-            <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
-                    error dolorem. Recusandae,
-                    quo ex laborum voluptate pariatur praesentium error doloremque cumque, mollitia laboriosam vel
-                    aut
-                    et eveniet eaque quaerat!</a></h2>
-        </article>
-
-        <article>
-            <a href="#">
-                <img src="style/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
+                <img src="assets/img/post.jpg"" width="200" alt="Imagem post" title="Imagem Post">
             </a>
             <p><a href="" class="category">Categoria</a></p>
             <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
@@ -226,7 +214,7 @@
 
         <article>
             <a href="#">
-                <img src="style/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
+                <img src="assets/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
             </a>
             <p><a href="" class="category">Categoria</a></p>
             <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
@@ -238,7 +226,7 @@
 
         <article>
             <a href="#">
-                <img src="style/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
+                <img src="assets/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
             </a>
             <p><a href="" class="category">Categoria</a></p>
             <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
@@ -250,7 +238,19 @@
 
         <article>
             <a href="#">
-                <img src="style/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
+                <img src="assets/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
+            </a>
+            <p><a href="" class="category">Categoria</a></p>
+            <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
+                    error dolorem. Recusandae,
+                    quo ex laborum voluptate pariatur praesentium error doloremque cumque, mollitia laboriosam vel
+                    aut
+                    et eveniet eaque quaerat!</a></h2>
+        </article>
+
+        <article>
+            <a href="#">
+                <img src="assets/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
             </a>
             <p><a href="" class="category">Categoria</a></p>
             <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
@@ -262,7 +262,7 @@
         
         <article>
             <a href="#">
-                <img src="style/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
+                <img src="assets/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
             </a>
             <p><a href="" class="category">Categoria</a></p>
             <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
@@ -272,98 +272,6 @@
                     et eveniet eaque quaerat!</a></h2>
         </article>
     </header>
-
-    <!--FIM SESSÃO SESSÃO DE ARTIGOS-->
-
-    <!-- RODAPÉ -->
-    <footer>
-        <section class="T_R">
-            <b> Adicione um Titulo </b>
-        </section>
-        <nav class="P_C">
-            <b> Titulo </b>
-            <ul>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-            </ul>
-        </nav>
-        <nav class="S_C">
-            <b> Titulo </b>
-            <ul>
-                <li>Insira a Informação</li>
-                <li>Insira a Informação</li>
-                <li>Insira a Informação</li>
-                <li>Insira a Informação</li>
-                <li>Insira a Informação</li>
-                <li>Insira a Informação</li>
-            </ul>
-        </nav>
-        <nav class="T_C">
-            <b> Titulo </b>
-            <ul>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-            </ul>
-        </nav>
-        <nav class="Q_C">
-            <b> Titulo </b>
-            <ul>
-                <li>Insira a Informação</li>
-                <li>Insira a Informação</li>
-                <li>Insira a Informação</li>
-                <li>Insira a Informação</li>
-                <li>Insira a Informação</li>
-                <li>Insira a Informação</li>
-            </ul>
-        </nav>
-        <nav class="Qi_C">
-            <b> Titulo </b>
-            <ul>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-            </ul>
-        </nav>
-        <nav class="S_C">
-            <b> Titulo </b>
-            <ul>
-                <li>Insira a Informação</li>
-                <li>Insira a Informação</li>
-                <li>Insira a Informação</li>
-                <li>Insira a Informação</li>
-                <li>Insira a Informação</li>
-                <li>Insira a Informação</li>
-            </ul>
-        </nav>
-        <nav class="St_C">
-            <b> Titulo </b>
-            <ul>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-            </ul>
-        </nav>
-    </footer>
-    <!-- FIM DO RODAPÉ -->
-    
-</body>
-    <script type="text/javascript" src="js/pop_up/login.js"></script>
-    <script type="text/javascript" src="js/pop_up/cadastro.js"></script>
-    <script type="text/javascript" src="js/pop_up/login_responsivo.js"></script>
-    <script type="text/javascript" src="js/pop_up/cadastro responsivo.js"></script>
-    <script type="text/javascript" src="js/pop_up/cpf.js"></script>
-</html>
+<?php
+require_once("layouts/site/footer.php");
+?>

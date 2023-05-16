@@ -14,11 +14,6 @@
             <link rel="stylesheet" href="assets/css/style_js/cadastro_responsive.css">
             <link rel="stylesheet" href="assets/css/style_js/login.css">
             <link rel="stylesheet" href="assets/css/style_js/login_responsive.css">
-            <script type="text/javascript" src="assets/js/login.js"></script>
-            <script type="text/javascript" src="assets/js/cadastro.js"></script>
-            <script type="text/javascript" src="assets/js/login_responsivo.js"></script>
-            <script type="text/javascript" src="assets/js/cadastro responsivo.js"></script>
-            <script type="text/javascript" src="assets/js/cpf.js"></script>
             <title>Guia Jovem</title>
         </head>
-    </html>
+        <!-- fecha depois, FECHA TUDOOOO CARALHOOOOOOO  -->
