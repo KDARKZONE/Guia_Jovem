@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banco de Dados </title>
     <link rel="icon" href="style/img/logooo.png">
-    <link rel="stylesheet" href="style/styles.css"> 
+    <link rel="stylesheet" href="../adm/style/style.css"> 
     <script src="https://kit.fontawesome.com/7bcc76ecaf.js" crossorigin="anonymous"></script>
 </head>
 <body>

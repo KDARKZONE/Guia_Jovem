@@ -16,4 +16,4 @@
             <link rel="stylesheet" href="assets/css/style_js/login_responsive.css">
             <title>Guia Jovem</title>
         </head>
-        <!-- fecha depois, FECHA TUDOOOO CARALHOOOOOOO  -->
+        <!-- fecha depois --> 
