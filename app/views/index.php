@@ -15,7 +15,6 @@
         }
     ?>
 
-<body>
     <!--INICIO SESSÃO SESSÃO DE ARTIGOS-->
 <header class="post">
     <section class="noticias">
@@ -116,4 +115,17 @@
     </header>
 <?php
 require_once("layouts/site/footer.php");
+?>
+<?php
+    if(isset($_POST['submit'])){
+      require_once("../database/usuario.php");
+      $cadastroUsuario= new Usuario();
+      $verificar = $cadastroUsuario->cadastro($_POST);
+      if($verificar->rowCount() > 0){
+        echo "<script>alert('Usuario Ja Cadastrado')</script>";
+    }
+    else{
+        echo "<script>alert('Usuario Cadastrado com sucesso')</script>";
+    }
+}
 ?>

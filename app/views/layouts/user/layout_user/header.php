@@ -5,15 +5,10 @@
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <script src="https://kit.fontawesome.com/7bcc76ecaf.js" crossorigin="anonymous"></script>
-            <link rel="icon" href="img/logooo.png">
-            <link rel="stylesheet" href="css/body.css">
-            <link rel="stylesheet" href="css/cabeçario.css"> 
-            <link rel="stylesheet" href="css/cabeçario_vertical.css">
-            <link rel="stylesheet" href="css/style_js/layout_pop_up.css">
-            <link rel="stylesheet" href="css/style_js/cadastro.css">
-            <link rel="stylesheet" href="css/style_js/cadastro_responsive.css">
-            <link rel="stylesheet" href="css/style_js/login.css">
-            <link rel="stylesheet" href="css/style_js/login_responsive.css">
+            <link rel="icon" href="layout_user/img/logooo.png">
+            <link rel="stylesheet" href="layout_user/css/body.css">
+            <link rel="stylesheet" href="layout_user/css/cabeçario.css"> 
+            <link rel="stylesheet" href="layout_user/css/cabeçario_vertical.css">
             <title>Guia Jovem</title>
         </head>
-        <!-- fecha depois --> 
+    <!-- fecha depois --> 

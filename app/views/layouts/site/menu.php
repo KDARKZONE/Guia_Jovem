@@ -1,5 +1,5 @@
 <?php
-    // session_start();
+   session_start();
 ?>
 <header class="cabeçario">
         <!-- MENU RESPONSIVO -->
@@ -21,11 +21,11 @@
                             </div>
                         </ul>
                     </nav>
-        </div>
-        <!-- MENU TOTAL -->
+            </div>
+            <!-- MENU TOTAL -->
         <div class="container">
             <div class="logo"> 
-            <img src="assets/img/guia_jovem_home.png">
+                <img src="assets/img/guia_jovem_home.png">
             </div>
             <div class="Menu">
                 <nav>
@@ -74,7 +74,7 @@
     <!-- MENU POP - UP CADASTRAMENTO -->
     <div class="overlay_1"></div>
     <div class="modal_1">
-        <form method="POST" action="index.php">
+        <form method="POST" action="">
             <fieldset class="envolver">
                 <legend class="item"><b> Formulario de Cadastramento </b></legend>
                 <div class="inputBox">
@@ -147,8 +147,3 @@
             </fieldset>
         </form>
     </div>
-<?php
-    if(isset($_POST['submit'])){
-      require_once("/XAMPP/htdocs/Guia_Jovem-20230521T153750Z-001/Guia_Jovem/app/database/index.php");
-    }
-?>

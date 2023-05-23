@@ -48,7 +48,21 @@
         $stmt = $conexão->prepare("SELECT*FROM perfis WHERE email = :email AND senha = :senha");
         $stmt->execute([':email' => Email() , ':senha' => Senha()]);
         if($stmt->rowCount() > 0){
-            header('Location: layouts/user/user.html');
+            $_SESSION['usuario'] = true;
+            // Redireciona o usuario para a Tela de Usuario
+            header('Location: layouts/user/index.php');
+            // Raviavel que puxa o Nome, pelo E-mail e a Senha
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            // Puxando as Variaveis
+            $_SESSION['nome_usuario'] = $NomeUsuario = $row['nome'];
+            $_SESSION['email_usuario'] = $EmailUsuario = $row['email'];
+            $_SESSION['senha_usuario'] = $SenhaUsuario = $row['senha'];
+            // colocando elas em uma array
+            $_SESSION['usuario'] = array(
+                'nome' => $_SESSION['nome_usuario'],
+                'email' => $_SESSION['email_usuario'],
+                'senha' => $_SESSION['senha_usuario']
+            );
         }
         else{
             echo "O usuario não foi encontrado";

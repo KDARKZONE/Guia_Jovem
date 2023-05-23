@@ -1,27 +1,28 @@
-<div class="Login_adm">
-                <div class="DropDown">
-                    <form method="POST">
-                    <img src="img/foto_default.png">
-                    <div class="DropDown_Menu">
-                        <input type="submit" name="submit_logout" value="Logout">
+        <header class="cabeçario_adm">
+                    <div class="Login_adm">
+                        <div class="DropDown">
+                            <img src="layout_adm/img/foto_default.png">
+                            <div class="DropDown_Menu">
+                                <form method="POST">
+                                    <input type="submit" name="logout" value="Sair">
+                                </form>
+                            </div>
+                        </div>
                     </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </header>
+                </div>
+        </header> 
         <header class="menu_vertical">
-        <input type="checkbox" id="check">
-        <label for="check">
-            <i class="fa-solid fa-bars"></i> 
-        </label>
-        <nav>
-            <ul>
-                <li><a href="painel_de_controle.php"> Home </a></li>
-                <li><a href="vizualizar.php"> Vizualizar Banco (Criptografado) </a></li>
-                <li><a href="Esvaziar_Tabela.php">Limpar Tabela </a></li>
-                <li><a href="search.html">Pesquisar no Banco</a></li>
-                <li><a href="Deletar_item.html">Deletar item </a></li>
-            </ul>
-        </nav>
-    </header>
+                <input type="checkbox" id="check">
+                    <label for="check">
+                        <i class="fa-solid fa-bars"></i> 
+                    </label>
+                <nav>
+                    <ul>
+                        <li><a href="../../index.php"> Home </a></li>
+                        <li><a href="vizualizar.php"> Vizualizar Banco</a></li>
+                        <li><a href="clear_table.php">Limpar Tabela </a></li>
+                        <li><a href="search.php">Pesquisar no Banco</a></li>
+                        <li><a href="Deletar_item.php">Deletar item </a></li>
+                    </ul>
+                </nav>
+        </header>

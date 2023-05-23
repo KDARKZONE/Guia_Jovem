@@ -22,16 +22,14 @@
     }
     echo "</table>";
 ?>
-        </article>
-    </section>
-    <footer>
-        <?php
-        if(isset($_POST['submit']));
-            require_once("clear_table.php");
-        ?>
-        <form method="POST" action="Esvaziar_Tabela.php"> 
-        <input type="submit" value="Esvaziar" name="Esvaziar">
-        </form>
-    </footer>
-</body>
+        <footer>
+            <?php
+                if(isset($_POST['submit']));
+                require_once("clear_table.php");
+            ?>
+            <form method="POST" action="Esvaziar_Tabela.php"> 
+                <input type="submit" value="Esvaziar" name="Esvaziar">
+            </form>
+        </footer>
+    </body>.
 </html>

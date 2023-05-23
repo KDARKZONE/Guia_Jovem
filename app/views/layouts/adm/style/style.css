@@ -55,8 +55,6 @@ input[type=checkbox] {
     color: black;
     padding: 5px;
     cursor: pointer;
-    border-radius: 15%;
-    opacity: 95%;
 }
 nav {
     background-color: black;
@@ -95,7 +93,7 @@ a:hover {
 label {
     background-color: none;
     padding-left: 20px;
-    padding-top: 20px;
+    padding-top: 5px;
     position: fixed;
     z-index: 99999;
     cursor: pointer;
