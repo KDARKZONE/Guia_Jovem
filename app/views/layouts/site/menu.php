@@ -1,6 +1,3 @@
-<?php
-   session_start();
-?>
 <header class="cabeçario">
         <!-- MENU RESPONSIVO -->
             <div class="Icone_Menu">
@@ -25,7 +22,7 @@
             <!-- MENU TOTAL -->
         <div class="container">
             <div class="logo"> 
-                <img src="assets/img/guia_jovem_home.png">
+                <img src="layouts/site/style/img/guia_jovem_home.png">
             </div>
             <div class="Menu">
                 <nav>
@@ -43,7 +40,7 @@
                 <button><i class="fa-brands fa-instagram"></i></button>
             </div>
             <div class="Login">
-                <button><a class="modal-link"><img src="assets/img/logooo.png" title="Entrar"></a></button>
+                <button><a class="modal-link"><img src="layouts/site/style/img/logooo.png" title="Entrar"></a></button>
             </div>
         </div>
     </header>
