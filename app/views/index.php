@@ -117,15 +117,7 @@
 require_once("layouts/site/footer.php");
 ?>
 <?php
-//     if(isset($_POST['submit'])){
-//       require_once("../database/perfis.php");
-//       $cadastroUsuario = new Perfis();
-//       $verificar = $cadastroUsuario->cadastro($_POST);
-//       if($verificar->rowCount() > 0){
-//         echo "<script>alert('Usuario Ja Cadastrado')</script>";
-//     }
-//     else{
-//         echo "<script>alert('Usuario Cadastrado com sucesso')</script>";
-//     }
-// }
+    if(isset($_POST['submit'])){
+      require_once("../models/index");
+    }
 ?>

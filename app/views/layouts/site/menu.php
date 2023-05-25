@@ -81,6 +81,12 @@
                 </div>
                 
                 <div class="inputBox">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" name="usuario" id="usuario" class="inputUser" required>
+                    <label for="nome" class="labelInput"> Nome de Usuario </label>
+                </div>
+
+                <div class="inputBox">
                     <i class="fa-solid fa-envelope"></i>
                     <input type="email" name="email" id="email" class="inputUser" required>
                     <label for="email" class="labelInput"> E-mail </label>
