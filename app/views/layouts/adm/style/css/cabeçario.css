@@ -1,0 +1,63 @@
+/** COMEÇANDO A ESTILIZAÇÃO DO MENU (HEADER) **/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Poppins:wght@300&family=Schibsted+Grotesk&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  font-family: 'Poppins',sans-serif;
+}
+.container_adm{
+    max-width: 10000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+.cabeçario_adm{
+    background-color: #333;
+    width: 100%;
+    border: 2px solid cyan;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-bottom: 20%;
+    z-index: 9999;
+}
+.Login_adm {
+  border-radius: 50%;
+  background: none;
+  border: none;
+  width: 100%;
+  
+}
+.Login_adm img{
+  width: 50px;
+  cursor:pointer;
+  border-radius: 50%;
+  float: right;
+}
+.DropDown input[t]
+.DropDown{
+  float: right;
+}
+.DropDown_Menu{
+  display: none;
+}
+.DropDown:hover .DropDown_Menu{
+  display: block;
+  position: absolute;
+  top: 70px;
+  right: 2px;
+
+}
