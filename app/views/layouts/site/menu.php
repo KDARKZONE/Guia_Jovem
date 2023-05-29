@@ -1,3 +1,17 @@
+<?php 
+if($_SERVER['REQUEST_METHOD'] == "POST"){
+    if(isset($_POST['Cadastro'])){
+        require_once("./app/models/perfis.php");
+    }
+    else 
+    if (isset($_POST['Login'])){
+        require_once("login.php");
+    }
+    else{
+        echo "<script>alert(' error ')</script>";
+    }
+}
+?>
 <header class="cabeçario">
         <!-- MENU RESPONSIVO -->
             <div class="Icone_Menu">
@@ -40,14 +54,18 @@
                 <button><i class="fa-brands fa-instagram"></i></button>
             </div>
             <div class="Login">
-                <button><a class="modal-link"><img src="layouts/site/style/img/logooo.png" title="Entrar"></a></button>
+                <nav>
+                    <ul>
+                        <li><a class="modal-link"> Login </a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </header>
     <!-- MENU POP - UP LOGIN -->
     <div class="overlay"></div>
     <div class="modal">
-            <form method="POST" action="login.php">
+            <form method="POST" action="">
                 <fieldset class="envolver">
                     <legend class="item"><b> Formulario de Login </b></legend>
                     <div class="inputBox">
@@ -61,7 +79,7 @@
                         <input type="password" name="senha" id="senha" class="inputUser" required>
                         <label for="senha" class="labelInput"> Senha: </label>
                     </div>
-                     <input type="submit" value="Entrar" class="Input_Login_user">
+                     <input type="submit" value="Entrar" class="Input_Login_user" name="Login">
                      <a href="#" class="modal-link_1"> Não tem uma Conta ?</a>
                 </fieldset>
             </form>
@@ -81,6 +99,12 @@
                 </div>
                 
                 <div class="inputBox">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" name="usuario" id="usuario" class="inputUser" required>
+                    <label for="nome" class="labelInput"> Nome de Usuario </label>
+                </div>
+
+                <div class="inputBox">
                     <i class="fa-solid fa-envelope"></i>
                     <input type="email" name="email" id="email" class="inputUser" required>
                     <label for="email" class="labelInput"> E-mail </label>
@@ -91,7 +115,7 @@
                     <input type="password" name="senha" id="senha" class="inputUser" required>
                     <label for="senha" class="labelInput"> Crie uma Senha: </label>
                 </div>
-                 <input type="submit" value="Cadastrar" name="submit" id="submit">
+                 <input type="submit" value="Cadastrar" name="Cadastro" id="submit">
             </fieldset>
         </form>
     </div>

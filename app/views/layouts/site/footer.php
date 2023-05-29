@@ -168,4 +168,14 @@
     });
     </script>
 </html>
-    
+
+<?php
+    if(isset($_POST['submit'])){
+      require_once("/XAMPP/htdocs/Guia_Jovem-main/app/models/perfis.php");
+    }
+?>
+<?php
+    if(isset($_POST['submit_Login'])){
+        require_once("/XAMPP/htdocs/Guia_Jovem-main/app/models/perfis.php");
+    }
+?>

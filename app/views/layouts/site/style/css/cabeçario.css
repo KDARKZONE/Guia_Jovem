@@ -157,7 +157,32 @@ body{
 
 
 
+.Login nav ul li {
+  list-style: none;
 
+}
+.Login nav a{
+  color: rgba(11, 241, 241);
+  text-decoration: none;
+  padding-right: 50px;
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+  
+}
+.Login nav a::after{
+  content: " ";
+  width: 0;
+  height: 4px;
+  background-color:rgba(11, 241, 241);
+  position: absolute;
+  top:0;
+  left:0;
+  transition: width 0.5s;
+}
+.Login nav a:hover::after{
+  width: 50px;
+}
 
 
 
