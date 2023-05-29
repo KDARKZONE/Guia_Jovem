@@ -168,7 +168,10 @@
     });
     </script>
 </html>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5047c66c2ea45ae5b214baa4009a3a5a772fe839
 <?php
     if(isset($_POST['submit'])){
       require_once("/XAMPP/htdocs/Guia_Jovem-main/app/models/perfis.php");

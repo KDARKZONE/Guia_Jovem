@@ -1,4 +1,5 @@
 <?php 
+<<<<<<< HEAD
 if($_SERVER['REQUEST_METHOD'] == "POST"){
     if(isset($_POST['Cadastro'])){
         require_once("./app/models/perfis.php");
@@ -11,6 +12,14 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         echo "<script>alert(' error ')</script>";
     }
 }
+=======
+    @session_start();
+    @$_SESSION['usuario'] = Array(
+        'nome' => $_POST['nome'],
+        'email' => $_POST['email'],
+        'senha' => $_POST['senha']
+    );
+>>>>>>> 5047c66c2ea45ae5b214baa4009a3a5a772fe839
 ?>
 <header class="cabeçario">
         <!-- MENU RESPONSIVO -->
@@ -79,7 +88,11 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                         <input type="password" name="senha" id="senha" class="inputUser" required>
                         <label for="senha" class="labelInput"> Senha: </label>
                     </div>
+<<<<<<< HEAD
                      <input type="submit" value="Entrar" class="Input_Login_user" name="Login">
+=======
+                     <input type="submit" value="Entrar" class="Input_Login_user" name="submit_Login">
+>>>>>>> 5047c66c2ea45ae5b214baa4009a3a5a772fe839
                      <a href="#" class="modal-link_1"> Não tem uma Conta ?</a>
                 </fieldset>
             </form>
