@@ -1,4 +1,4 @@
-<?php
+    <?php
     require_once("../models/database/conexao.php");
     Class Perfis Extends Conexao{
         public $Nome;
@@ -10,7 +10,7 @@
                 if($_SERVER['REQUEST_METHOD'] == "POST"){
                     $this->Nome = $_POST['nome'];
                     $this->Email = $_POST['email'];
-                    $this->Senha = $_POST['senha'];
+                    $this->Senha = base64_encode($_POST['senha']);
                     $this->Usuario = $_POST['usuario'];
                     try {
                         $conexao = $this->conexao();
@@ -25,9 +25,9 @@
                             $query->bindParam(':nome',$this->Nome);
                             $query->bindParam(':email',$this->Email);
                             $query->bindParam(':senha',$this->Senha);
+                            $query->bindParam(':usuario',$this->Usuario);
                             $query->execute();
-                            $id_perfil = $conexao->lastInsertId();
-                            echo "<script> alert(' Essa Usuario Foi Cadastrado com Sucesso ')</script>";
+                            echo "<script> alert(' Cadastro efetuado com sucesso! ')</script>";
                     }
                     }catch (PDOException $E){
                         return "Error in inset Sing-in in the Banck. Error in ".$E->getMessage();
@@ -36,6 +36,6 @@
             }
     }
     $Cadastrar = new Perfis();
-    echo $Cadastrar->CadastrarPerfil();
+    echo $Cadastrar->CadastrarPerfil(); 
     
 ?>

@@ -1,25 +1,26 @@
 <?php
-    /** Criando a Classe Conexao armazenará a Conexao com o Banco De Dados */
+    /** Criando a Classe Conexão armazenará a Conexão com o Banco De Dados */
     class Conexao{
-        protected $conexao;
-        
+        protected $host;
+        protected $user;
+        protected $password;
+        protected $dbname;
         /** Acessando os Atributos e Adicionando os Parametros  */
         public function __construct(){
-            $host = 'localhost';
-            $user = 'root';
-            $password = '';
-            $dbname = 'guia_jovem';
+            $this->host = 'localhost';
+            $this->user = 'root';
+            $this->password = '';
+            $this->dbname = 'guia_jovem';
+        }
+        
+        public function conexao(){
             try{
-                    $this->conexao = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
-                    $this->conexao->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-                }catch(PDOException $e){
+                $conexao = new PDO("mysql:host=$this->host;dbname=$this->dbname", $this->user, $this->password);
+                $conexao->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+                return $conexao;
+            }catch(PDOException $e){
                 echo "ERROR in ".$e->getMessage();
             }
         }
-        
-
     }
-?>
-<?php
-    
 ?>

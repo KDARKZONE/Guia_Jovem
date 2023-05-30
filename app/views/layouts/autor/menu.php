@@ -1,4 +1,23 @@
-
+<?php 
+if($_SERVER['REQUEST_METHOD'] == "POST"){
+    if(isset($_POST['Cadastro'])){
+        require_once("./app/models/perfis.php");
+    }
+    else 
+    if (isset($_POST['Login'])){
+        require_once("login.php");
+    }
+    else{
+        echo "<script>alert(' error ')</script>";
+    }
+}
+    @session_start();
+    @$_SESSION['usuario'] = Array(
+        'nome' => $_POST['nome'],
+        'email' => $_POST['email'],
+        'senha' => $_POST['senha']
+    );
+?>
 <header class="cabeçario">
         <!-- MENU RESPONSIVO -->
             <div class="Icone_Menu">
@@ -52,7 +71,7 @@
     <!-- MENU POP - UP LOGIN -->
     <div class="overlay"></div>
     <div class="modal">
-            <form method="POST" action="/app/models/login.php">
+            <form method="POST" action="../../../models/login.php">
                 <fieldset class="envolver">
                     <legend class="item"><b> Formulario de Login </b></legend>
                     <div class="inputBox">
@@ -109,7 +128,7 @@
     <!-- MENU POP - UP LOGIN RESPONSIVE -->
     <div class="overlay_responsive_Login"></div>
     <div class="modal_responsive_Login">
-            <form method="POST" action="/app/models/login.php   ">
+            <form method="POST" action="">
                 <fieldset class="envolver">
                     <legend class="item"><b> Formulario de Login </b></legend>
                     <div class="inputBox">

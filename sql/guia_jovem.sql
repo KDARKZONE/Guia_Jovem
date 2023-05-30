@@ -8,7 +8,6 @@
 	  nome VARCHAR(50) NOT NULL,
 	  email VARCHAR(50) NOT NULL,
 	  senha VARCHAR(50) NOT NULL,
-	  foto_default VARCHAR(100) NOT NULL,
 	  nivel_acesso ENUM('usuário comum', 'autor', 'administrador') NOT NULL,
 	  PRIMARY KEY (ID_perfil)
 	);
@@ -64,30 +63,30 @@
 
 	-- PERFIS
 	INSERT INTO perfis (nome, email, senha, foto_default, nivel_acesso)
-	VALUES ('teste', 'teste@gmail.com', 'Qm9sc29sdWxhMTMyMg==', 'https://www.promoview.com.br/uploads/2017/04/b72a1cfe.png', 'usuário comum'),
-	  ('Kauã', 'kauaalmeida8995@gmail.com', 'Qm9sc29sdWxhMTMyMg==', 'https://www.promoview.com.br/uploads/2017/04/b72a1cfe.png', 'administrador'),
-	  ('autor', 'autor@gmail.com', 'Qm9sc29sdWxhMTMyMg==', 'https://www.promoview.com.br/uploads/2017/04/b72a1cfe.png', 'autor'),
-	  ('Anderson', 'andersonpiresdacruz@gmail.com', 'Qm9sc29sdWxhMTMyMg==', 'https://www.promoview.com.br/uploads/2017/04/b72a1cfe.png', 'administrador'),
-	  ('João Silva', 'joao.silva@example.com', 'senha1', 'https://www.promoview.com.br/uploads/2017/04/b72a1cfe.png', 'usuário comum'),
-	  ('Maria Santos', 'maria.santos@example.com', 'senha2', 'https://www.promoview.com.br/uploads/2017/04/b72a1cfe.png', 'autor'),
-	  ('Pedro Costa', 'pedro.costa@example.com', 'senha3', 'https://www.promoview.com.br/uploads/2017/04/b72a1cfe.png', 'administrador'),
-	  ('Ana Ferreira', 'ana.ferreira@example.com', 'senha4', 'https://www.promoview.com.br/uploads/2017/04/b72a1cfe.png', 'usuário comum'),
-	  ('Carlos Oliveira', 'carlos.oliveira@example.com', 'senha5', 'https://www.promoview.com.br/uploads/2017/04/b72a1cfe.png','autor'),
-	  ('Sofia Pereira', 'sofia.pereira@example.com', 'senha6', 'https://www.promoview.com.br/uploads/2017/04/b72a1cfe.png', 'administrador'),
-	  ('Luiz Almeida', 'luiz.almeida@example.com', 'senha7', 'https://www.promoview.com.br/uploads/2017/04/b72a1cfe.png','usuário comum'),
-	  ('Laura Ribeiro', 'laura.ribeiro@example.com', 'senha8','https://www.promoview.com.br/uploads/2017/04/b72a1cfe.png', 'autor'),
-	  ('Fernando Gomes', 'fernando.gomes@example.com', 'senha9', 'https://www.promoview.com.br/uploads/2017/04/b72a1cfe.png','administrador'),
-	  ('Mariana Sousa', 'mariana.sousa@example.com', 'senha10', 'https://www.promoview.com.br/uploads/2017/04/b72a1cfe.png','usuário comum'),
-	  ('Gabriel Carvalho', 'gabriel.carvalho@example.com', 'senha11','https://www.promoview.com.br/uploads/2017/04/b72a1cfe.png', 'autor'),
-	  ('Carolina Mendes', 'carolina.mendes@example.com', 'senha12', 'https://www.promoview.com.br/uploads/2017/04/b72a1cfe.png','administrador'),
-	  ('Rafaela Castro', 'rafaela.castro@example.com', 'senha13','https://www.promoview.com.br/uploads/2017/04/b72a1cfe.png', 'usuário comum'),
-	  ('Ricardo Santos', 'ricardo.santos@example.com', 'senha14', 'https://www.promoview.com.br/uploads/2017/04/b72a1cfe.png','autor'),
-	  ('Isabela Lima', 'isabela.lima@example.com', 'senha15', 'https://www.promoview.com.br/uploads/2017/04/b72a1cfe.png','administrador'),
-	  ('Daniel Pereira', 'daniel.pereira@example.com', 'senha16', 'https://www.promoview.com.br/uploads/2017/04/b72a1cfe.png','usuário comum'),
-	  ('Vitória Alves', 'vitoria.alves@example.com', 'senha17','https://www.promoview.com.br/uploads/2017/04/b72a1cfe.png', 'autor'),
-	  ('Diego Fernandes', 'diego.fernandes@example.com', 'senha18', 'https://www.promoview.com.br/uploads/2017/04/b72a1cfe.png','administrador'),
-	  ('Larissa Ribeiro', 'larissa.ribeiro@example.com', 'senha19', 'https://www.promoview.com.br/uploads/2017/04/b72a1cfe.png', 'usuário comum'),
-	  ('Gustavo Melo', 'gustavo.melo@example.com', 'senha20', 'https://www.promoview.com.br/uploads/2017/04/b72a1cfe.png', 'autor');
+	VALUES ('teste', 'teste@gmail.com', 'Qm9sc29sdWxhMTMyMg==',  'usuário comum'),
+	  ('Kauã', 'kauaalmeida8995@gmail.com', 'Qm9sc29sdWxhMTMyMg==',  'administrador'),
+	  ('autor', 'autor@gmail.com', 'Qm9sc29sdWxhMTMyMg==',  'autor'),
+	  ('Anderson', 'andersonpiresdacruz@gmail.com', 'Qm9sc29sdWxhMTMyMg==',  'administrador'),
+	  ('João Silva', 'joao.silva@example.com', 'senha1',  'usuário comum'),
+	  ('Maria Santos', 'maria.santos@example.com', 'senha2',  'autor'),
+	  ('Pedro Costa', 'pedro.costa@example.com', 'senha3',  'administrador'),
+	  ('Ana Ferreira', 'ana.ferreira@example.com', 'senha4',  'usuário comum'),
+	  ('Carlos Oliveira', 'carlos.oliveira@example.com', 'senha5', 'autor'),
+	  ('Sofia Pereira', 'sofia.pereira@example.com', 'senha6',  'administrador'),
+	  ('Luiz Almeida', 'luiz.almeida@example.com', 'senha7', 'usuário comum'),
+	  ('Laura Ribeiro', 'laura.ribeiro@example.com', 'senha8'  'autor'),
+	  ('Fernando Gomes', 'fernando.gomes@example.com', 'senha9', 'administrador'),
+	  ('Mariana Sousa', 'mariana.sousa@example.com', 'senha10', 'usuário comum'),
+	  ('Gabriel Carvalho', 'gabriel.carvalho@example.com', 'senha11'  'autor'),
+	  ('Carolina Mendes', 'carolina.mendes@example.com', 'senha12', 'administrador'),
+	  ('Rafaela Castro', 'rafaela.castro@example.com', 'senha13'  'usuário comum'),
+	  ('Ricardo Santos', 'ricardo.santos@example.com', 'senha14', 'autor'),
+	  ('Isabela Lima', 'isabela.lima@example.com', 'senha15', 'administrador'),
+	  ('Daniel Pereira', 'daniel.pereira@example.com', 'senha16', 'usuário comum'),
+	  ('Vitória Alves', 'vitoria.alves@example.com', 'senha17'  'autor'),
+	  ('Diego Fernandes', 'diego.fernandes@example.com', 'senha18', 'administrador'),
+	  ('Larissa Ribeiro', 'larissa.ribeiro@example.com', 'senha19',  'usuário comum'),
+	  ('Gustavo Melo', 'gustavo.melo@example.com', 'senha20',  'autor');
 	  -- USUARIOS ADM
 
 	INSERT INTO administradores (codigo_de_acesso, ID_perfil)

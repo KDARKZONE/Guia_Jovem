@@ -6,7 +6,7 @@
         public function RealizarLogin(){
             if($_SERVER['REQUEST_METHOD'] == "POST"){
                 $this->Email = $_POST['email'];
-                $this->Senha = $_POST['senha'];
+                $this->Senha = base64_encode($_POST['senha']);
                 try{
                     $conexão = $this->conexao();
                     $query = $conexão->prepare("SELECT*FROM perfis WHERE email = :email AND senha = :senha");
@@ -18,7 +18,8 @@
                         $_SESSION['usuario'] = Array(
                             'Nome' => $row['nome'],
                             'Email' => $row['email'],
-                            'Senha' => $row['senha']
+                            'Senha' => $row['senha'],
+                            'Ni' => $row['senha']
                         );
                         $_SESSION['administrador'] = null;
                         echo "<script> alert(' O usuario já Cadastrado !! ')</script>";

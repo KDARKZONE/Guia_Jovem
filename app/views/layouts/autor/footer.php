@@ -167,4 +167,15 @@
         modal_responsive_Cadastro.style.display = 'none'; // oculta a janela modal
     });
     </script>
-</html> 
+</html>
+
+<?php
+    if(isset($_POST['Cadastro'])){
+      require_once("./app/models/perfis.php");
+    }
+?>
+<?php
+    if(isset($_POST['Login'])){
+        require_once("./app/models/login.php");
+    }
+?>
