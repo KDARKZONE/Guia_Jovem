@@ -1,6 +1,6 @@
 
  <!-- RODAPÉ -->
-    <footer>
+    <!-- <footer>
         <section class="T_R">
             <b> Adicione um Titulo </b>
         </section>
@@ -81,7 +81,7 @@
                 <li> Insira a Informação</li>
             </ul>
         </nav>
-    </footer>   
+    </footer>    -->
 </body>
 <!-- Segue Login pop-up , Sing in pop-up -->
 <!-- Segue os Formularios Responsivos tmb-->

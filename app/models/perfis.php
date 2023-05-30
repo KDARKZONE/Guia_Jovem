@@ -1,10 +1,10 @@
     <?php
     require_once("../models/database/conexao.php");
     Class Perfis Extends Conexao{
-        public $Nome;
-        public $Email;
-        public $Senha;
-        public $Usuario;
+        protected $Nome;
+        protected $Email;
+        protected $Senha;
+        protected $Usuario;
         public function CadastrarPerfil(){
             
                 if($_SERVER['REQUEST_METHOD'] == "POST"){
@@ -25,8 +25,12 @@
                             $query->bindParam(':nome',$this->Nome);
                             $query->bindParam(':email',$this->Email);
                             $query->bindParam(':senha',$this->Senha);
-                            $query->bindParam(':usuario',$this->Usuario);
                             $query->execute();
+                            $id_perfil = $conexao->lastInsertId();
+                            $query2 = $conexao->prepare("INSERT INTO usuarios_comuns (usuario, ID_perfil) VALUES (:usuario,:ID_perfil)");
+                            $query2->bindParam(':usuario', $this->Usuario);
+                            $query2->bindParam(':ID_perfil', $id_perfil);
+                            $query2->execute();
                             echo "<script> alert(' Cadastro efetuado com sucesso! ')</script>";
                     }
                     }catch (PDOException $E){

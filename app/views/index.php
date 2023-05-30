@@ -1,11 +1,9 @@
 
 <?php
-    # para trabalhar com sessões sempre iniciamos com session_start.
-    session_start();
-    # inclui os arquivos header, menu e login.
+    require_once('../models/sessao.php');
     require_once 'layouts/site/head.php';
-    # acessando botões de formularios Login/Cadastro
-    require_once 'layouts/site/menu.php';
+    require_once 'layouts/site/menu.php';  
+        
 ?>
 
 <?php
@@ -120,9 +118,4 @@
 
 <?php
 require_once("layouts/site/footer.php");
-?>
-<?php
-    if(isset($_POST['submit'])){
-      require_once("../models/perfis.php");
-    }
 ?>

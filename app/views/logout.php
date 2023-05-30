@@ -1,9 +1,14 @@
 <?php
-    # para trabalhar com sessões sempre iniciamos com session_start.
     session_start();
-    # destroi todas sessões, se existirem.
-    session_destroy();
 
-    # redireciona para a pagina inicial.
-    header('location: index.php');
+    if(session_status() == PHP_SESSION_ACTIVE){
+        session_destroy();
+    }
+    if(session_status() == PHP_SESSION_NONE){
+        echo "<script>alert('A Conta foi Encerrada');
+        window.location.href='/Guia_Jovem/index.php';</script>";
+    }
+    else{
+        echo "<script>alert('Erro ao Tentar Deslogar a sua Conta')</script>";
+    }
 ?>

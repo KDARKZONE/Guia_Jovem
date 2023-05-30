@@ -1,17 +1,3 @@
-<?php 
-    if($_SERVER['REQUEST_METHOD'] == "POST"){
-        if(isset($_POST['Cadastro'])){
-            require_once("/xampp/htdocs/Guia_Jovem/app/models/perfis.php");
-        }
-        else 
-        if (isset($_POST['Login'])){
-            require_once("/xampp/htdocs/Guia_Jovem/app/models/login.php");
-        }
-        else{
-            echo "<script>alert(' error ')</script>";
-        }
-    }
-?>
 <!DOCTYPE html>
     <html lang="pt-br">
         <head>

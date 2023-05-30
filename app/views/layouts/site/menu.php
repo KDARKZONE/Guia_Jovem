@@ -52,7 +52,7 @@
     <!-- MENU POP - UP LOGIN -->
     <div class="overlay"></div>
     <div class="modal">
-            <form method="POST" action="/app/models/login.php">
+            <form method="POST" action="../models/login.php">
                 <fieldset class="envolver">
                     <legend class="item"><b> Formulario de Login </b></legend>
                     <div class="inputBox">
@@ -66,7 +66,7 @@
                         <input type="password" name="senha" id="senha" class="inputUser" required>
                         <label for="senha" class="labelInput"> Senha: </label>
                     </div>
-                     <input type="submit" value="Entrar" class="Input_Login_user" name="Login">
+                     <input type="submit" value="Entrar">
                      <a href="#" class="modal-link_1"> Não tem uma Conta ?</a>
                 </fieldset>
             </form>
@@ -109,7 +109,7 @@
     <!-- MENU POP - UP LOGIN RESPONSIVE -->
     <div class="overlay_responsive_Login"></div>
     <div class="modal_responsive_Login">
-            <form method="POST" action="/app/models/login.php   ">
+            <form method="POST" action="">
                 <fieldset class="envolver">
                     <legend class="item"><b> Formulario de Login </b></legend>
                     <div class="inputBox">

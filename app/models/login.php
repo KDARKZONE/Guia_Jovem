@@ -15,23 +15,24 @@
                     $query->execute();
                     if($query->rowCount() > 0){
                         $row = $query->fetch(PDO::FETCH_ASSOC);
-                        $_SESSION['usuario'] = Array(
+                        $_SESSION['Perfil'] = Array(
                             'Nome' => $row['nome'],
                             'Email' => $row['email'],
                             'Senha' => $row['senha'],
-                            'Ni' => $row['senha']
+                            'Nivel de Acesso' => $row['nivel_acesso']
                         );
-                        $_SESSION['administrador'] = null;
-                        echo "<script> alert(' O usuario já Cadastrado !! ')</script>";
+                       require_once("/xampp/htdocs/Guia_Jovem/app/models/sessao.php");
+
                     }
                     else{
-                        echo "<script> alert(' O Usuario Não Cadastrado !!')</script>";
+                        echo "<script> alert('O Usuario Não Cadastrado, registre-se')</script>";
                     }
                 }catch(PDOException $e){
                     echo "<script> alert(' Error: ".$e->getMessage()."')</script>";
                 }
             }else{
-                echo "<script>alert('Os Dados não foram Enviados Corretamente Verifique o Metodo')</script>";
+                return null;
+                // echo "<script>alert('Os Dados não foram Enviados Corretamente Verifique o Metodo')</script>";
             }
         }
     }
