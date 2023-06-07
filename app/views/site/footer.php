@@ -1,40 +1,42 @@
-    <footer>
-            <section class="T_R">
-                <b> Adicione um Titulo </b>
-            </section>
-            <nav class="P_C">
-                <b> Titulo </b>
-                <ul>
-                    <li> Insira a Informação</li>
-                    <li> Insira a Informação</li>
-                    <li> Insira a Informação</li>
-                    <li> Insira a Informação</li>
-                    <li> Insira a Informação</li>
-                    <li> Insira a Informação</li>
-                </ul>
-            </nav>
-            <nav class="S_C">
-                <b> Titulo </b>
-                <ul>
-                    <li>Insira a Informação</li>
-                    <li>Insira a Informação</li>
-                    <li>Insira a Informação</li>
-                    <li>Insira a Informação</li>
-                    <li>Insira a Informação</li>
-                    <li>Insira a Informação</li>
-                </ul>
-            </nav>
-            <nav class="T_C">
-                <b> Titulo </b>
-                <ul>
-                    <li> Insira a Informação</li>
-                    <li> Insira a Informação</li>
-                    <li> Insira a Informação</li>
-                    <li> Insira a Informação</li>
-                    <li> Insira a Informação</li>
-                    <li> Insira a Informação</li>
-                </ul>
-            </nav>
+
+ <!-- RODAPÉ -->
+ <footer>
+        <section class="T_R">
+            <b> Adicione um Titulo </b>
+        </section>
+        <nav class="P_C">
+            <b> Titulo </b>
+            <ul>
+                <li> Insira a Informação</li>
+                <li> Insira a Informação</li>
+                <li> Insira a Informação</li>
+                <li> Insira a Informação</li>
+                <li> Insira a Informação</li>
+                <li> Insira a Informação</li>
+            </ul>
+        </nav>
+        <nav class="S_C">
+            <b> Titulo </b>
+            <ul>
+                <li>Insira a Informação</li>
+                <li>Insira a Informação</li>
+                <li>Insira a Informação</li>
+                <li>Insira a Informação</li>
+                <li>Insira a Informação</li>
+                <li>Insira a Informação</li>
+            </ul>
+        </nav>
+        <nav class="T_C">
+            <b> Titulo </b>
+            <ul>
+                <li> Insira a Informação</li>
+                <li> Insira a Informação</li>
+                <li> Insira a Informação</li>
+                <li> Insira a Informação</li>
+                <li> Insira a Informação</li>
+                <li> Insira a Informação</li>
+            </ul>
+        </nav>
             <nav class="Q_C">
                 <b> Titulo </b>
                 <ul>
@@ -81,4 +83,9 @@
             </nav>
         </footer> 
     </body>
-</html>
+
+    <!-- Scripts  -->
+    
+    <script src="assets/js/popup.js"></script>
+    
+</html> 

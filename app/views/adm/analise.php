@@ -1,3 +1,24 @@
+<?php
+    session_start();
+    if(isset( $_SESSION['Perfil']) &&  $_SESSION['administrador'] == true){
+        echo "<script>alert('Olá Administrador ".$_SESSION['Perfil']['Nome']."')</script>";
+    }
+    else{
+        echo "<script>alert('Não existe conta cadastrada, por favor cadastra-se novamente');
+        window.location.href = '../../index.php';</script>";
+    }
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Administrador </title>
+        <link rel="icon" href="layout_adm/img/logooo.png">
+        <link rel="stylesheet" href="styles/analise.css">
+        <script src="https://kit.fontawesome.com/7bcc76ecaf.js" crossorigin="anonymous"></script>
+    </head>
 <header class="cabeçario">
         <!-- MENU RESPONSIVO -->
             <div class="Icone_Menu">
@@ -21,16 +42,16 @@
         <!-- MENU TOTAL -->
         <div class="container">
             <div class="logo"> 
-            <img src="../img/img-site/guia_jovem_home.png">
+            <img src="./styles/img/guia_jovem_home.png">
             </div>
             <div class="Menu">
                 <nav>
                     <ul>
-                        <li><a href="../Layout/Administrador.php"> Home </a></li>
-                        <li><a href="../adm-acess/adm-pesquisar.php"> Pesquisar </a></li>
-                        <li><a href="../adm-acess/adm-dados.php"> Dados </a></li>
-                        <li><a href="../adm-acess/adm-noticia.php"> Noticias </a></li>
-                        <li><a href="../adm-acess/adm-analise.php"> Analise </a></li>
+                        <li><a href="../../layouts/adm/menu.php"> Home </a></li>
+                        <li><a href="./search.php"> Pesquisar </a></li>
+                        <li><a href="./dados.php"> Dados </a></li>
+                        <li><a href="./notice.php"> Noticias </a></li>
+                        <li><a href="./analise.php"> Analise </a></li>
                       </ul>
                 </nav>
             </div>
@@ -40,11 +61,11 @@
                         <li class="DropDown">
                             <button><i class="fa-solid fa-user"></i></button>
                             <div class="DropDown_Menu">
-                                <a>Nome :   <?php echo $_SESSION['administrador']['Nome'];?></a>
-                                <a>Email :  <?php echo $_SESSION['administrador']['Email'];?></a>
-                                <a>Senha :  <?php echo $_SESSION['administrador']['Senha'];?></a>
-                                <a>Nivel : Administrador</a>
-                                <a class="Btn-logout"><form method="POST"><input type="submit" name="logout" value="Sair"></form></a>
+                                <a>Nome :   <?php echo $_SESSION['Perfil']['Nome'];?></a>
+                                <a>Email :  <?php echo $_SESSION['Perfil']['Email'];?></a>
+                                <a>Senha :  <?php echo $_SESSION['Perfil']['Senha'];?></a>
+                                <a>Nivel :  <?php echo $_SESSION['Perfil']['Nivel de Acesso'];?></a>
+                                <a class="Btn-logout"><form method="POST" action="./logout-adm.php"><input type="submit" name="logout" value="Sair"></form></a>
                             </div>
                         </li>
                     </ul>
@@ -61,7 +82,7 @@
                 </legend>
                 <fieldset class="Dados"><legend class="Descricao-Dado">Usuario Comum</legend><i class="fa-solid fa-user"></i><br>
                 <?php 
-                    require_once("../conexao/conexao.php");
+                    require_once("/XAMPP/htdocs/Guia_Jovem-main/Guia_Jovem-main/app/models/database/conexao.php");
                     $dbConnection = new Conexao();
                     $db = $dbConnection->conexao();
                     $sql = "SELECT COUNT(*) AS total_usuarios_comuns FROM Perfis WHERE nivel_acesso = 'usuário comum'";
@@ -77,7 +98,7 @@
                 ?></fieldset>
                 <fieldset class="Dados"><legend class="Descricao-Dado">Administrador</legend><i class="fa-sharp fa-solid fa-user-tie"></i><br>
                 <?php 
-                    require_once("../conexao/conexao.php");
+                    require_once("/XAMPP/htdocs/Guia_Jovem-main/Guia_Jovem-main/app/models/database/conexao.php");
                     $dbConnection = new Conexao();
                     $db = $dbConnection->conexao();
                     $sql = "SELECT COUNT(*) AS total_administradores FROM Perfis WHERE nivel_acesso = 'administrador'";
@@ -93,7 +114,7 @@
                 ?></fieldset>
                 <fieldset class="Dados"><legend class="Descricao-Dado">Autores</legend><i class="fa-solid fa-tag"></i><br>
                 <?php 
-                    require_once("../conexao/conexao.php");
+                    require_once("/XAMPP/htdocs/Guia_Jovem-main/Guia_Jovem-main/app/models/database/conexao.php");
                     $dbConnection = new Conexao();
                     $db = $dbConnection->conexao();
                     $sql = "SELECT COUNT(*) AS total_autor FROM Perfis WHERE nivel_acesso = 'autor'";
@@ -109,7 +130,7 @@
                 ?></fieldset>
                 <fieldset class="Dados"><legend class="Descricao-Dado">Total</legend><i class="fa-solid fa-square-poll-vertical"></i><br>
                 <?php 
-                    require_once("../conexao/conexao.php");
+                   require_once("/XAMPP/htdocs/Guia_Jovem-main/Guia_Jovem-main/app/models/database/conexao.php");
                     $dbConnection = new Conexao();
                     $db = $dbConnection->conexao();
                     $sql = "SELECT COUNT(*) AS total FROM Perfis WHERE nivel_acesso";
@@ -128,6 +149,3 @@
  </footer>
 </body>
 </html>
-<?php
-    if(isset($_POST['logout'])){ header("Location:/XAMPP/htdocs/Guia_Jovem-Organizacao/site/Logout/Logout.php");}else{ return null;}
-?>

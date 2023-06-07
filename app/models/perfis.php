@@ -18,7 +18,8 @@
                         $query->bindParam(':email',$this->Email);
                         $query->execute();
                         if($query->rowCount() > 0){
-                            echo "<script> alert(' Esse Usuario Ja Esta Cadastrado ')</script>";
+                            echo "<script> alert(' Esse Usuario Ja Esta Cadastrado ');
+                            window.location.href='../../index.php';</script>";
                         }
                         else{
                             $query = $conexao->prepare("INSERT INTO perfis (nome,email,senha) VALUES (:nome,:email,:senha)");
@@ -33,6 +34,7 @@
                             $query2->execute();
                             echo "<script> alert(' Cadastro efetuado com sucesso! ');
                             window.location.href='../../index.php';</script>";
+                            // require_once("")
                     }
                     }catch (PDOException $E){
                         return "Error in inset Sing-in in the Banck. Error in ".$E->getMessage();

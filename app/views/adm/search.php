@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador - Pesquisar </title>
+    <link rel="stylesheet" href="./styles/search.css">
+
+    <script src="https://kit.fontawesome.com/7bcc76ecaf.js" crossorigin="anonymous"></script>
+</head>
 <body>
     <form method="POST">
     <div class="search-box">
@@ -14,11 +25,11 @@
     </label>
     <nav>
         <ul>
-        <li><a href="../Layout/Administrador.php" class="op"> Home </a></li>
-        <li><a href="./adm-pesquisar.php" class="op"> Pesquisar </a></li>
-        <li><a href="./adm-dados.php" class="op"> Dados </a></li>
-        <li><a href="./adm-noticia.php" class="op"> Noticias </a></li>
-        <li><a href="./adm-analise.php" class="op"> Analise </a></li>
+        <li><a href="../../layouts/adm/menu.php" class="op"> Home </a></li>
+        <li><a href="./search.php" class="op"> Pesquisar </a></li>
+        <li><a href="./dados.php" class="op"> Dados </a></li>
+        <li><a href="./notice.php" class="op"> Noticias </a></li>
+        <li><a href="./analise.php" class="op"> Analise </a></li>
         </ul>
     </nav>
     <div class="Dados">

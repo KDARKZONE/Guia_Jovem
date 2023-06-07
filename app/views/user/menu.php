@@ -1,7 +1,17 @@
 <?php
-    // session_start();
+session_start();
+if(isset($_SESSION['Perfil']) &&  $_SESSION['usuario'] == true){
+    echo "<script>alert(' Olá Bem vindo ".$_SESSION['Perfil']['nome']."')</script>";
+}
+else{
+    echo "<script>alert('Não existe conta cadastrada, por favor cadastre-se novamente');
+    window.location.href='../../index.php';</script>";
+}
+require_once("site/header.php");
+
 ?>
-<header class="cabeçario">
+    <body>
+    <header class="cabeçario">
         <!-- MENU RESPONSIVO -->
             <div class="Icone_Menu">
                 <input type="checkbox" id="check">
@@ -21,11 +31,12 @@
                             </div>
                         </ul>
                     </nav>
+            </div>
         </div>
         <!-- MENU TOTAL -->
         <div class="container">
             <div class="logo"> 
-            <img src="assets/img/guia_jovem_home.png">
+            <img src="./style/img/guia_jovem_home.png">
             </div>
             <div class="Menu">
                 <nav>
@@ -43,12 +54,17 @@
                 <button><i class="fa-brands fa-instagram"></i></button>
             </div>
             <div class="Login">
-                <button><a class="modal-link"><img src="assets/img/logooo.png" title="Entrar"></a></button>
+                <div class="DropDown">
+                    <button><img src="./style/img/foto_default.png"></a></button>
+                    <div class="DropDown_Menu">
+                        <a class="Informações"><?php echo @$_SESSION['Perfil']['Nome']; ?></a>
+                        <a class="Informações"><?php echo @$_SESSION['Perfil']['Email']; ?></a>
+                        <a class="Informações"><?php echo @$_SESSION['Perfil']['Senha']; ?></a>
+                        <a class="Informações"><?php echo @$_SESSION['Perfil']['Nivel de Acesso'];?></a>
+                        <a class="Informações"><form method="POST" action="../logout.php"><button type="submit" name="logout" value="Logout"> Logout </button></form></a>
+                    </div>
+            </div>
             </div>
         </div>
     </header>
-<?php
-    if(isset($_POST['submit'])){
-      require_once("/XAMPP/htdocs/Guia_Jovem-20230521T153750Z-001/Guia_Jovem/app/database/index.php");
-    }
-?>
+</html>
