@@ -31,7 +31,8 @@
                             $query2->bindParam(':usuario', $this->Usuario);
                             $query2->bindParam(':ID_perfil', $id_perfil);
                             $query2->execute();
-                            echo "<script> alert(' Cadastro efetuado com sucesso! ')</script>";
+                            echo "<script> alert(' Cadastro efetuado com sucesso! ');
+                            window.location.href='../../index.php';</script>";
                     }
                     }catch (PDOException $E){
                         return "Error in inset Sing-in in the Banck. Error in ".$E->getMessage();
