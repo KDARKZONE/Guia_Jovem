@@ -12,9 +12,6 @@
 
         echo "<form action='update.php' method='POST'>";
         echo "<input type='hidden' name='id' value='".$perfil['ID_perfil']."'>";
-        // echo "Nome: <input type='text' name='nome' value='".$perfil['nome']."'>";
-        // echo "Email: <input type='text' name='email' value='".$perfil['email']."'>";
-        // echo "Senha: <input type='text' name='senha' value='".$perfil['senha']."'>";
         echo "Nivel de Acesso: <input type='text' name='nivel_acesso' value='".$perfil['nivel_acesso']."'>";
         echo "<button type='submit'> Salvar </button>";
         echo "</form>";

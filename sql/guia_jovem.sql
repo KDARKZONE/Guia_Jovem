@@ -63,29 +63,29 @@
 
 	-- PERFIS
 		INSERT INTO perfis (nome, email, senha, nivel_acesso)
-VALUES ('teste', 'teste@gmail.com', 'Qm9sc29sdWxhMTMyMg==', 'usuário comum'),
+VALUES ('teste', 'teste@gmail.com', 'Qm9sc29sdWxhMTMyMg==', 'usuario comum'),
   ('Kauã', 'kauaalmeida8995@gmail.com', 'Qm9sc29sdWxhMTMyMg==', 'administrador'),
   ('autor', 'autor@gmail.com', 'Qm9sc29sdWxhMTMyMg==',  'autor'),
   ('Anderson', 'andersonpiresdacruz@gmail.com', 'Qm9sc29sdWxhMTMyMg==', 'administrador'),
-  ('João Silva', 'joao.silva@example.com', 'senha1',  'usuário comum'),
+  ('João Silva', 'joao.silva@example.com', 'senha1',  'usuario comum'),
   ('Maria Santos', 'maria.santos@example.com', 'senha2', 'autor'),
   ('Pedro Costa', 'pedro.costa@example.com', 'senha3', 'administrador'),
-  ('Ana Ferreira', 'ana.ferreira@example.com', 'senha4',  'usuário comum'),
+  ('Ana Ferreira', 'ana.ferreira@example.com', 'senha4',  'usuario comum'),
   ('Carlos Oliveira', 'carlos.oliveira@example.com', 'senha5', 'autor'),
   ('Sofia Pereira', 'sofia.pereira@example.com', 'senha6',  'administrador'),
-  ('Luiz Almeida', 'luiz.almeida@example.com', 'senha7', 'usuário comum'),
+  ('Luiz Almeida', 'luiz.almeida@example.com', 'senha7', 'usuario comum'),
   ('Laura Ribeiro', 'laura.ribeiro@example.com', 'senha8', 'autor'),
   ('Fernando Gomes', 'fernando.gomes@example.com', 'senha9', 'administrador'),
-  ('Mariana Sousa', 'mariana.sousa@example.com', 'senha10', 'usuário comum'),
+  ('Mariana Sousa', 'mariana.sousa@example.com', 'senha10', 'usuario comum'),
   ('Gabriel Carvalho', 'gabriel.carvalho@example.com', 'senha11', 'autor'),
   ('Carolina Mendes', 'carolina.mendes@example.com', 'senha12', 'administrador'),
-  ('Rafaela Castro', 'rafaela.castro@example.com', 'senha13', 'usuário comum'),
+  ('Rafaela Castro', 'rafaela.castro@example.com', 'senha13', 'usuario comum'),
   ('Ricardo Santos', 'ricardo.santos@example.com', 'senha14', 'autor'),
   ('Isabela Lima', 'isabela.lima@example.com', 'senha15',  'administrador'),
-  ('Daniel Pereira', 'daniel.pereira@example.com', 'senha16', 'usuário comum'),
+  ('Daniel Pereira', 'daniel.pereira@example.com', 'senha16', 'usuario comum'),
   ('Vitória Alves', 'vitoria.alves@example.com', 'senha17', 'autor'),
   ('Diego Fernandes', 'diego.fernandes@example.com', 'senha18', 'administrador'),
-  ('Larissa Ribeiro', 'larissa.ribeiro@example.com', 'senha19', 'usuário comum'),
+  ('Larissa Ribeiro', 'larissa.ribeiro@example.com', 'senha19', 'usuario comum'),
   ('Gustavo Melo', 'gustavo.melo@example.com', 'senha20', 'autor');
 	  -- USUARIOS ADM
 

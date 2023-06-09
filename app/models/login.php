@@ -22,11 +22,12 @@
                             'ID_perfil' => $row['ID_perfil'],
                             'nivel_acesso' => $row['nivel_acesso']
                         );
-                       require_once("../models/database/conexao.php");
+                       require_once("sessao.php");
 
                     }
                     else{
-                        echo "<script> alert('Oops! Verifique se os dados estão corretos e tente novamente ')</script>";
+                        echo "<script> alert('Oops! Verifique se os dados estão corretos e tente novamente ')
+                        window.location.href='../../index.php';</script>";
                     }
                 }catch(PDOException $e){
                     echo "<script> alert(' Error: ".$e->getMessage()."')</script>";

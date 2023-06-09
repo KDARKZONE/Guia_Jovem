@@ -10,21 +10,21 @@ class Sessao extends Login {
             $nivelAcesso = $_SESSION['Perfil']['nivel_acesso'];
 
             if ($nivelAcesso === 'usuario comum') {
-                $_SESSION['Usuario'] = true;
+                $_SESSION['usuario comum'] = true;
                 $_SESSION['administrador'] = null;
                 $_SESSION['autor'] = null;
-                header("Location:../views/layouts/user/index.php");        
+                header("Location:../views/user/index.php");        
                 
             } elseif ($nivelAcesso === 'autor') {
                 $_SESSION['autor'] = true;
                 $_SESSION['usuario comum'] = null;
                 $_SESSION['administrador'] = null;
-                header("Location: ../views/layouts/autor/index.php");
+                header("Location: ../views/autor/index.php");
             } elseif ($nivelAcesso === 'administrador') {
                 $_SESSION['administrador'] = true;
                 $_SESSION['usuario comum'] = null;
                 $_SESSION['autor'] = null;
-               header("Location:../views/layouts/adm/index.php");   
+               header("Location:../views/adm/index.php");   
             }
         } else {
             return null;

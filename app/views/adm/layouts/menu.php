@@ -1,7 +1,5 @@
-<?php
-    require_once("cabecario.php");
-?>
-        <header class="cabeçario">
+
+    <header class="cabeçario">
         <!-- MENU RESPONSIVO -->
             <div class="Icone_Menu">
                 <input type="checkbox" id="check">
@@ -24,16 +22,16 @@
         <!-- MENU TOTAL -->
         <div class="container">
             <div class="logo"> 
-            <img src="./style/img/guia_jovem_home.png">
+            <img src="../assets/style/img/guia_jovem_home.png">
             </div>
             <div class="Menu">
                 <nav>
                     <ul>
-                        <li><a href="./menu.php"> Home </a></li>
-                        <li><a href="../../controllers/adm/search.php"> Pesquisar </a></li>
-                        <li><a href="../../controllers/adm/dados.php"> Dados </a></li>
-                        <li><a href="../../controllers/adm/notice.php"> Noticia </a></li>
-                        <li><a href="../../controllers/adm/analise.php"> Analise </a></li>
+                        <li><a href="index"> Home </a></li>
+                        <li><a href="layouts/search.php"> Pesquisar </a></li>
+                        <li><a href="layouts/dados.php"> Dados </a></li>
+                        <li><a href="layouts/notice.php"> Noticia </a></li>
+                        <li><a href="layouts/analise.php"> Analise </a></li>
                       </ul>
                 </nav>
             </div> 

@@ -5,7 +5,7 @@
         // $email = $_POST['email'];
         // $senha = $_POST['senha'];
         $nivel_de_acesso = $_POST['nivel_acesso'];
-        require_once("../../../../models/database/conexao.php");
+        require_once("../models/database/conexao.php");
         $dbConnection = new Conexao();
         $db = $dbConnection->conexao();
         $sql = "UPDATE Perfis SET nivel_acesso = :nivel_acesso WHERE ID_perfil = :id";
@@ -13,7 +13,7 @@
         $stmt->bindParam(':id',$id);
         $stmt->bindParam(':nivel_acesso',$nivel_de_acesso);
         $stmt->execute();
-        header("Location:../dados.php");
+        header("Location: dados.php");
         exit;
     }
 ?>
