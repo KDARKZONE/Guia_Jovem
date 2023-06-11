@@ -1,29 +1,14 @@
-            <div class="Login">
-                <nav>
-                    <ul>
-                        <li class="DropDown">
-                            <button><i class="fa-solid fa-user"></i></button>
-                            <div class="DropDown_Menu">
-                                <a>Nome :   <?php echo $_SESSION['Perfil']['Nome'];?></a>
-                                <a>Email :  <?php echo $_SESSION['Perfil']['Email'];?></a>
-                                <a>Senha :  <?php echo $_SESSION['Perfil']['Senha'];?></a>
-                                <a>Nivel :  <?php echo $_SESSION['Perfil']['Nivel de Acesso'];?></a>
-                                <a class="Btn-logout"><form method="POST" action="./logout-adm.php"><input type="submit" name="logout" value="Sair"></form></a>
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-    <!-- Inicio -->
-    <section>
-        <div class="Welcome">
-            <fieldset class="Painel-de-Controle">
-                <legend class="painel-de-controle">
-                    Painel de Controle 
-                </legend>
-                <fieldset class="Dados"><legend class="Descricao-Dado">Usuario Comum</legend><i class="fa-solid fa-user"></i><br>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador</title>
+    <link rel="stylesheet" href="../assets/style/adm/css/analise.css">
+    <script src="https://kit.fontawesome.com/7bcc76ecaf.js" crossorigin="anonymous"></script>
+</head>
+    <fieldset class="Dados"><legend class="Descricao-Dado">Usuario Comum</legend><i class="fa-solid fa-user"></i><br>
                 <?php 
                     require_once("../../models/database/conexao.php");
                     $dbConnection = new Conexao();
@@ -41,7 +26,7 @@
                 ?></fieldset>
                 <fieldset class="Dados"><legend class="Descricao-Dado">Administrador</legend><i class="fa-sharp fa-solid fa-user-tie"></i><br>
                 <?php 
-                    require_once("models/database/conexao.php");
+                    require_once("../../models/database/conexao.php");
                     $dbConnection = new Conexao();
                     $db = $dbConnection->conexao();
                     $sql = "SELECT COUNT(*) AS total_administradores FROM Perfis WHERE nivel_acesso = 'administrador'";

@@ -174,7 +174,7 @@ section .Welcome{
 }
 section .Welcome table{
   margin-top: 1cm;
-  width: 100%;
+  width: 5000px;
 }
 section .Welcome table caption select{
   background-color: #333;
@@ -219,10 +219,10 @@ section .Welcome #autorTable  tr .title{
 section .Welcome #usuariosTable .usuario .btn{
   text-align: center;
 }
-section .Welcome #usuariosTable .administrador .btn{
+section .Welcome #administradoresTable .administrador .btn{
   text-align: center;
 }
-section .Welcome #usuariosTable .autor .btn{
+section .Welcome #autorTable .autor .btn{
   text-align: center;
 }
 section .Welcome .table-usuario{
@@ -311,7 +311,7 @@ section .Welcome .Configuer .configuer-container .configuer-option .op a{
 }
 section .Welcome .Configuer .configuer-container .configuer-option .op a::after{
   content: " ";
-  width: 0;
+  width: 0; 
   height: 4px;
   background-color: cyan;
   position: absolute;
@@ -321,15 +321,6 @@ section .Welcome .Configuer .configuer-container .configuer-option .op a::after{
 }
 section .Welcome .Configuer .configuer-container .configuer-option .op a:hover::after{
   width: 80px;
-}
-section .Welcome .Configuer .hidden .usuario .btn{
-  text-align: center;
-}
-section .Welcome .Configuer .hidden .administrador .btn{
-  text-align: center;
-}
-section .Welcome .Configuer .hidden .autor .btn{
-  text-align: center;
 }
 .Icone_Menu{
   display: none;
@@ -494,10 +485,6 @@ section .Welcome .Configuer .hidden .autor .btn{
       border-radius: 5px;
   } */
 }
-
-
-
-
 
 
 @media only screen and (max-width: 1000px) {

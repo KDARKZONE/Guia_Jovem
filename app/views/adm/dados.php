@@ -24,7 +24,6 @@
                         <td class="title">Id:</td>
                         <td class="title">Nome:</td>
                         <td class="title">E-mail:</td>
-                        <td class="title">Senha: </td>
                         <td class="title">Nivel de Acesso</td>
                         <td class="title">Editar/Deletar</td>
                     </tr>
@@ -38,11 +37,11 @@
                             }
                             else
                             if(isset($_POST['usuario'])){
-                                require_once("../models/database/conexao.php"); 
+                                require_once("../../models/database/conexao.php"); 
                             $dbConnection = new Conexao();
                             $db = $dbConnection->conexao();
                             // |---------------------------------------------------| USUARIO |---------------------------------------| \\
-                            $sql = "SELECT ID_perfil, nome ,email,senha ,nivel_acesso FROM Perfis WHERE nivel_acesso = 'usuario comum'";
+                            $sql = "SELECT ID_perfil, nome ,email, nivel_acesso FROM Perfis WHERE nivel_acesso = 'usuario comum'";
                             $stmt = $db->prepare($sql);
                             $stmt->execute();
                             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
@@ -52,11 +51,11 @@
                                 echo "<td>".$row['email']."</td>";
                                 echo "<td>".$row['nivel_acesso']."</td>";
                                 echo "<td class='btn'>";
-                                echo "<form action='layouts/delete.php' method='POST' style='display:inline'>";
+                                echo "<form action='delete.php' method='POST' style='display:inline'>";
                                 echo "<input type='hidden' name='id' value='".$row['ID_perfil']."'>";
                                 echo "<button type='submit'> Deletar </button>";
                                 echo "</form>";
-                                echo "<form action='layouts/edit.php' method='post' style='display:inline'>";
+                                echo "<form action='edit.php' method='post' style='display:inline'>";
                                 echo "<input type='hidden' name='id' value='".$row['ID_perfil']."'>";
                                 echo "<button type='submit'> Editar </button>";
                                 echo "</form>";
@@ -69,22 +68,21 @@
                             $dbConnection = new Conexao();
                             $db = $dbConnection->conexao();
                     // |--------------------------------------------------| ADMINISTRADOR |-----------------------------------| \\
-                    $sql = "SELECT ID_perfil, nome,email,senha , nivel_acesso FROM Perfis WHERE nivel_acesso = 'administrador'";
+                    $sql = "SELECT ID_perfil, nome, email, nivel_acesso FROM Perfis WHERE nivel_acesso = 'administrador'";
                     $stmt = $db->prepare($sql);
                     $stmt->execute();
                     while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                         echo "<tr class='administrador' id='tabelaAdministrador'>";
                         echo "<td>".$row['ID_perfil']."</td>";
                         echo "<td>".$row['nome']."</td>";
-                        echo "<td>".$row['email']."</td>";
-                        echo "<td>".$row['senha']."</td>";
+                        echo "<td>".$row['email']."</td>";                       
                         echo "<td>".$row['nivel_acesso']."</td>";
                         echo "<td class='btn'>";
-                                echo "<form action='layouts/delete.php' method='POST' style='display:inline'>";
+                                echo "<form action='delete.php' method='POST' style='display:inline'>";
                                 echo "<input type='hidden' name='id' value='".$row['ID_perfil']."'>";
                                 echo "<button type='submit'> Deletar </button>";
                                 echo "</form>";
-                                echo "<form action='layouts/edit.php' method='post' style='display:inline'>";
+                                echo "<form action='edit.php' method='post' style='display:inline'>";
                                 echo "<input type='hidden' name='id' value='".$row['ID_perfil']."'>";
                                 echo "<button type='submit'> Editar </button>";
                                 echo "</form>";
@@ -98,7 +96,7 @@
                             $dbConnection = new Conexao();
                             $db = $dbConnection->conexao();
                         // |-------------------------------------------------------| AUTOR |--------------------------------------|\\
-                        $sql = "SELECT ID_perfil, nome,email,senha, nivel_acesso FROM Perfis WHERE nivel_acesso = 'autor'";
+                        $sql = "SELECT ID_perfil, nome, email, nivel_acesso FROM Perfis WHERE nivel_acesso = 'autor'";
                         $stmt = $db->prepare($sql);
                         $stmt->execute();
                         while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
@@ -106,14 +104,13 @@
                             echo "<td>".$row['ID_perfil']."</td>";
                             echo "<td>".$row['nome']."</td>";
                             echo "<td>".$row['email']."</td>";
-                            echo "<td>".$row['senha']."</td>";
                             echo "<td>".$row['nivel_acesso']."</td>";
                             echo "<td class='btn'>";
-                            echo "<form action='layouts/delete.php' method='POST' style='display:inline'>";
+                            echo "<form action='delete.php' method='POST' style='display:inline'>";
                             echo "<input type='hidden' name='id' value='".$row['ID_perfil']."'>";
                             echo "<button type='submit'> Deletar </button>";
                             echo "</form>";
-                            echo "<form action='layouts/edit.php' method='post' style='display:inline'>";
+                            echo "<form action='edit.php' method='post' style='display:inline'>";
                             echo "<input type='hidden' name='id' value='".$row['ID_perfil']."'>";
                             echo "<button type='submit'> Editar </button>";
                             echo "</form>";
