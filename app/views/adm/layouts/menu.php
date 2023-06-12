@@ -52,6 +52,6 @@
     </header>
 </body>
 <?php
-    if(isset($_POST['logout'])){header("Location:logout.php");}else{return null;}
+    if(isset($_POST['logout'])){header("Location:controllers/logout.php");}else{return null;}
 ?>
 
