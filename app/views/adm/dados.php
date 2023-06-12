@@ -1,106 +1,76 @@
-           <section>
-            <div class="Welcome">
-                <fieldset class="Configuer">
-                    <legend>
-                        <input type="checkbox" id="hidden">
-                        <label for="hidden">
-                            <i class="fa-solid fa-screwdriver-wrench"></i>
-                        </label>
-                    </legend>
-                <header class="configuer-container">
-                    <form method="POST">
-                        <div class="configuer-option">
-                            <div class="op"><a><i class="fa-solid fa-user"></i><input type="submit" name="usuario" value="Usuario"></a></div>
-                            <div class="op"><a><i class="fa-solid fa-user-tie"></i><input type="submit" name="administrador" value="Administrador"></a></div>
-                            <div class="op"><a><i class="fa-solid fa-tag"></i><input type="submit" name="autor" value="Autor"></a></div>
-                            <div class="op"><a><i class="fa-solid fa-delete-left"></i><input type="submit" name="clear" value="Limpar"></a></div>
-                        </div>
-                    </form>
-                </header>
-                </fieldset>
-                </header>
-                <table id="usuariosTable" class="hidden">
-                    <tr class="title-table">
-                        <td class="title">Id:</td>
-                        <td class="title">Nome:</td>
-                        <td class="title">E-mail:</td>
-                        <td class="title">Nivel de Acesso</td>
-                        <td class="title">Editar/Deletar</td>
-                    </tr>
-                        <?php 
-                        
-                            // |----------------------------------------| Seleçao de Tabelas com PHP |------------------------------| \\
+<?php
+    session_start();
+    if(isset( $_SESSION['Perfil']) &&  $_SESSION['administrador'] == true){
+        null;
+    }
+    else{
+        echo "<script>alert('Você não tem permissão pra acessar está página');
+        window.location.href = '../../index.php';</script>";
+    }
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Painel de Controle</title>
+        <link rel="icon" href="../assets/style/adm/img/logooo.png">
+        <link rel="stylesheet" href="../assets/style/adm/css/dados.css">
+        <link rel="stylesheet" href="../assets/style/adm/css/hidden.css">
+        <script src="../assets/js/adm-option.js"></script>
+        <script src="https://kit.fontawesome.com/7bcc76ecaf.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <!-- Inicio -->
+    <section>
+        <div class="Welcome">
+            <fieldset class="Configuer">
+                <legend>
+                    <input type="checkbox" id="hidden">
+                    <label for="hidden">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </label>
+                </legend>
+            <header class="configuer-container">
+                <form method="POST">
+                    <div class="configuer-option">
+                        <div class="op"><a><i class="fa-solid fa-user"></i><input type="submit" name="usuario" value="Usuario"></a></div>
+                        <div class="op"><a><i class="fa-solid fa-user-tie"></i><input type="submit" name="administrador" value="Administrador"></a></div>
+                        <div class="op"><a><i class="fa-solid fa-tag"></i><input type="submit" name="autor" value="Autor"></a></div>
+                        <div class="op"><a><i class="fa-solid fa-delete-left"></i><input type="submit" name="clear" value="Limpar"></a></div>
+                    </div>
+                </form>
+            </header>
+            </fieldset>
+            </header>
+            <table id="usuariosTable" class="hidden">
+                <tr class="title-table">
+                    <td class="title">Id:</td>
+                    <td class="title">Nome:</td>
+                    <td class="title">E-mail:</td>
+                    <td class="title">Nivel de Acesso</td>
+                    <td class="title">Editar/Deletar</td>
+                </tr>
+                    <?php 
+                    
+                        // |----------------------------------------| Seleçao de Tabelas com PHP |------------------------------| \\
 
-                            #Pegando o Checkbox
-                            if(isset($_POST['clear'])){
-                                echo "<tr style='display:none'></tr>";
-                            }
-                            else
-                            if(isset($_POST['usuario'])){
-                                require_once("../../models/database/conexao.php"); 
-                            $dbConnection = new Conexao();
-                            $db = $dbConnection->conexao();
-                            // |---------------------------------------------------| USUARIO |---------------------------------------| \\
-                            $sql = "SELECT ID_perfil, nome ,email, nivel_acesso FROM Perfis WHERE nivel_acesso = 'usuario comum'";
-                            $stmt = $db->prepare($sql);
-                            $stmt->execute();
-                            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-                                echo "<tr class='usuario'>";
-                                echo "<td>".$row['ID_perfil']."</td>";
-                                echo "<td>".$row['nome']."</td>";
-                                echo "<td>".$row['email']."</td>";
-                                echo "<td>".$row['nivel_acesso']."</td>";
-                                echo "<td class='btn'>";
-                                echo "<form action='delete.php' method='POST' style='display:inline'>";
-                                echo "<input type='hidden' name='id' value='".$row['ID_perfil']."'>";
-                                echo "<button type='submit'> Deletar </button>";
-                                echo "</form>";
-                                echo "<form action='edit.php' method='post' style='display:inline'>";
-                                echo "<input type='hidden' name='id' value='".$row['ID_perfil']."'>";
-                                echo "<button type='submit'> Editar </button>";
-                                echo "</form>";
-                                echo "</td>";
-                                echo "</tr>";
-                            }
-                        } else 
-                        if(isset($_POST['administrador'])){
-                            require_once("../../models/database/conexao.php");
-                            $dbConnection = new Conexao();
-                            $db = $dbConnection->conexao();
-                    // |--------------------------------------------------| ADMINISTRADOR |-----------------------------------| \\
-                    $sql = "SELECT ID_perfil, nome, email, nivel_acesso FROM Perfis WHERE nivel_acesso = 'administrador'";
-                    $stmt = $db->prepare($sql);
-                    $stmt->execute();
-                    while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-                        echo "<tr class='administrador' id='tabelaAdministrador'>";
-                        echo "<td>".$row['ID_perfil']."</td>";
-                        echo "<td>".$row['nome']."</td>";
-                        echo "<td>".$row['email']."</td>";                       
-                        echo "<td>".$row['nivel_acesso']."</td>";
-                        echo "<td class='btn'>";
-                                echo "<form action='delete.php' method='POST' style='display:inline'>";
-                                echo "<input type='hidden' name='id' value='".$row['ID_perfil']."'>";
-                                echo "<button type='submit'> Deletar </button>";
-                                echo "</form>";
-                                echo "<form action='edit.php' method='post' style='display:inline'>";
-                                echo "<input type='hidden' name='id' value='".$row['ID_perfil']."'>";
-                                echo "<button type='submit'> Editar </button>";
-                                echo "</form>";
-                                echo "</td>";
-                                echo "</tr>";
-                    }
-                }
-                else 
-                if(isset($_POST['autor'])){
-                    require_once("../../models/database/conexao.php");
-                            $dbConnection = new Conexao();
-                            $db = $dbConnection->conexao();
-                        // |-------------------------------------------------------| AUTOR |--------------------------------------|\\
-                        $sql = "SELECT ID_perfil, nome, email, nivel_acesso FROM Perfis WHERE nivel_acesso = 'autor'";
+                        #Pegando o Checkbox
+                        if(isset($_POST['clear'])){
+                            echo "<tr style='display:none'></tr>";
+                        }
+                        else
+                        if(isset($_POST['usuario'])){
+                            require_once("../../models/database/conexao.php"); 
+                        $dbConnection = new Conexao();
+                        $db = $dbConnection->conexao();
+                        // |---------------------------------------------------| USUARIO |---------------------------------------| \\
+                        $sql = "SELECT ID_perfil, nome, email, nivel_acesso FROM Perfis WHERE nivel_acesso = 'usuario comum'";
                         $stmt = $db->prepare($sql);
                         $stmt->execute();
-                        while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-                            echo "<tr class='autor' id='tabelaAutor'>";
+                        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+                            echo "<tr class='usuario'>";
                             echo "<td>".$row['ID_perfil']."</td>";
                             echo "<td>".$row['nome']."</td>";
                             echo "<td>".$row['email']."</td>";
@@ -117,12 +87,67 @@
                             echo "</td>";
                             echo "</tr>";
                         }
-                    }else{
-                        return null;
+                    } else 
+                    if(isset($_POST['administrador'])){
+                        require_once("../../models/database/conexao.php");
+                        $dbConnection = new Conexao();
+                        $db = $dbConnection->conexao();
+                 // |--------------------------------------------------| ADMINISTRADOR |-----------------------------------| \\
+                $sql = "SELECT ID_perfil, nome, email, nivel_acesso FROM Perfis WHERE nivel_acesso = 'administrador'";
+                $stmt = $db->prepare($sql);
+                $stmt->execute();
+                while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+                    echo "<tr class='administrador' id='tabelaAdministrador'>";
+                    echo "<td>".$row['ID_perfil']."</td>";
+                    echo "<td>".$row['nome']."</td>";
+                    echo "<td>".$row['email']."</td>";
+                    echo "<td>".$row['nivel_acesso']."</td>";
+                    echo "<td class='btn'>";
+                            echo "<form action='delete.php' method='POST' style='display:inline'>";
+                            echo "<input type='hidden' name='id' value='".$row['ID_perfil']."'>";
+                            echo "<button type='submit'> Deletar </button>";
+                            echo "</form>";
+                            echo "<form action='edit.php' method='post' style='display:inline'>";
+                            echo "<input type='hidden' name='id' value='".$row['ID_perfil']."'>";
+                            echo "<button type='submit'> Editar </button>";
+                            echo "</form>";
+                            echo "</td>";
+                            echo "</tr>";
+                }
+            }
+            else 
+            if(isset($_POST['autor'])){
+                require_once("../../models/database/conexao.php");
+                        $dbConnection = new Conexao();
+                        $db = $dbConnection->conexao();
+                    // |-------------------------------------------------------| AUTOR |--------------------------------------|\\
+                    $sql = "SELECT ID_perfil, nome, email, nivel_acesso FROM Perfis WHERE nivel_acesso = 'autor'";
+                    $stmt = $db->prepare($sql);
+                    $stmt->execute();
+                    while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+                        echo "<tr class='autor' id='tabelaAutor'>";
+                        echo "<td>".$row['ID_perfil']."</td>";
+                        echo "<td>".$row['nome']."</td>";
+                        echo "<td>".$row['email']."</td>";
+                        echo "<td>".$row['nivel_acesso']."</td>";
+                        echo "<td class='btn'>";
+                        echo "<form action='delete.php' method='POST' style='display:inline'>";
+                        echo "<input type='hidden' name='id' value='".$row['ID_perfil']."'>";
+                        echo "<button type='submit'> Deletar </button>";
+                        echo "</form>";
+                        echo "<form action='edit.php' method='post' style='display:inline'>";
+                        echo "<input type='hidden' name='id' value='".$row['ID_perfil']."'>";
+                        echo "<button type='submit'> Editar </button>";
+                        echo "</form>";
+                        echo "</td>";
+                        echo "</tr>";
                     }
-                    ?>
-                </table>
-            </div>
-        </section>
-    </body>
+                }else{
+                    return null;
+                }
+                ?>
+            </table>
+        </div>
+    </section>
+</body>
 </html>

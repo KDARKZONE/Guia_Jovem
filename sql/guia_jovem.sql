@@ -40,8 +40,7 @@
 
 	CREATE TABLE IF NOT EXISTS post (
 	  ID_post INT NOT NULL AUTO_INCREMENT,
-	  data_publicacao DATE NOT NULL,
-	  hora_publicacao TIME NOT NULL,
+	  data_hora_post DATETIME NOT NULL,
 	  titulo TIME NOT NULL,
 	  conteudo TEXT NOT NULL,
 	  thumb LONGBLOB NOT NULL,

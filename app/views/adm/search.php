@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administrador</title>
+    <title>Administrador - Pesquisar </title>
     <link rel="stylesheet" href="../assets/style/adm/css/search.css">
     <script src="https://kit.fontawesome.com/7bcc76ecaf.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="body">
     <form method="POST">
     <div class="search-box">
     <input type="text" class="search-txt" placeholder="Pesquisar" name="search">
@@ -17,13 +17,13 @@
     </a></button>
     </div>
     </form>
-    <header>
+    <header class="header">
     <input type="checkbox" id="check">
-    <label for="check">
+    <label class="label" for="check">
         <i class="fa-solid fa-bars"></i> 
     </label>
-    <nav>
-        <ul>
+    <nav class="nav">
+        <ul class="ul">
             <li><a href="index.php">Home</a></li>
             <li><a href="search.php">Pesquisar</a></li>
             <li><a href="dados.php">Dados</a></li>

@@ -18,5 +18,10 @@
         <link rel="icon" href="../assets/style/adm/img/logooo.png">
         <link rel="stylesheet" href="../assets/style/adm/css/cabeçario-responsive.css">
         <link rel="stylesheet" href="../assets/style/adm/css/cabeçario.css">
+        <!-- <link rel="stylesheet" href="../assets/style/adm/css/search.css">
+        <link rel="stylesheet" href="../assets/style/adm/css/dados.css">
+        <link rel="stylesheet" href="../assets/style/adm/css/analise.css">
+        <link rel="stylesheet" href="../assets/style/adm/css/notice.css">
+        <link rel="stylesheet" href="../assets/style/adm/css/hidden.css"> -->
         <script src="https://kit.fontawesome.com/7bcc76ecaf.js" crossorigin="anonymous"></script>
     </head>
