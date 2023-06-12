@@ -4,30 +4,29 @@
     margin: 0px;
     box-sizing: border-box;
 }
-a{
-    text-decoration: none;
-    color: cyan;
-}
-body{
+
+.body-search{
     font-family: 'Poppins',sans-serif;
-    height: 100vh;
     width: 100%;
+    margin: 0;
+    height: 100vh;
+    background-color: #333;
 }
-header{
+.body-search .header-search{
     height: 100%;
     position: 'relative';
 }
-ul{
+.body-search .header-search .ul-search{
     list-style:none;
 }
-label i{
+.label-search .i-search{
     font-size: 30px;
     color: cyan;
 }
-input[type=checkbox]{
+.input-search{
     display: none;
 }
-nav{
+.nav-search{
     background-color: black;
     width: 350px;
     left: -350px;
@@ -37,48 +36,36 @@ nav{
     transition: all 0.5s;
     z-index: 2;
 }
-ul{
+.ul-search
+{
     top: 65px;
     position: absolute;
     width: 98%;
     background-color: black;
 
 }
-ul li{
+.ul-search .li-search{
     margin-bottom: 5px;
 }
-.op{
-    background-color: #333;
-    display: block;
-    padding: 20px 5px;
-}
-a:hover{
-    opacity: 0.7;
 
-}
-label{
+.label-search{
     background-color: #333;
     padding: 15px;
     position: fixed;
     z-index: 3;
     cursor:pointer;
 }
-input[type=checkbox]:checked ~ nav{
+.input-search:checked ~ nav{
     transform: translateX(350px);
 }
-input[type=checkbox]:checked ~ label{
+.input-search:checked ~ label{
     background-color: black;
 }
-body{
-    margin: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: #333;
-}
+
 .search-box{
     padding-top: 100px;
     position: absolute;
-    top: 5%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: #333;
@@ -105,7 +92,7 @@ form .search-txt{
     /*width: 40px;
     height: 40px;*/
     border-radius: 50%;
-    background: none;
+    background: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,6 +104,9 @@ form .search-txt{
     text-decoration: none;
     color: none;
     padding-left: 5px;
+    border: none;
+    color: cyan;
+
 }
 .search-box .search.txt a i{
     height: 20px;
@@ -125,7 +115,7 @@ form .search-txt{
 .Dados{
     padding-top: 100px;
     position: absolute;
-    top: 20%;
+    top: 50%;
     left: 350px;
     width: calc(100% - 350px);
     /* max-height: 100%; */

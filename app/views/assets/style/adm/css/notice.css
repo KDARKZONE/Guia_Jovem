@@ -1,180 +1,35 @@
 /** COMEÇANDO A ESTILIZAÇÃO DO MENU (HEADER) **/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Poppins:wght@300&family=Schibsted+Grotesk&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-  font-family: 'Poppins',sans-serif;
-  background-color:#333;
-  color: cyan;
-}
-.container{
-    max-width: 10000px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
 
-}
-.cabeçario{
-    background-color: #333;
-    width: 100%;
-    /* border: 2px solid cyan; */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 12);
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    left: 0;
-    margin-bottom: 20%;
-    z-index: 9999;
-}
-.Menu{
-    width: 50%; 
-    padding-left: 2%;
-}
-.Menu ul li{
-    list-style: none;
-    display: inline-block;
-}
-.logo{
-    width: 20%;
-}
-.logo img{
-  width: 100%;
-
-}
-.Menu nav a{
-    color: rgba(11, 241, 241);
-    text-decoration: none;
-    padding-right: 50px;
-    font-size: 18px;
-    cursor: pointer;
-    position: relative;
-    
-}
-.Menu nav a::after{
-    content: " ";
-    width: 0;
-    height: 4px;
-    background-color:rgba(11, 241, 241);
-    position: absolute;
-    top:0;
-    left:0;
-    transition: width 0.5s;
-}
-.Menu nav a:hover::after{
-    width: 50px;
-}
-.redes_sociais{
-    padding-right: 3cm;
-}
-.redes_sociais button{
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(45deg , cyan , rgb(19, 100, 100));
-    border: none;
-    border-radius: 8px;
-    margin-right:20px;
-    cursor:pointer;
-}
-.redes_sociais button i{
-    font-size: 20px;
-    color: white;
-
-}
-.redes_sociais button:hover{
-    transition: all 0.5s;
-    transform: scale(1.5);
-}
-
-ul li{
-  list-style: none;
-}
-.DropDown_Menu a{
-  color: cyan;
-  text-decoration: none;
-  display: block;
-  text-align: center;
-  background-color: #333;
-  padding: 15px;
-  width: 10cm;
-  cursor: pointer;
-  margin-bottom: 5px;
-}
-.DropDown_Menu{
-  display: none;
-}
-.DropDown:hover .DropDown_Menu{
-  position: absolute;
-  display: block;
-  right: 2%;
-  background-color: cyan;
-  border: 2px solid cyan;
-  padding: 5px;
-  animation-name: slow;
-  animation-duration: 1s;
-}
-.Login nav .DropDown button{
-  border: 2px solid Cyan;
-  border-radius: 50%;
-  background-color: #333;
-}
-.Login nav .DropDown button i{
-  padding: 15px;
-  font-size: 60px;
-  color: cyan;
-  cursor: pointer;
-}
-form input[type='submit']{
-  font-size: 20px;
-  color: cyan;
-  background-color: #333;
-  border: none;
-  cursor: pointer;
-}
-
-@keyframes slow{
-  from{opacity: 0;}
-  to {opacity: 1;}
-}
-section{
+.noticia{
   max-width: 100%;
 
 }
-section .selecao{
+.noticia .selecao{
   position:absolute;
   top: 25%;
   width: 100%;
   text-align: center;
 }
-section .selecao form label{
+.noticia .selecao form label{
   margin-right: 50px;
 }
-section .selecao form label input{
+.noticia .selecao form label input{
   z-index: 9999;
 }
-.Welcome{
+.post{
   width: 100%;
 }
-section .Welcome{
+.noticia .post{
   position: absolute;
   top: 25%;
 
 }
-section .Welcome table{
+.noticia .post table{
   margin-top: 1cm;
   width: 5000px;
 }
-section .Welcome table caption select{
+.noticia .post table caption select{
   background-color: #333;
   color: cyan;
   width: 200px;
@@ -184,14 +39,14 @@ section .Welcome table caption select{
   outline: none;
 }
 
-section .Welcome #usuariosTable  tr .title{  
+.noticia .post #usuariosTable  tr .title{  
   background-color: cyan;
   border: none;
   color: #333;
   font-weight: 700;
   text-align: center;
 }
-section .Welcome #administradoresTable  tr .title{ 
+.noticia .post #administradoresTable  tr .title{ 
   margin-top: 20px; 
   background-color: cyan;
   border: none;
@@ -199,32 +54,32 @@ section .Welcome #administradoresTable  tr .title{
   font-weight: 700;
   text-align: center;
 }
-section .Welcome #autorTable  tr .title{  
+.noticia .post #autorTable  tr .title{  
   background-color: cyan;
   border: none;
   color: #333;
   font-weight: 700;
   text-align: center;
 }
-section .Welcome #usuariosTable .usuario .btn{
+.noticia .post #usuariosTable .usuario .btn{
   text-align: center;
 }
-section .Welcome #administradoresTable .administrador .btn{
+.noticia .post #administradoresTable .administrador .btn{
   text-align: center;
 }
-section .Welcome #autorTable .autor .btn{
+.noticia .post #autorTable .autor .btn{
   text-align: center;
 }
-section .Welcome .table-usuario{
+.noticia .post .table-usuario{
   display: none;
 }
-section .Welcome .table-adm{
+.noticia .post .table-adm{
   display: none;
 }
-section .Welcome .table-autor{
+.noticia .post .table-autor{
   display: none;
 }
-section .Welcome table tr td button{
+.noticia .post table tr td button{
   padding: 5px;
   background-color: cyan;
   font-weight: 700;
@@ -234,56 +89,56 @@ section .Welcome table tr td button{
   cursor: pointer;
   margin-right: 10px;
 }
-section .Welcome table tr td button:hover{
+.noticia .post table tr td button:hover{
   opacity: 0.8;
 }
  
-section .Welcome .Painel-de-Controle{
+.noticia .post .Painel-de-Controle{
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-section .Welcome .Painel-de-Controle .painel-de-controle{
+.noticia .post .Painel-de-Controle .painel-de-controle{
   text-align: center;
   padding: 5px;
 }
-section .Welcome .Painel-de-Controle{
+.noticia .post .Painel-de-Controle{
   border: 2px solid cyan;
   padding: 10px;
 }
-section .Welcome .Painel-de-Controle .Dados .Descricao-Dado{
+.noticia .post .Painel-de-Controle .Dados .Descricao-Dado{
   text-align: center;
   padding: 5px;
 }
-section .Welcome .Painel-de-Controle .Dados{
+.noticia .post .Painel-de-Controle .Dados{
   border: 2px solid cyan;
   display: inline-block;
   margin-right: 5%;
   padding: 20px;
   text-align: center;
 }
-section .Welcome .Painel-de-Controle .Dados i{
+.noticia .post .Painel-de-Controle .Dados i{
   font-size: 100px;
   text-align: center;
 }
-section .Welcome .Painel-de-Controle .Dados p{
+.noticia .post .Painel-de-Controle .Dados p{
   font-weight: 700;
 }
-section .Welcome .Configuer{
+.noticia .post .Configuer{
   border: none;
 }
-section .Welcome .Configuer legend{
+.noticia .post .Configuer legend{
   text-align: center;
 }
-section .Welcome .Configuer legend i{
+.noticia .post .Configuer legend i{
   font-size: 30px;
   cursor:pointer;
 }
-section .Welcome .Configuer #hidden{
+.noticia .post .Configuer #hidden{
   display: none;
 }
-section .Welcome .Configuer .configuer-container{
+.noticia .post .Configuer .configuer-container{
   width: 100%;
   display: flex;
   align-items: center;
@@ -291,15 +146,15 @@ section .Welcome .Configuer .configuer-container{
   justify-items: center;
   
 }
-section .Welcome .Configuer .configuer-container .configuer-option .op{
+.noticia .post .Configuer .configuer-container .configuer-option .op{
   display: inline-block;
   padding-right: 90px;
   
 }
-section .Welcome .Configuer .configuer-container .configuer-option .op a{
+.noticia .post .Configuer .configuer-container .configuer-option .op a{
   position: relative;
 }
-section .Welcome .Configuer .configuer-container .configuer-option .op a::after{
+.noticia .post .Configuer .configuer-container .configuer-option .op a::after{
   content: " ";
   width: 0; 
   height: 4px;
@@ -309,234 +164,6 @@ section .Welcome .Configuer .configuer-container .configuer-option .op a::after{
   left: 0;
   transition: width 0.5s;
 }
-section .Welcome .Configuer .configuer-container .configuer-option .op a:hover::after{
+.noticia .post .Configuer .configuer-container .configuer-option .op a:hover::after{
   width: 80px;
 }
-.Icone_Menu{
-  display: none;
-}
-@media screen and (max-width: 1000px){
-  *{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-  }
-  .container{
-      display:none;
-  }
-  .Menu_Vertical{
-      display: block;
-  }
-  .Icone_Menu{
-      display: block; 
-  }
-  .cabeçario{
-      background: none;
-      border:none;
-      height: 100%;
-      padding: 0;
-  }
-  .Icone_Menu input[type=checkbox]{
-      display: none;
-  }
-  .Icone_Menu .opções{
-      padding-left: 5px;
-  }
-  .Icone_Menu nav{
-      background-color:black;
-      width: 350px;
-      height: 100%;
-      left: -350px;
-      position: fixed;
-      transition: all 0.5s;
-  }
-  .Icone_Menu .opções a{
-      background-color: #333;
-      display: block;
-      padding: 20px 5px;
-      color: cyan;
-      cursor: pointer;
-      margin-bottom: 1%;
-      text-decoration: none;
-
-  }
-  .Icone_Menu .opções a:hover{
-      opacity: 0.9;
-
-  }
-  .Icone_Menu label{
-      background-color: black;
-      padding: 15px;
-      position: absolute;
-      z-index: 1;
-      cursor: pointer;
-      border-radius: 8px;
-  }
-  .Icone_Menu .opções ul{
-      top: 55px;
-      position: absolute;
-      width: 98%;
-  }
-  .Icone_Menu .opções ul li a{
-      text-decoration: none;
-  }
-  .Icone_Menu label i{
-      color: cyan;
-  }
-  .Icone_Menu nav .redes_sociais button{
-      width: 40px;
-      height: 40px;
-      background: cyan;
-      border:none;
-      border-radius:8px;
-      margin-right: 20px;
-      cursor:pointer;
-  }
-  .Icone_Menu nav button i{
-      font-size: 20px;
-      color: white;
-  }
-  /*.Icone_Menu nav .botão{
-      margin-top: 10%;
-      margin-bottom: 2%;
-  }*/
-  .Icone_Menu nav .redes_sociais{
-      width: 100%;
-      padding-left: 70.99px;;
-      padding-right:0;
-      padding-top: 20px;
-  }
-  .Icone_Menu nav .botão{
-      display: inline;
-      width: 40px;
-      padding-left:0;
-  }
-  .Icone_Menu nav .login{
-      background: none;
-      width: 100%;
-      padding-left: 119.99px;
-  }
-  .Icone_Menu nav .login  a{
-      background: none;
-  }
-  .Icone_Menu nav .login  button{
-      background: none;
-      border: none;
-  }
-  .Icone_Menu nav .login  button img{
-      width: 50px;
-  }
-  input[type=checkbox]:checked ~ nav{
-      transform: translate(350px);
-  }
-
-}
-
-
-@media only screen and (max-width: 1000px) {
-    /* Define as regras CSS para telas menores que 768px */
-    .logo {
-      width: 25%;
-    }
-    .Menu {
-      width: 50%;
-      padding-top: 20px;
-    }
-    .Menu nav a {
-      font-size: 16px;
-      padding-right: 30px;
-    }
-    .redes_sociais {
-      padding-right: 2cm;
-    }
-    .redes_sociais button {
-      margin-right: 10px;
-      width: 30px;
-      height: 30px;
-    }
-    .redes_sociais button i {
-      font-size: 16px;
-    }
-    .Login .botão {
-      width: 40px;
-      border: 3px solid cyan;
-    }
-    .Anuncio{
-        display: none;
-    }
-    footer p {
-      font-size: 14px;
-    }
-  }
-  
-@media only screen and (max-width: 768px) {
-    /* Define as regras CSS para telas menores que 768px */
-    .logo {
-      width: 25%;
-    }
-    .Menu {
-      width: 50%;
-      padding-top: 20px;
-    }
-    .Menu nav a {
-      font-size: 16px;
-      padding-right: 30px;
-    }
-    .redes_sociais {
-      padding-right: 2cm;
-    }
-    .redes_sociais button {
-      margin-right: 10px;
-      width: 30px;
-      height: 30px;
-    }
-    .redes_sociais button i {
-      font-size: 16px;
-    }
-    .Login .botão {
-      width: 40px;
-      border: 3px solid cyan;
-    }
-    .Anuncio{
-        display: none;
-    }
-    footer p {
-      font-size: 14px;
-    }
-  }
-  
-  @media only screen and (max-width: 480px) {
-    /* Define as regras CSS para telas menores que 480px */
-    .logo {
-      width: 30%;
-    }
-    .Menu {
-      width: 100%;
-      padding-top: 20px;
-    }
-    .Menu nav a {
-      font-size: 14px;
-      padding-right: 20px;
-    }
-    .redes_sociais {
-      padding-right: 1cm;
-    }
-    .redes_sociais button {
-      margin-right: 10px;
-      width: 25px;
-      height: 25px;
-    }
-    .redes_sociais button i {
-      font-size: 14px;
-    }
-    .Login .botão {
-      width: 30px;
-      border: 2px solid cyan;
-    }
-    .Anuncio{
-        display: none;
-    }
-    footer p {
-      font-size: 12px;
-    }
-  }

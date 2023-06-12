@@ -1,60 +1,38 @@
-<?php
-    session_start();
-    if(isset( $_SESSION['Perfil']) &&  $_SESSION['administrador'] == true){
-        null;
-    }
-    else{
-        echo "<script>alert('Você não tem permissão pra acessar está página');
-        window.location.href = '../../index.php';</script>";
-    }
+<?php 
+    require_once "layouts/header.php";
+    require_once "layouts/menu.php";
 ?>
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Painel de Controle</title>
-        <link rel="icon" href="../assets/style/adm/img/logooo.png">
-        <link rel="stylesheet" href="../assets/style/adm/css/dados.css">
-        <link rel="stylesheet" href="../assets/style/adm/css/hidden.css">
-        <script src="../assets/js/adm-option.js"></script>
-        <script src="https://kit.fontawesome.com/7bcc76ecaf.js" crossorigin="anonymous"></script>
-    </head>
-    
-    <!-- Inicio -->
-    <section>
-        <div class="Welcome">
-            <fieldset class="Configuer">
-                <legend>
-                    <input type="checkbox" id="hidden">
-                    <label for="hidden">
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
-                    </label>
-                </legend>
-            <header class="configuer-container">
-                <form method="POST">
-                    <div class="configuer-option">
-                        <div class="op"><a><i class="fa-solid fa-user"></i><input type="submit" name="usuario" value="Usuario"></a></div>
-                        <div class="op"><a><i class="fa-solid fa-user-tie"></i><input type="submit" name="administrador" value="Administrador"></a></div>
-                        <div class="op"><a><i class="fa-solid fa-tag"></i><input type="submit" name="autor" value="Autor"></a></div>
-                        <div class="op"><a><i class="fa-solid fa-delete-left"></i><input type="submit" name="clear" value="Limpar"></a></div>
-                    </div>
-                </form>
-            </header>
-            </fieldset>
-            </header>
-            <table id="usuariosTable" class="hidden">
-                <tr class="title-table">
-                    <td class="title">Id:</td>
-                    <td class="title">Nome:</td>
-                    <td class="title">E-mail:</td>
-                    <td class="title">Nivel de Acesso</td>
-                    <td class="title">Editar/Deletar</td>
-                </tr>
-                    <?php 
-                    
-                        // |----------------------------------------| Seleçao de Tabelas com PHP |------------------------------| \\
+<section class="dados">
+    <div class="Welcome">
+                <fieldset class="Configuer">
+                    <legend>
+                        <input type="checkbox" id="hidden">
+                        <label for="hidden">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </label>
+                    </legend>
+                <header class="configuer-container">
+                    <form method="POST">
+                        <div class="configuer-option">
+                            <div class="op"><a><i class="fa-solid fa-user"></i><input type="submit" name="usuario" value="Usuario"></a></div>
+                            <div class="op"><a><i class="fa-solid fa-user-tie"></i><input type="submit" name="administrador" value="Administrador"></a></div>
+                            <div class="op"><a><i class="fa-solid fa-tag"></i><input type="submit" name="autor" value="Autor"></a></div>
+                            <div class="op"><a><i class="fa-solid fa-delete-left"></i><input type="submit" name="clear" value="Limpar"></a></div>
+                        </div>
+                    </form> 
+                </header>
+                </fieldset>
+                </header>
+                <table id="usuariosTable" class="hidden">
+                    <tr class="title-table">
+                        <td class="title">Id:</td>
+                        <td class="title">Nome:</td>
+                        <td class="title">E-mail:</td>
+                        <td class="title">Nivel de Acesso</td>
+                        <td class="title">Editar/Deletar</td>
+                    </tr>
+<?php                    
+// |----------------------------------------| Seleçao de Tabelas com PHP |------------------------------| \\
 
                         #Pegando o Checkbox
                         if(isset($_POST['clear'])){
@@ -76,7 +54,7 @@
                             echo "<td>".$row['email']."</td>";
                             echo "<td>".$row['nivel_acesso']."</td>";
                             echo "<td class='btn'>";
-                            echo "<form action='delete.php' method='POST' style='display:inline'>";
+                            echo "<form action='controllers/delete.php' method='POST' style='display:inline'>";
                             echo "<input type='hidden' name='id' value='".$row['ID_perfil']."'>";
                             echo "<button type='submit'> Deletar </button>";
                             echo "</form>";
@@ -103,7 +81,7 @@
                     echo "<td>".$row['email']."</td>";
                     echo "<td>".$row['nivel_acesso']."</td>";
                     echo "<td class='btn'>";
-                            echo "<form action='delete.php' method='POST' style='display:inline'>";
+                            echo "<form action='controllers/delete.php' method='POST' style='display:inline'>";
                             echo "<input type='hidden' name='id' value='".$row['ID_perfil']."'>";
                             echo "<button type='submit'> Deletar </button>";
                             echo "</form>";
@@ -131,7 +109,7 @@
                         echo "<td>".$row['email']."</td>";
                         echo "<td>".$row['nivel_acesso']."</td>";
                         echo "<td class='btn'>";
-                        echo "<form action='delete.php' method='POST' style='display:inline'>";
+                        echo "<form action='controllers/delete.php' method='POST' style='display:inline'>";
                         echo "<input type='hidden' name='id' value='".$row['ID_perfil']."'>";
                         echo "<button type='submit'> Deletar </button>";
                         echo "</form>";
@@ -149,5 +127,3 @@
             </table>
         </div>
     </section>
-</body>
-</html>

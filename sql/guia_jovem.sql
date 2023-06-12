@@ -42,7 +42,7 @@
 	  ID_post INT NOT NULL AUTO_INCREMENT,
 	  data_hora_post DATETIME NOT NULL,
 	  titulo TIME NOT NULL,
-	  conteudo TEXT NOT NULL,
+	  conteudo TEXT NOT NULL,	
 	  thumb LONGBLOB NOT NULL,
 	  cpf VARCHAR(14) NOT NULL,
 	  PRIMARY KEY (ID_post),

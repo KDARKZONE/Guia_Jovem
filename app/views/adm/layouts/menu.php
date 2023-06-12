@@ -8,13 +8,12 @@
                     <nav class="opções">
                         <ul>
                         <li><a href="index.php">Home</a></li>
-                        <li><a href="search.php">Pesquisar</a></li>
                         <li><a href="dados.php">Dados</a></li>
                         <li><a href="notice.php">Noticia</a></li>
                         <li><a href="analise.php">Analise</a></li>
                         </ul>
                     </nav>
-                <div class="login">
+                <div class="perfil">
             
                 </div>
             </div>
@@ -27,14 +26,13 @@
                 <nav>
                     <ul>
                         <li><a href="index.php">Home</a></li>
-                        <li><a href="search.php">Pesquisar</a></li>
                         <li><a href="dados.php">Dados</a></li>
                         <li><a href="notice.php">Noticia</a></li>
                         <li><a href="analise.php">Analise</a></li>
                       </ul>
                 </nav>
             </div> 
-            <div class="Login">
+            <div class="perfil">
                 <nav>
                     <ul>
                         <li class="DropDown">
@@ -52,13 +50,6 @@
             </div>
         </div>
     </header>
-    <!-- Inicio -->
-    <section>
-        <div class="Welcome">
-            <h3<p>Olá Administrador <?php echo  $_SESSION['Perfil']['nome']?></p></h3>
-        </div>
-    </section>
-
 </body>
 <?php
     if(isset($_POST['logout'])){header("Location:logout.php");}else{return null;}

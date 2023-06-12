@@ -2,7 +2,11 @@
 require_once "layouts/header.php";
 require_once "layouts/menu.php";
 ?>
-    <fieldset class="Dados"><legend class="Descricao-Dado">Usuario Comum</legend><i class="fa-solid fa-user"></i><br>
+<section class="analise">
+    <div class="Welcome">
+    <fieldset class="Painel-de-Controle">
+        <legend class="painel-de-controle">Painel de Controle</legend>
+    <fieldset class="container"><legend class="Descricao-Dado">Usuario Comum</legend><i class="fa-solid fa-user"></i><br>
                 <?php 
                     require_once("../../models/database/conexao.php");
                     $dbConnection = new Conexao();
@@ -18,7 +22,7 @@ require_once "layouts/menu.php";
                     }
 
                 ?></fieldset>
-                <fieldset class="Dados"><legend class="Descricao-Dado">Administrador</legend><i class="fa-sharp fa-solid fa-user-tie"></i><br>
+                <fieldset class="container"><legend class="Descricao-Dado">Administrador</legend><i class="fa-sharp fa-solid fa-user-tie"></i><br>
                 <?php 
                     require_once("../../models/database/conexao.php");
                     $dbConnection = new Conexao();
@@ -34,7 +38,7 @@ require_once "layouts/menu.php";
                         echo "Error";
                     }
                 ?></fieldset>
-                <fieldset class="Dados"><legend class="Descricao-Dado">Autores</legend><i class="fa-solid fa-tag"></i><br>
+                <fieldset class="container"><legend class="Descricao-Dado">Autores</legend><i class="fa-solid fa-tag"></i><br>
                 <?php 
                     require_once("../../models/database/conexao.php");
                     $dbConnection = new Conexao();
@@ -50,7 +54,7 @@ require_once "layouts/menu.php";
                         echo "Error";
                     }
                 ?></fieldset>
-                <fieldset class="Dados"><legend class="Descricao-Dado">Total</legend><i class="fa-solid fa-square-poll-vertical"></i><br>
+                <fieldset class="container"><legend class="Descricao-Dado">Total</legend><i class="fa-solid fa-square-poll-vertical"></i><br>
                 <?php 
                    require_once("../../models/database/conexao.php");
                     $dbConnection = new Conexao();

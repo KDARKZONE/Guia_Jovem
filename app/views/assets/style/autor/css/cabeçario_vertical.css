@@ -8,7 +8,7 @@
         box-sizing: border-box;
     }
     .container{
-        display:none;
+        display:none; 
     }
     .Menu_Vertical{
         display: block;
