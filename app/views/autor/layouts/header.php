@@ -9,7 +9,7 @@
             <link rel="stylesheet" href="../assets/style/autor/css/body.css">
             <link rel="stylesheet" href="../assets/style/autor/css/cabeçario.css"> 
             <link rel="stylesheet" href="../assets/style/autor/css/cabeçario_vertical.css">
-            <script src="../assets/js/autor.js"></script>
+            <link rel="stylesheet" href="../assets/style/autor/css/form-autor.css">
             <title>Guia Jovem</title>
         </head>
         <!-- fecha depois --> 
