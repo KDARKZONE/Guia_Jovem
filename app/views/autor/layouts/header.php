@@ -1,3 +1,7 @@
+<?php 
+  session_start();
+  if(isset($_SESSION['Perfil']) && $_SESSION['autor'] == true){
+    echo'
 <!DOCTYPE html>
     <html lang="pt-br">
         <head>
@@ -12,4 +16,10 @@
             <link rel="stylesheet" href="../assets/style/autor/css/form-autor.css">
             <title>Guia Jovem</title>
         </head>
-        <!-- fecha depois --> 
+        <!-- fecha depois --> ';}
+        else{
+            session_destroy();
+            die("<script>alert('Você não tem permissão para acessar essa página');
+            window.location.href='../../../index.php';</script>");
+             } 
+     ?>

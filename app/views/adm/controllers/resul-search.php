@@ -1,6 +1,6 @@
 <?php
     # caso o Administrador queira Saber os Nomes das Pessoas que estão no Banco Ordenado pela Primeira Letra do Nome
-    require_once("../../models/database/conexao.php");
+    require_once("../../../models/database/conexao.php");
     $dbConnection = new Conexao();
     $db = $dbConnection->conexao();
     @$Letra = $_POST['search'];

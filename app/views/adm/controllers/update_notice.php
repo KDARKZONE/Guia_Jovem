@@ -2,7 +2,7 @@
     if($_SERVER['REQUEST_METHOD'] === "POST"){
         $id = $_POST['id'];
         $conteudo = $_POST['conteudo'];
-        require_once("../../models/database/conexao.php");
+        require_once("../../../models/database/conexao.php");
         $dbConnection = new Conexao();
         $db = $dbConnection->conexao();
         $sql = "UPDATE post SET conteudo = :conteudo WHERE ID_post = :id";

@@ -1,6 +1,6 @@
 <?php
 @session_start();
-require_once("../models/login.php");
+require_once("login.php");
 
 class Sessao extends Login {
     public function verificarNivelAcesso() {
@@ -15,12 +15,17 @@ class Sessao extends Login {
                 $_SESSION['autor'] = null;
                 header("Location:../views/user/index.php");        
                 
-            } elseif ($nivelAcesso == 'autor') {
+            } 
+            else
+            if ($nivelAcesso == 'autor') {
                 $_SESSION['autor'] = true;
                 $_SESSION['usuario comum'] = null;
                 $_SESSION['administrador'] = null;
-                header("Location: ../views/autor/index.php");
-            } elseif ($nivelAcesso == 'administrador') {
+                header("Location: verificacao_autor.php");
+                //header("Location: ../views/autor/index.php");
+            } 
+            else
+            if ($nivelAcesso == 'administrador') {
                 $_SESSION['administrador'] = true;
                 $_SESSION['usuario comum'] = null;
                 $_SESSION['autor'] = null;
@@ -28,7 +33,6 @@ class Sessao extends Login {
             }
         } else {
             return null;
-
         }
     }
 }

@@ -1,6 +1,6 @@
 
 <?php  
-    require_once("../models/database/conexao.php");
+    require_once("database/conexao.php");
     Class Login extends Conexao{
         protected  $Email; 
         protected  $Senha;
@@ -9,8 +9,8 @@
                 $this->Email = $_POST['email'];
                 $this->Senha = base64_encode($_POST['senha']);
                 try{
-                    $conexão = $this->conexao();
-                    $query = $conexão->prepare("SELECT*FROM perfis WHERE email = :email AND senha = :senha");
+                    $conexao = $this->conexao();
+                    $query = $conexao->prepare("SELECT*FROM perfis WHERE email = :email AND senha = :senha");
                     $query->bindParam(':email',$this->Email);
                     $query->bindParam(':senha',$this->Senha);
                     $query->execute();
@@ -23,7 +23,6 @@
                             'nivel_acesso' => $row['nivel_acesso']
                         );
                        require_once("sessao.php");
-
                     }
                     else{
                         echo "<script> alert('Oops! Verifique se os dados estão corretos e tente novamente ')

@@ -21,7 +21,7 @@
 	);
 
 	CREATE TABLE IF NOT EXISTS autores (
-	  cpf VARCHAR(14) NOT NULL,
+	  cpf VARCHAR(20) NOT NULL,
 	  data_de_nascimento DATE NOT NULL,
 	  ID_perfil INT NOT NULL,
 	  PRIMARY KEY (cpf),
@@ -39,7 +39,7 @@
 	CREATE TABLE IF NOT EXISTS post (
 	  ID_post INT NOT NULL AUTO_INCREMENT,
 	  data_hora_post DATETIME NOT NULL,
-	  titulo TIME NOT NULL,
+	  titulo TEXT NOT NULL,
 	  conteudo TEXT NOT NULL,	
 	  thumb LONGBLOB NOT NULL,
 	  cpf VARCHAR(14) NOT NULL,
@@ -66,8 +66,8 @@ VALUES ('teste', 'teste@gmail.com', 'Qm9sc29sdWxhMTMyMg==', 'usuario comum'),
   ('Anderson', 'andersonpiresdacruz@gmail.com', 'Qm9sc29sdWxhMTMyMg==', 'administrador'),
   ('João Silva', 'joao.silva@example.com', 'c2VuaGEx',  'usuario comum'),
   ('Maria Santos', 'maria.santos@example.com', 'c2VuaGEy', 'autor'),
-  ('Pedro Costa', 'pedro.costa@example.com', 'senha3', 'administrador'),
-  ('Ana Ferreira', 'ana.ferreira@example.com', 'c2VuaGEz',  'usuario comum'),
+  ('Pedro Costa', 'pedro.costa@example.com', 'c2VuaGEz', 'administrador'),
+  ('Ana Ferreira', 'ana.ferreira@example.com', 'c2VuaGE0',  'usuario comum'),
   ('Carlos Oliveira', 'carlos.oliveira@example.com', 'c2VuaGE1', 'autor'),
   ('Sofia Pereira', 'sofia.pereira@example.com', 'c2VuaGE2',  'administrador'),
   ('Luiz Almeida', 'luiz.almeida@example.com', 'c2VuaGE3', 'usuario comum'),
@@ -94,5 +94,5 @@ VALUES ('teste', 'teste@gmail.com', 'Qm9sc29sdWxhMTMyMg==', 'usuario comum'),
 	VALUES ('teste', 1);
 	-- AUTOR
 	INSERT INTO autores (cpf, data_de_nascimento, ID_perfil)
-	VALUES ('00011122233', '2000-01-01', 4);
+	VALUES ('000.111.222-33', '2000-01-01', 3);
 

@@ -23,7 +23,7 @@
                 <a href="#">
                     <img src="assets/style/site/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
                 </a>    
-                    <p><a hr    ef="" class="category">Categoria</a></p>
+                    <p><a href="" class="category">Categoria</a></p>
                     <h2><a href=    "" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
                             error do    lorem. Recusandae,
                             quo ex labor    um voluptate pariatur praesentium error doloremque cumque, mollitia laboriosam vel

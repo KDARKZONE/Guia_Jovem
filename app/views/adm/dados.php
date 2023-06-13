@@ -58,7 +58,7 @@
                             echo "<input type='hidden' name='id' value='".$row['ID_perfil']."'>";
                             echo "<button type='submit'> Deletar </button>";
                             echo "</form>";
-                            echo "<form action='edit.php' method='post' style='display:inline'>";
+                            echo "<form action='controllers/edit.php' method='post' style='display:inline'>";
                             echo "<input type='hidden' name='id' value='".$row['ID_perfil']."'>";
                             echo "<button type='submit'> Editar </button>";
                             echo "</form>";

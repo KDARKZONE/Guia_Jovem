@@ -10,7 +10,7 @@
         $stmt->bindParam(':id',$id);
         $stmt->bindParam(':nivel_acesso',$nivel_de_acesso);
         $stmt->execute();
-        header("Location: dados.php");
+        header("Location: ../dados.php");
         exit;
     }
 ?>

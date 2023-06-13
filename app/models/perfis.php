@@ -1,5 +1,5 @@
     <?php
-    require_once("../models/database/conexao.php");
+    require_once("database/conexao.php");
     Class Perfis Extends Conexao{
         protected $Nome;
         protected $Email;
