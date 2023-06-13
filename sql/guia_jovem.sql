@@ -14,7 +14,6 @@
 
 	CREATE TABLE IF NOT EXISTS usuarios_comuns (
 	  usuario VARCHAR(50) NOT NULL,
-	  status_usuario BOOLEAN,
 	  ID_perfil INT NOT NULL,
 	  foto_usuario LONGBLOB,
 	  PRIMARY KEY (usuario),
@@ -24,7 +23,6 @@
 	CREATE TABLE IF NOT EXISTS autores (
 	  cpf VARCHAR(14) NOT NULL,
 	  data_de_nascimento DATE NOT NULL,
-	  status_autor BOOLEAN,
 	  ID_perfil INT NOT NULL,
 	  PRIMARY KEY (cpf),
 	  FOREIGN KEY (ID_perfil) REFERENCES perfis(ID_perfil)
