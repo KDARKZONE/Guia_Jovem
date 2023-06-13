@@ -1,4 +1,4 @@
-    <body>
+<body>
         <header class="cabeçario">
             <!-- MENU RESPONSIVO -->
                 <div class="Icone_Menu">
@@ -45,43 +45,43 @@
                     <div class="DropDown">
                         <button class="conta"><img src="../assets/style/autor/img/foto_default.png"></a></button>
                         <div class="DropDown_Menu">
-                            <a class="Informações"><form method="POST" action="../../layouts/logout.php"><input type="submit" name="logout" value="Logout"></form></a>
+                            <a class="Informações"><form method="POST" action="controllers/logout.php"><input type="submit" name="logout" value="Logout"></form></a>
                         </div>
                 </div>
                 </div>
             </div>
         </header>
-        <header class="post">
-            <section class="noticias">
-                <div class="div">
-                    <fieldset>
-                        <legend>
-                            <div class="item-ilustrativo">
-                                <img src="../assets/style/autor/img/logooo.png" class="img">
-                                <div>
-                                    <p>Cadastro da Notícia</p>
+            <header class="post">
+                <section class="noticias">
+                    <div class="div">
+                        <fieldset>
+                            <legend>
+                                <div class="item-ilustrativo">
+                                    <img src="../assets/style/autor/img/logooo.png" class="img">
+                                    <div>
+                                        <p>Cadastro da Notícia</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </legend>
-                        <div class="content">
-                            <form id="form" method="POST" action="controllers/" enctype="multipart/form-data">
+                            </legend>
+                            <div class="content">
+                                <form id="form" method="POST" action="controllers/" enctype="multipart/form-data">
                                 <div>	
-                                    <input type='text' placeholder='Insira seu título aqui' name="titulo" class="inputs required" oninput="NoticeValidate()" required>
+                                    <input type='text' placeholder='Insira seu título aqui' name="titulo" class="inputs required" oninput="noticeValidate()" required>
                                     <span class="span-required">Título</span>
                                 </div>
-                                <div>	
-                                    <input type='text' placeholder='Insira sua notícia aqui' name="descrição" class="inputs required" oninput="DescriptionValidate()" required>
-                                    <span class="span-required">Manchete</span>
-                                </div>
-                                <div>	
-                                    <input type='text' placeholder='Insira o seu CPF aqui' class="inputs required" name="cpf" oninput="cpfValidade()" required>
-                                    <span class="span-required">CPF</span>
-                                </div>
-                                <div>	
-                                    <input type='file' name="imagem" class="" required>
-                                </div>
-                                <button type='submit' name="cadastrar">Cadastrar POST</button>
-                            </form>
+                            <div>	
+                                <input type='text' placeholder='Insira sua notícia aqui' name="descrição" class="inputs required" oninput=" descriptionValidate()" required>
+                                <span class="span-required">Manchete</span>
+                            </div>
+                            <div>	
+                                <input type='text' placeholder='Insira o seu CPF aqui' class="inputs required" name="cpf" oninput="cpfValidate()" required>
+                                <span class="span-required">CPF</span>
+                            </div>
+                            <div>	
+                                <input type='file' name="imagem" class="" required>
+                            </div>
+                            <button type='submit' name="cadastrar">Cadastrar POST</button>
+                                </form>
                         </div>
                     </fieldset>
                 </div>
