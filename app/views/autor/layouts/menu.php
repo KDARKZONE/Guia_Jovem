@@ -74,10 +74,6 @@
                                 <span class="span-required">Manchete</span>
                             </div>
                             <div>	
-                                <input type='text' placeholder='Insira o seu CPF aqui' class="inputs required" name="cpf" oninput="cpfValidate()" required>
-                                <span class="span-required">CPF</span>
-                            </div>
-                            <div>	
                                 <input type='file' name="imagem" class="" required>
                             </div>
                             <button type='submit' name="cadastrar">Cadastrar POST</button>

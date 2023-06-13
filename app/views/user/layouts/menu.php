@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(isset($_SESSION['Perfil']) &&  $_SESSION['usuario comum'] == true){
-    echo "<script>alert(' Olá Bem vindo ".$_SESSION['Perfil']['nome']."')</script>";
+    ;
 }
 else{
     session_destroy();

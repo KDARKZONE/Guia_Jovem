@@ -1,3 +1,6 @@
+<?php
+    require_once "header.php";
+?>        
         <header class="cabeçario">
         <!-- MENU RESPONSIVO -->
             <div class="Icone_Menu">
