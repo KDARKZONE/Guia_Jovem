@@ -19,7 +19,8 @@
             $stmt->BindParam(':data_de_nascimento',$this->data_de_nascimento);
             $stmt->BindParam(':ID_perfil',$ID_perfil);
             if($stmt->execute()){
-                echo "Dados Inseridos no banco de Dados";
+                echo "<script> alert(' Cadastro efetuado com sucesso! ');
+                    window.location.href='../index.php';</script>";
             }
             else{
                 echo "Deu erro ai man";

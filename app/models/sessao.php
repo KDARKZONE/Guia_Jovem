@@ -21,8 +21,7 @@ class Sessao extends Login {
                 $_SESSION['autor'] = true;
                 $_SESSION['usuario comum'] = null;
                 $_SESSION['administrador'] = null;
-                header("Location: verificacao_autor.php");
-                //header("Location: ../views/autor/index.php");
+                header("Location: ../views/autor/controllers/verificacao_autor.php");
             } 
             else
             if ($nivelAcesso == 'administrador') {
