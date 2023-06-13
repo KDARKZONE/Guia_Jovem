@@ -37,7 +37,7 @@
                             // require_once("")
                     }
                     }catch (PDOException $E){
-                        return "Error in inset Sing-in in the Banck. Error in ".$E->getMessage();
+                        return null;
                     }
                 }
             }
