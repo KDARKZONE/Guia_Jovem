@@ -19,10 +19,10 @@ else{
                     </label>
                     <nav class="opções">
                         <ul>
-                            <li><a href="index.php"> Home </a></li>
+                            <li><a href="index.php">Home</a></li>
                             <li><a href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem"> Enem </a></li>
-                            <li><a href="https://sisfiesportal.mec.gov.br/"> Fies </a></li>
-                            <li><a href="https://acessounico.mec.gov.br/prouni"> Prouni </a></li>
+                            <li><a href="https://sisfiesportal.mec.gov.br/">Fies</a></li>
+                            <li><a href="https://acessounico.mec.gov.br/prouni">Prouni</a></li>
                             <div class="redes_sociais">
                             <li class="botão"><button><i class="fa-brands fa-facebook"></i></button></li>
                             <li class="botão"><button><i class="fa-brands fa-twitter"></i></button></li>
@@ -40,10 +40,10 @@ else{
             <div class="Menu">
                 <nav>
                     <ul>
-                        <li><a href="index.php"> Home </a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><a href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem"> Enem </a></li>
-                        <li><a href="https://sisfiesportal.mec.gov.br/"> Fies </a></li>
-                        <li><a href="https://acessounico.mec.gov.br/prouni"> Prouni </a></li>
+                        <li><a href="https://sisfiesportal.mec.gov.br/">Fies</a></li>
+                       <li><a href="https://acessounico.mec.gov.br/prouni">Prouni</a></li>
                       </ul>
                 </nav>
             </div> 
@@ -56,10 +56,7 @@ else{
                 <div class="DropDown">
                     <button><img src="../assets/style/user/img/foto_default.png"></a></button>
                     <div class="DropDown_Menu">
-                        <a class="Informações"><?php echo @$_SESSION['Perfil']['Nome']; ?></a>
-                        <a class="Informações"><?php echo @$_SESSION['Perfil']['Email']; ?></a>
-                        <a class="Informações"><?php echo @$_SESSION['Perfil']['Nivel de Acesso'];?></a>
-                        <a class="Informações"><form method="POST" action="../../models/logout.php"><button type="submit" name="logout" value="Logout"> Logout </button></form></a>
+                        <a class="Informações"><form method="POST" action="controllers/logout.php"><button type="submit" name="logout" value="Logout"> Logout </button></form></a>
                     </div>
             </div>
             </div>
