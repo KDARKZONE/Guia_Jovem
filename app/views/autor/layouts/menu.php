@@ -1,3 +1,6 @@
+<?php
+    require_once "";
+?>
 <body>
         <header class="cabeçario">
             <!-- MENU RESPONSIVO -->
@@ -64,7 +67,7 @@
                                 </div>
                             </legend>
                             <div class="content">
-                                <form id="form" method="POST" action="controllers/" enctype="multipart/form-data">
+                                <form id="form" method="POST" action="controllers/insert.php" enctype="multipart/form-data">
                                 <div>	
                                     <input type='text' placeholder='Insira seu título aqui' name="titulo" class="inputs required" oninput="noticeValidate()" required>
                                     <span class="span-required">Título</span>

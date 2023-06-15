@@ -23,7 +23,7 @@
                     window.location.href='../index.php';</script>";
             }
             else{
-                echo "Deu erro ai man";
+                return null;
             }   
         }
     }

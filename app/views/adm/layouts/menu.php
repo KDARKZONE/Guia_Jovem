@@ -30,7 +30,7 @@
                     <ul>
                         <li><a href="index.php">Home</a></li>
                         <li><a href="dados.php">Dados</a></li>
-                        <li><a href="notice.php">Noticia</a></li>
+                        <li><a href="post.php">Noticia</a></li>
                         <li><a href="analise.php">Analise</a></li>
                       </ul>
                 </nav>

@@ -8,7 +8,7 @@
         $stmt = $db->prepare($sql);
         $stmt->bindParam(':id',$id);
         $stmt->execute();
-        header("Location:../notice.php"); 
+        header("Location:../post.php"); 
         exit;
     }
 ?>

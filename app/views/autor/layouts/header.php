@@ -1,6 +1,6 @@
 <?php 
-  session_start();
-  if(isset($_SESSION['Perfil']) && $_SESSION['autor'] == true){
+  @session_start();
+  if(isset($_SESSION['Perfil']) && $_SESSION['autor'] == true || $_SESSION['administrador'] == true ){
     echo'
 <!DOCTYPE html>
     <html lang="pt-br">

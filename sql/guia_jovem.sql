@@ -30,7 +30,7 @@
 
 	CREATE TABLE IF NOT EXISTS administradores (
 	  codigo_de_acesso INT NOT NULL,
-	  data_de_criação DATE,
+	  data_de_criacao DATE,
 	  ID_perfil INT NOT NULL,
 	  PRIMARY KEY (codigo_de_acesso),
 	  FOREIGN KEY (ID_perfil) REFERENCES perfis(ID_perfil)
@@ -86,13 +86,12 @@ VALUES ('teste', 'teste@gmail.com', 'Qm9sc29sdWxhMTMyMg==', 'usuario comum'),
   ('Gustavo Melo', 'gustavo.melo@example.com', 'c2VuaGExMA==', 'autor');
 	  -- USUARIOS ADM
 
-	INSERT INTO administradores (codigo_de_acesso, ID_perfil)
-	VALUES ('1322', 2),
-	('1109', 4);
+	INSERT INTO administradores (codigo_de_acesso, data_de_criacao, ID_perfil)
+	VALUES ('1322','2023-03-01', 2),
+	('1109', '2023-03-01', 4);
 	-- USUARIOS COMUNS
 	INSERT INTO usuarios_comuns (usuario, ID_perfil)
 	VALUES ('teste', 1);
 	-- AUTOR
 	INSERT INTO autores (cpf, data_de_nascimento, ID_perfil)
 	VALUES ('000.111.222-33', '2000-01-01', 3);
-

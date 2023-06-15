@@ -28,11 +28,11 @@
                 echo "<td>".$row['titulo']."</td>";
                 echo "<td>".$row['conteudo']."</td>";
                 echo "<td class='btn'>";
-                echo "<form action='delete_notice.php' method='POST' style='display:inline'>";
+                echo "<form action='delete.php' method='POST' style='display:inline'>";
                 echo "<input type='hidden' name='id' value='".$row['ID_post']."'>";
                 echo "<button type='submit'>Deletar</button>";
                 echo "</form>";
-                echo "<form action='edit_notice.php' method='post' style='display:inline'>";
+                echo "<form action='edit.php' method='post' style='display:inline'>";
                 echo "<input type='hidden' name='id' value='".$row['ID_post']."'>";
                 echo "<button type='submit'>Editar</button>";
                 echo "</form>";
