@@ -1,0 +1,407 @@
+/** COMEÇANDO A ESTILIZAÇÃO DO MENU (HEADER) **/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Poppins:wght@300&family=Schibsted+Grotesk&display=swap');
+/** Inicio da estilação do Corpo **/
+.dados{
+  max-width: 100%;
+
+}
+.dados .selecao{
+  position:absolute;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+}
+.dados .selecao form label{
+  margin-right: 50px;
+}
+.dados .selecao form label input{
+  z-index: 9999;
+}
+.Welcome{
+  width: 100%;
+}
+.dados .Welcome{
+  position: absolute;
+  top: 25%;
+
+}
+.dados .Welcome table{
+  margin-top: 1cm;
+  width: 100%;
+}
+.dados .Welcome table caption select{
+  background-color: #333;
+  color: cyan;
+  width: 200px;
+  font-size: 18px;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+
+.dados .Welcome #usuariosTable  tr .title{  
+  background-color: cyan;
+  border: none;
+  color: #333;
+  font-weight: 700;
+  text-align: center;
+}
+.dados .Welcome #administradoresTable  tr .title{ 
+  margin-top: 20px; 
+  background-color: cyan;
+  border: none;
+  color: #333;
+  font-weight: 700;
+  text-align: center;
+}
+.dados .Welcome #autorTable  tr .title{  
+  background-color: cyan;
+  border: none;
+  color: #333;
+  font-weight: 700;
+  text-align: center;
+}
+.dados .Welcome #usuariosTable .usuario .btn{
+  text-align: center;
+}
+.dados .Welcome #usuariosTable .administrador .btn{
+  text-align: center;
+}
+.dados .Welcome #usuariosTable .autor .btn{
+  text-align: center;
+}
+.dados .Welcome .table-usuario{
+  display: none;
+}
+.dados .Welcome .table-adm{
+  display: none;
+}
+.dados .Welcome .table-autor{
+  display: none;
+}
+.dados .Welcome table tr td button{
+  padding: 5px;
+  background-color: cyan;
+  font-weight: 700;
+  color: black;
+  border: none;
+  width: 70px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.dados .Welcome table tr td button:hover{
+  opacity: 0.8;
+}
+ 
+.dados .Welcome .Painel-de-Controle{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dados .Welcome .Painel-de-Controle .painel-de-controle{
+  text-align: center;
+  padding: 5px;
+}
+.dados .Welcome .Painel-de-Controle{
+  border: 2px solid cyan;
+  padding: 10px;
+}
+.dados .Welcome .Painel-de-Controle .Dados .Descricao-Dado{
+  text-align: center;
+  padding: 5px;
+}
+.dados .Welcome .Painel-de-Controle .Dados{
+  border: 2px solid cyan;
+  display: inline-block;
+  margin-right: 5%;
+  padding: 20px;
+  text-align: center;
+}
+.dados .Welcome .Painel-de-Controle .Dados i{
+  font-size: 100px;
+  text-align: center;
+}
+.dados .Welcome .Painel-de-Controle .Dados p{
+  font-weight: 700;
+}
+.dados .Welcome .Configuer{
+  border: none;
+}
+.dados .Welcome .Configuer legend{
+  text-align: center;
+}
+.dados .Welcome .Configuer legend i{
+  font-size: 30px;
+  cursor:pointer;
+}
+.dados .Welcome .Configuer #hidden{
+  display: none;
+}
+.dados .Welcome .Configuer .configuer-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  
+}
+.dados .Welcome .Configuer .configuer-container .configuer-option .op{
+  display: inline-block;
+  padding-right: 90px;
+  
+}
+.dados .Welcome .Configuer .configuer-container .configuer-option .op a{
+  position: relative;
+}
+.dados .Welcome .Configuer .configuer-container .configuer-option .op a::after{
+  content: " ";
+  width: 0;
+  height: 4px;
+  background-color: cyan;
+  position: absolute;
+  top: -3px;
+  left: 0;
+  transition: width 0.5s;
+}
+.dados .Welcome .Configuer .configuer-container .configuer-option .op a:hover::after{
+  width: 80px;
+}
+.dados .Welcome .Configuer .hidden .usuario .btn{
+  text-align: center;
+}
+.dados .Welcome .Configuer .hidden .administrador .btn{
+  text-align: center;
+}
+.dados .Welcome .Configuer .hidden .autor .btn{
+  text-align: center;
+}
+.Icone_Menu{
+  display: none;
+}
+@media screen and (max-width: 1000px){
+  *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  .container{
+      display:none;
+  }
+  .Menu_Vertical{
+      display: block;
+  }
+  .Icone_Menu{
+      display: block; 
+  }
+  .cabeçario{
+      background: none;
+      border:none;
+      height: 100%;
+      padding: 0;
+  }
+  .Icone_Menu input[type=checkbox]{
+      display: none;
+  }
+  .Icone_Menu .opções{
+      padding-left: 5px;
+  }
+  .Icone_Menu nav{
+      background-color:black;
+      width: 350px;
+      height: 100%;
+      left: -350px;
+      position: fixed;
+      transition: all 0.5s;
+  }
+  .Icone_Menu .opções a{
+      background-color: #333;
+      display: block;
+      padding: 20px 5px;
+      color: cyan;
+      cursor: pointer;
+      margin-bottom: 1%;
+      text-decoration: none;
+
+  }
+  .Icone_Menu .opções a:hover{
+      opacity: 0.9;
+
+  }
+  .Icone_Menu label{
+      background-color: black;
+      padding: 15px;
+      position: absolute;
+      z-index: 1;
+      cursor: pointer;
+      border-radius: 8px;
+  }
+  .Icone_Menu .opções ul{
+      top: 55px;
+      position: absolute;
+      width: 98%;
+  }
+  .Icone_Menu .opções ul li a{
+      text-decoration: none;
+  }
+  .Icone_Menu label i{
+      color: cyan;
+  }
+  .Icone_Menu nav .redes_sociais button{
+      width: 40px;
+      height: 40px;
+      background: cyan;
+      border:none;
+      border-radius:8px;
+      margin-right: 20px;
+      cursor:pointer;
+  }
+  .Icone_Menu nav button i{
+      font-size: 20px;
+      color: white;
+  }
+  
+  .Icone_Menu nav .redes_sociais{
+      width: 100%;
+      padding-left: 70.99px;;
+      padding-right:0;
+      padding-top: 20px;
+  }
+  .Icone_Menu nav .botão{
+      display: inline;
+      width: 40px;
+      padding-left:0;
+  }
+  .Icone_Menu nav .login{
+      background: none;
+      width: 100%;
+      padding-left: 119.99px;
+  }
+  .Icone_Menu nav .login  a{
+      background: none;
+  }
+  .Icone_Menu nav .login  button{
+      background: none;
+      border: none;
+  }
+  .Icone_Menu nav .login  button img{
+      width: 50px;
+  }
+  input[type=checkbox]:checked ~ nav{
+      transform: translate(350px);
+  }
+  
+}
+
+
+
+
+
+
+@media only screen and (max-width: 1000px) {
+    /* Define as regras CSS para telas menores que 768px */
+    .logo {
+      width: 25%;
+    }
+    .Menu {
+      width: 50%;
+      padding-top: 20px;
+    }
+    .Menu nav a {
+      font-size: 16px;
+      padding-right: 30px;
+    }
+    .redes_sociais {
+      padding-right: 2cm;
+    }
+    .redes_sociais button {
+      margin-right: 10px;
+      width: 30px;
+      height: 30px;
+    }
+    .redes_sociais button i {
+      font-size: 16px;
+    }
+    .Login .botão {
+      width: 40px;
+      border: 3px solid cyan;
+    }
+    .Anuncio{
+        display: none;
+    }
+    footer p {
+      font-size: 14px;
+    }
+  }
+  
+@media only screen and (max-width: 768px) {
+    /* Define as regras CSS para telas menores que 768px */
+    .logo {
+      width: 25%;
+    }
+    .Menu {
+      width: 50%;
+      padding-top: 20px;
+    }
+    .Menu nav a {
+      font-size: 16px;
+      padding-right: 30px;
+    }
+    .redes_sociais {
+      padding-right: 2cm;
+    }
+    .redes_sociais button {
+      margin-right: 10px;
+      width: 30px;
+      height: 30px;
+    }
+    .redes_sociais button i {
+      font-size: 16px;
+    }
+    .Login .botão {
+      width: 40px;
+      border: 3px solid cyan;
+    }
+    .Anuncio{
+        display: none;
+    }
+    footer p {
+      font-size: 14px;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    /* Define as regras CSS para telas menores que 480px */
+    .logo {
+      width: 30%;
+    }
+    .Menu {
+      width: 100%;
+      padding-top: 20px;
+    }
+    .Menu nav a {
+      font-size: 14px;
+      padding-right: 20px;
+    }
+    .redes_sociais {
+      padding-right: 1cm;
+    }
+    .redes_sociais button {
+      margin-right: 10px;
+      width: 25px;
+      height: 25px;
+    }
+    .redes_sociais button i {
+      font-size: 14px;
+    }
+    .Login .botão {
+      width: 30px;
+      border: 2px solid cyan;
+    }
+    .Anuncio{
+        display: none;
+    }
+    footer p {
+      font-size: 12px;
+    }
+  }

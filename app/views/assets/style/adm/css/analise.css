@@ -1,0 +1,46 @@
+/** COMEÇANDO A ESTILIZAÇÃO DO MENU (HEADER) **/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Poppins:wght@300&family=Schibsted+Grotesk&display=swap');
+
+section{
+  max-width: 100%;
+}
+section .Welcome{
+    position: absolute;
+    top: 25%;
+
+}
+.Welcome{
+    width: 100%;
+}
+section .Welcome .Painel-de-Controle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  section .Welcome .Painel-de-Controle .painel-de-controle{
+    border: none;
+    text-align: center;
+    padding: 5px;
+  }
+  section .Welcome .Painel-de-Controle{
+    border: 2px solid cyan;
+    padding: 10px;
+  }
+  section .Welcome .Painel-de-Controle .container .Descricao-Dado{
+    text-align: center;
+    padding: 5px;
+  }
+  section .Welcome .Painel-de-Controle .container{
+    border: 2px solid cyan;
+    display: inline-block;
+    margin-right: 5%;
+    padding: 20px;
+    text-align: center;
+  }
+  section .Welcome .Painel-de-Controle .container i{
+    font-size: 100px;
+    text-align: center;
+  }
+  section .Welcome .Painel-de-Controle .container p{
+    font-weight: 700;
+  }

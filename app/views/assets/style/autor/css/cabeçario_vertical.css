@@ -1,0 +1,164 @@
+.Icone_Menu{
+    display: none;
+}
+@media screen and (max-width: 1000px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .container{
+        display:none; 
+    }
+    .Menu_Vertical{
+        display: block;
+    }
+    .Icone_Menu{
+        display: block; 
+    }
+    .cabeçario{
+        background: none;
+        border:none;
+        height: 100%;
+        padding: 0;
+    }
+    .Icone_Menu input[type=checkbox]{
+        display: none;
+    }
+    .Icone_Menu .opções{
+        padding-left: 5px;
+    }
+    .Icone_Menu nav{
+        background-color:black;
+        width: 350px;
+        height: 100%;
+        left: -350px;
+        position: fixed;
+        transition: all 0.5s;
+    }
+    .Icone_Menu .opções a{
+        background-color: #333;
+        display: block;
+        padding: 20px 5px;
+        color: cyan;
+        cursor: pointer;
+        margin-bottom: 1%;
+        text-decoration: none;
+
+    }
+    .Icone_Menu .opções a:hover{
+        opacity: 0.9;
+
+    }
+    .Icone_Menu label{
+        background-color: black;
+        padding: 15px;
+        position: absolute;
+        z-index: 1;
+        cursor: pointer;
+        border-radius: 8px;
+    }
+    .Icone_Menu .opções ul{
+        top: 55px;
+        position: absolute;
+        width: 98%;
+    }
+    .Icone_Menu .opções ul li a{
+        text-decoration: none;
+    }
+    .Icone_Menu label i{
+        color: cyan;
+    }
+    .Icone_Menu nav .redes_sociais button{
+        width: 40px;
+        height: 40px;
+        background: cyan;
+        border:none;
+        border-radius:8px;
+        margin-right: 20px;
+        cursor:pointer;
+    }
+    .Icone_Menu nav button i{
+        font-size: 20px;
+        color: white;
+    }
+    /*.Icone_Menu nav .botão{
+        margin-top: 10%;
+        margin-bottom: 2%;
+    }*/
+    .Icone_Menu nav .redes_sociais{
+        width: 100%;
+        padding-left: 70.99px;;
+        padding-right:0;
+        padding-top: 20px;
+    }
+    .Icone_Menu nav .botão{
+        display: inline;
+        width: 40px;
+        padding-left:0;
+    }
+    .Icone_Menu nav .login{
+        background: none;
+        width: 100%;
+        padding-left: 119.99px;
+    }
+    .Icone_Menu nav .login .img_login a{
+        background: none;
+    }
+    .Icone_Menu nav .login .img_login button{
+        background: none;
+        border: none;
+    }
+    .Icone_Menu nav .login .img_login button img{
+        width: 50px;
+    }
+    input[type=checkbox]:checked ~ nav{
+        transform: translate(350px);
+    }
+    /*.overlay_responsive_Login {
+        position: fixed; 
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7); 
+        z-index: 9999; 
+        display: none;
+    }
+    .modal_responsive_Login {
+        position: fixed; 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        /*background-color:#d36833;*/
+        /*padding: 20px;
+        width: 80%;
+        max-width: 800px;
+        z-index: 9999; 
+        border-radius: 5px;
+    } 
+    .overlay_responsive_Cadastro {
+        position: fixed; 
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7); 
+        z-index: 9999;
+        display: none; 
+    }
+    .modal_responsive_Cadastro {
+        position: fixed;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        /*background-color:#d36833;*/
+        /*padding: 20px;
+        width: 80%;
+        max-width: 800px;
+        z-index: 9999; 
+        display: none; 
+        border-radius: 5px;
+    } */
+}
+

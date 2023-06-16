@@ -1,0 +1,169 @@
+/** COMEÇANDO A ESTILIZAÇÃO DO MENU (HEADER) **/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Poppins:wght@300&family=Schibsted+Grotesk&display=swap');
+
+.noticia{
+  max-width: 100%;
+
+}
+.noticia .selecao{
+  position:absolute;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+}
+.noticia .selecao form label{
+  margin-right: 50px;
+}
+.noticia .selecao form label input{
+  z-index: 9999;
+}
+.post{
+  width: 100%;
+}
+.noticia .post{
+  position: absolute;
+  top: 25%;
+
+}
+.noticia .post table{
+  margin-top: 1cm;
+  width: 5000px;
+}
+.noticia .post table caption select{
+  background-color: #333;
+  color: cyan;
+  width: 200px;
+  font-size: 18px;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+
+.noticia .post #usuariosTable  tr .title{  
+  background-color: cyan;
+  border: none;
+  color: #333;
+  font-weight: 700;
+  text-align: center;
+}
+.noticia .post #administradoresTable  tr .title{ 
+  margin-top: 20px; 
+  background-color: cyan;
+  border: none;
+  color: #333;
+  font-weight: 700;
+  text-align: center;
+}
+.noticia .post #autorTable  tr .title{  
+  background-color: cyan;
+  border: none;
+  color: #333;
+  font-weight: 700;
+  text-align: center;
+}
+.noticia .post #usuariosTable .usuario .btn{
+  text-align: center;
+}
+.noticia .post #administradoresTable .administrador .btn{
+  text-align: center;
+}
+.noticia .post #autorTable .autor .btn{
+  text-align: center;
+}
+.noticia .post .table-usuario{
+  display: none;
+}
+.noticia .post .table-adm{
+  display: none;
+}
+.noticia .post .table-autor{
+  display: none;
+}
+.noticia .post table tr td button{
+  padding: 5px;
+  background-color: cyan;
+  font-weight: 700;
+  color: black;
+  border: none;
+  width: 70px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.noticia .post table tr td button:hover{
+  opacity: 0.8;
+}
+ 
+.noticia .post .Painel-de-Controle{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.noticia .post .Painel-de-Controle .painel-de-controle{
+  text-align: center;
+  padding: 5px;
+}
+.noticia .post .Painel-de-Controle{
+  border: 2px solid cyan;
+  padding: 10px;
+}
+.noticia .post .Painel-de-Controle .Dados .Descricao-Dado{
+  text-align: center;
+  padding: 5px;
+}
+.noticia .post .Painel-de-Controle .Dados{
+  border: 2px solid cyan;
+  display: inline-block;
+  margin-right: 5%;
+  padding: 20px;
+  text-align: center;
+}
+.noticia .post .Painel-de-Controle .Dados i{
+  font-size: 100px;
+  text-align: center;
+}
+.noticia .post .Painel-de-Controle .Dados p{
+  font-weight: 700;
+}
+.noticia .post .Configuer{
+  border: none;
+}
+.noticia .post .Configuer legend{
+  text-align: center;
+}
+.noticia .post .Configuer legend i{
+  font-size: 30px;
+  cursor:pointer;
+}
+.noticia .post .Configuer #hidden{
+  display: none;
+}
+.noticia .post .Configuer .configuer-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  
+}
+.noticia .post .Configuer .configuer-container .configuer-option .op{
+  display: inline-block;
+  padding-right: 90px;
+  
+}
+.noticia .post .Configuer .configuer-container .configuer-option .op a{
+  position: relative;
+}
+.noticia .post .Configuer .configuer-container .configuer-option .op a::after{
+  content: " ";
+  width: 0; 
+  height: 4px;
+  background-color: cyan;
+  position: absolute;
+  top: -3px;
+  left: 0;
+  transition: width 0.5s;
+}
+.noticia .post .Configuer .configuer-container .configuer-option .op a:hover::after{
+  width: 80px;
+}
