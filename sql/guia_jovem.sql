@@ -15,7 +15,7 @@
 	CREATE TABLE IF NOT EXISTS usuarios_comuns (
 	  usuario VARCHAR(50) NOT NULL,
 	  ID_perfil INT NOT NULL,
-	  foto_usuario LONGBLOB,
+	  foto_usuario VARCHAR(200),
 	  PRIMARY KEY (usuario),
 	  FOREIGN KEY (ID_perfil) REFERENCES perfis(ID_perfil)
 	);
@@ -41,8 +41,8 @@
 	  data_hora_post DATETIME NOT NULL,
 	  titulo TEXT NOT NULL,
 	  conteudo TEXT NOT NULL,	
-	  thumb LONGBLOB NOT NULL,
-	  cpf VARCHAR(14) NOT NULL,
+	  thumb VARCHAR(200) NOT NULL,
+	  cpf VARCHAR(20) NOT NULL,
 	  PRIMARY KEY (ID_post),
 	  FOREIGN KEY (cpf) REFERENCES autores(cpf)
 	);
