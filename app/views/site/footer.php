@@ -1,7 +1,7 @@
 
  <!-- RODAPÉ -->
  <footer>
-        <section class="T_R">
+        <!-- <section class="T_R">
             <b> Adicione um Titulo </b>
         </section>
         <nav class="P_C">
@@ -81,7 +81,7 @@
                     <li> Insira a Informação</li>
                 </ul>
             </nav>
-        </footer> 
+        </footer>  -->
     </body>
 
     <!-- Scripts  -->

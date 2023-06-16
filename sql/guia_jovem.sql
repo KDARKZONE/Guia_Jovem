@@ -87,8 +87,8 @@ VALUES ('teste', 'teste@gmail.com', 'Qm9sc29sdWxhMTMyMg==', 'usuario comum'),
 	  -- USUARIOS ADM
 
 	INSERT INTO administradores (codigo_de_acesso, data_de_criacao, ID_perfil)
-	VALUES ('1322','2023-03-01', 2),
-	('1109', '2023-03-01', 4);
+	VALUES ('1322','2023-03-01', 2,),
+	('1109', 4);
 	-- USUARIOS COMUNS
 	INSERT INTO usuarios_comuns (usuario, ID_perfil)
 	VALUES ('teste', 1);
