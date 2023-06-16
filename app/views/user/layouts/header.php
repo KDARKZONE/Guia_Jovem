@@ -1,3 +1,7 @@
+<?php
+session_start();
+if(isset($_SESSION['Perfil']) &&  $_SESSION['usuario comum'] == true){
+echo '
 <!DOCTYPE html>
     <html lang="pt-br">
         <head>
@@ -13,5 +17,10 @@
             <link rel="stylesheet" href="../assets/style/user/css/user.css">
             <link rel="stylesheet" href="../assets/style/user/css/user_layout.css">
             <title>Guia Jovem</title>
-        </head>
-    <!-- fecha depois -->  
+        </head>';
+}
+else{
+    session_destroy();
+    echo "<script>alert('Parece que você não está logado, faça o login e tente novamente');
+    window.location.href='../index.php';</script>";
+}

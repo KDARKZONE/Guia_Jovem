@@ -1,13 +1,5 @@
 <?php
-session_start();
-if(isset($_SESSION['Perfil']) &&  $_SESSION['usuario comum'] == true){
-    ;
-}
-else{
-    session_destroy();
-    echo "<script>alert('Parece que você não está logado, faça o login e tente novamente');
-    window.location.href='../index.php';</script>";
-}
+require_once "layouts/header.php"
 ?>
     <body>
     <header class="cabeçario">
@@ -35,7 +27,7 @@ else{
         <!-- MENU TOTAL -->
         <div class="container">
             <div class="logo"> 
-            <img src="../assets/style/user/img/guia_jovem_home.png">
+                <img src="../assets/style/user/img/guia_jovem_home.png">
             </div>
             <div class="Menu">
                 <nav>
@@ -54,11 +46,11 @@ else{
             </div>
             <div class="Login">
                 <div class="DropDown">
-                    <button><img src="../assets/style/user/img/foto_default.png"></a></button>
+                <button><img src="../assets/style/user/img/foto_default.png"></a></button>
                     <div class="DropDown_Menu">
                         <a class="Informações"><form method="POST" action="controllers/logout.php"><button type="submit" name="logout" value="Logout"> Logout </button></form></a>
-                    </div>
-            </div>
+                    </div>            
+        </div>
             </div>
         </div>
     </header>

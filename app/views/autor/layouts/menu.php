@@ -1,5 +1,5 @@
 <?php
-    // require_once "";
+     require_once "layouts/header.php";
 ?>
 <body>
         <header class="cabeçario">
@@ -74,7 +74,7 @@
                                 </div>
                             <div>	
                                 <input type='text' placeholder='Insira sua notícia aqui' name="descrição" class="inputs required" oninput=" descriptionValidate()" required>
-                                <span class="span-required">Manchete</span>
+                                <span class="span-required">Artigo</span>
                             </div>
                             <div>	
                                 <input type='file' name="imagem" class="" required>

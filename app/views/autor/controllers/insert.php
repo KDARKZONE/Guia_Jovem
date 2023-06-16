@@ -3,16 +3,17 @@ session_start();
 if(isset($_SESSION['Perfil']) && $_SESSION['autor'] == true){
     if($_SERVER['REQUEST_METHOD'] == "POST"){
         $titulo = $_POST['titulo'];
-        $descricao = $_POST['descrição'];
+        $categoria = $_POST['categoria'];
+        $conteudo = $_POST['conteudo'];
         $DataHora = date('Y-m-d H:i:s');
         $Pasta = 'IMG-autor/';/** Criando uma variavel que guarde o Caminho que a Pasta onde a Imagem será guardada **/
         $Nome_Imagem = $_FILES['imagem']['name'];/** Pegando o Nome do Arquivo  */
         $New_Nome_Imagem = uniqid($Nome_Imagem);/** Adicionando um Novo Nome ao Nome do Arquivo */
         $Extensao = strtolower(pathinfo($Nome_Imagem,PATHINFO_EXTENSION)); /** strtolower e usado para transformar as letras de MAISCULAS para todas minusculas, no caso da imagem estar em JPG ou PNG, mas a função pathinfo('',PATHINFO_EXTENSION) para buscar a extensão da Imagem (PNG ou JPG) */
         /** Criando uma Excessão */
-        if($Extensao != 'jpg' && $Extensao != 'png'){
+        if($Extensao != 'jpg' && $Extensao != 'png' && $Extensao != 'JPEG'){
             die("<script>alert('Tipo de Arquivo não aceito Verifique se a Extenção esta em png ou jpg');
-            window.location.href='index.php';</script>");
+            window.location.href='../index.php';</script>");
         }
         /** Caso exista erros */
         if($_FILES['imagem']['error'] >= 1){
@@ -30,16 +31,17 @@ if(isset($_SESSION['Perfil']) && $_SESSION['autor'] == true){
         $stmt_SELECT->execute();
         $result = $stmt_SELECT->fetch(PDO::FETCH_ASSOC);
         $cpf = $result['cpf'];
-        $sql_INSERT = "INSERT INTO post (data_hora_post,titulo,conteudo,thumb,cpf) VALUES (:data_hora_post,:titulo, :conteudo, :thumb,:cpf)";
+        $sql_INSERT = "INSERT INTO post (data_hora_post,titulo,categoria,conteudo,thumb,cpf) VALUES (:data_hora_post,:titulo, :categoria, :conteudo, :thumb,:cpf)";
         $stmt_INSERT = $db->prepare($sql_INSERT);
         $stmt_INSERT->bindParam(':data_hora_post',$DataHora);
         $stmt_INSERT->bindParam(':titulo',$titulo);
+        $stmt_INSERT->bindParam(':categoria',$categoria);
         $stmt_INSERT->bindParam(':conteudo',$descricao);
         $stmt_INSERT->bindParam(':thumb',$New_Pasta);
         $stmt_INSERT->bindParam(':cpf',$cpf);
         if($stmt_INSERT->execute()){
             $imagemURL = "../app/views/autor/controllers/".$New_Pasta;
-            echo "<script>alert('Parabens ".$_SESSION['Perfil']['nome']." o seu Poster foi publicado com sucesso');
+            echo "<script>alert('O seu artigo foi publicado com sucesso');
             window.location.href = '../index.php';</script>";
 
         }

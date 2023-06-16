@@ -10,6 +10,7 @@
                     <td class="title">Data e hora de Publicação:</td>
                     <td class="title">Thumb:</td>
                     <td class="title">Titulo:</td>
+                    <td class="title">Categoria:</td>
                     <td class="title">Conteudo:</td>
                     <td class="title">Editar/Deletar</td>
                 </tr>
@@ -26,6 +27,7 @@
                 echo "<td>".$row['data_hora_post']."</td>";
                 echo "<td>".$row['thumb']."</td>";
                 echo "<td>".$row['titulo']."</td>";
+                echo "<td>".$row['categoria']."</td>";
                 echo "<td>".$row['conteudo']."</td>";
                 echo "<td class='btn'>";
                 echo "<form action='delete.php' method='POST' style='display:inline'>";
