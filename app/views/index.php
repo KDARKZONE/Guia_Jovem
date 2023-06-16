@@ -15,106 +15,36 @@
     ?>
 
     <!--INICIO SESSÃO SESSÃO DE ARTIGOS-->
- <?php 
-    // echo '
-    // // <header class="post">
-    // //     <section class="noticias">
-    // //         <article>
-    // //             <a href="#">
-    // //                 <img src="assets/style/site/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
-    // //             </a>    
-    // //                 <p><a href="" class="category">Categoria</a></p>
-    // //                 <h2><a href=    "" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
-    // //                         error do    lorem. Recusandae,
-    // //                         quo ex labor    um voluptate pariatur praesentium error doloremque cumque, mollitia laboriosam vel
-    // //                         aut 
-    // //                         et e    veniet eaque quaerat!</a></h2>
-    // //         </article>  
-
-    // //         <article>
-    // //             <a href="#">
-    // //                 <img src="assets/style/site/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
-    // //             </a>
-    // //                 <p><a href="" class="category">Categoria</a></p>
-    // //                 <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
-    // //                         error dolorem. Recusandae,
-    // //                         quo ex laborum voluptate pariatur praesentium error doloremque cumque, mollitia laboriosam vel
-    // //                         aut
-    // //                         et eveniet eaque quaerat!</a></h2>
-    // //        </article>
-    // //        <article>
-    // //          <a href="#">
-    // //             <img src="assets/style/site/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
-    // //          </a>
-    // //            <p><a href="" class="category">Categoria</a></p>
-    // //            <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
-    // //                         error dolorem. Recusandae,
-    // //                         quo ex laborum voluptate pariatur praesentium error doloremque cumque, mollitia laboriosam vel
-    // //                         aut
-    // //                         et eveniet eaque quaerat!</a></h2>
-    // //         </article>
-
-    // //             <article>
-    // //                 <a href="#">
-    // //                     <img src="assets/style/site/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
-    // //                 </a>
-    // //                 <p><a href="" class="category">Categoria</a></p>
-    // //                 <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
-    // //                         error dolorem. Recusandae,
-    // //                         quo ex laborum voluptate pariatur praesentium error doloremque cumque, mollitia laboriosam vel
-    // //                         aut
-    // //                         et eveniet eaque quaerat!</a></h2>
-    // //             </article>
-
-    // //             <article>
-    // //                 <a href="#">
-    // //                     <img src="assets/style/site/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
-    // //                 </a>
-    // //                 <p><a href="" class="category">Categoria</a></p>
-    // //                 <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
-    // //                         error dolorem. Recusandae,
-    // //                         quo ex laborum voluptate pariatur praesentium error doloremque cumque, mollitia laboriosam vel
-    // //                         aut
-    // //                         et eveniet eaque quaerat!</a></h2>
-    // //             </article>
-
-    // //             <article>
-    // //                 <a href="#">
-    // //                     <img src="assets/style/site/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
-    // //                 </a>
-    // //                 <p><a href="" class="category">Categoria</a></p>
-    // //                 <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
-    // //                         error dolorem. Recusandae,
-    // //                         quo ex laborum voluptate pariatur praesentium error doloremque cumque, mollitia laboriosam vel
-    // //                         aut
-    // //                         et eveniet eaque quaerat!</a></h2>
-    // //             </article>
-
-    // //             <article>
-    // //                 <a href="#">
-    // //                     <img src="assets/style/site/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
-    // //                 </a>
-    // //                 <p><a href="" class="category">Categoria</a></p>
-    // //                 <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
-    // //                         error dolorem. Recusandae,
-    // //                         quo ex laborum voluptate pariatur praesentium error doloremque cumque, mollitia laboriosam vel
-    // //                         aut
-    // //                         et eveniet eaque quaerat!</a></h2>
-    // //             </article>
+<header>
+ <section >
+        <?php 
+            require_once("../models/database/conexao.php");
+            $dbConnection = new Conexao();
+            $db = $dbConnection->conexao();
+            $sql = "SELECT thumb FROM post";
+            $stmt = $db->prepare($sql);
+            $stmt->execute(); 
+            echo '<header class="post">';
+            while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+                $caminho = 'autor/controllers/';
+            echo '
+                    <article class="noticias">
+                        <a href="#">
+                            <img src="'.$caminho.$row["thumb"].'" width="200" height="400" alt="Imagem post" title="Imagem Post">
+                        </a>    
+                        <p><a href="" class="category">Categoria</a></p>
+                            <h2><a href=    "" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
+                                    error do    lorem. Recusandae,
+                                    quo ex labor    um voluptate pariatur praesentium error doloremque cumque, mollitia laboriosam vel
+                                    aut 
+                                    et e    veniet eaque quaerat!</a></h2>
+                    </article>';
             
-    // //             <article>
-    // //                 <a href="#">
-    // //                     <img src="assets/style/site/img/post.jpg" width="200" alt="Imagem post" title="Imagem Post">
-    // //                 </a>
-    // //                 <p><a href="" class="category">Categoria</a></p>
-    // //                 <h2><a href="" class="title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam magnam
-    // //                         error dolorem. Recusandae,
-    // //                         quo ex laborum voluptate pariatur praesentium error doloremque cumque, mollitia laboriosam vel
-    // //                         aut
-    // //                         et eveniet eaque quaerat!</a></h2>
-    // //     </article>
-    // // </header>';  
-?>
+        }
+        
+        ?>
+    </section>
+</header>
     <!--FIM DA SESSÃO DE ARTIGOS-->
 <?php
     
