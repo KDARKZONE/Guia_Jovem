@@ -27,10 +27,10 @@
                             $query->bindParam(':email',$this->Email);
                             $query->bindParam(':senha',$this->Senha);
                             $query->execute();
-                            $id_perfil = $conexao->lastInsertId();
+                            $ID_perfil = $conexao->lastInsertId();
                             $query2 = $conexao->prepare("INSERT INTO usuarios_comuns (usuario, ID_perfil) VALUES (:usuario,:ID_perfil)");
                             $query2->bindParam(':usuario', $this->Usuario);
-                            $query2->bindParam(':ID_perfil', $id_perfil);
+                            $query2->bindParam(':ID_perfil', $ID_perfil);
                             $query2->execute();
                             echo "<script> alert(' Cadastro efetuado com sucesso! ');
                             window.location.href='../../index.php';</script>";
