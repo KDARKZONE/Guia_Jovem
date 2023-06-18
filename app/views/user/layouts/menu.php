@@ -46,11 +46,44 @@ require_once "layouts/header.php"
             </div>
             <div class="Login">
                 <div class="DropDown">
-                <button><img src="../assets/style/user/img/foto_default.png"></a></button>
-                    <div class="DropDown_Menu">
-                        <a class="Informações"><form method="POST" action="controllers/logout.php"><button type="submit" name="logout" value="Logout"> Logout </button></form></a>
-                    </div>            
-        </div>
+                    <button><a href="controllers/edit.php"><?php
+                    @session_start();
+                    $idPerfil = $_SESSION['Perfil']['ID_perfil'];
+                    require_once("../../models/database/conexao.php");
+                    $dbConnection = new Conexao();
+                    $db = $dbConnection->conexao();
+                    $sql = "SELECT * FROM usuarios_comuns WHERE ID_perfil = :ID_perfil";
+                    $stmt = $db->prepare($sql);
+                    $stmt->bindParam(':ID_perfil',$idPerfil);
+                    if($stmt->execute()){
+                        while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+                            $usuario = $row['usuario'];
+                        }
+                    }
+                    $Conexão = new Conexao();
+                    $Banco = $Conexão->conexao();
+                    $comando = "SELECT foto_usuario FROM usuarios_comuns WHERE usuario = :usuario";
+                    $função = $Banco->prepare($comando);
+                    $função->bindParam(':usuario',$usuario);
+                    if($função->execute()){
+                        $row = $função->fetch(PDO::FETCH_ASSOC);
+                        if ($row) {
+                            if ($row['foto_usuario'] == null) {
+                                echo "Nula";
+                            } else {
+                                $caminho = 'controllers/';
+                                echo "<img src=".$caminho.$row['foto_usuario'].">";
+                            }
+                        } else {
+                            echo "Nenhuma foto encontrada";
+                        }
+                    }
+                        ?>
+                        <div class="DropDown_Menu">
+                            <a class="Informações"><?php echo  $_SESSION['Perfil']['nome'];?></a>
+                            <a class="Informações"><form method="POST" action="controllers/logout.php"><input type="submit" value="Logout"></form></a>
+                        </div>            
+                </div>
             </div>
         </div>
     </header>

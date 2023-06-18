@@ -1,8 +1,21 @@
 <?php
-session_start();
-  require_once('../models/login.php');
-  require_once 'site/header.php';
-  require_once 'site/menu.php';
+ /** Verificação de Sessões */
+ session_start();
+ if(isset($_SESSION['Perfil']) && $_SESSION['administrador']){
+  header('Location: adm/index.php');
+ }
+ else
+ if(isset($_SESSION['Perfil']) && $_SESSION['usuario comum']){
+  header('Location: user/index.php');
+ }
+ else
+ if(isset($_SESSION['Perfil']) && $_SESSION['autor']){
+  header('Location: autor/index.php');
+ }
+ else{
+  require_once("site/header.php");
+  require_once("site/menu.php");
+ }
 ?>
 <?php
   # verifica se a variavel $_GET error existe. Se sim, exibe mensagem de error.
@@ -39,12 +52,14 @@ session_start();
                     <?=$row['titulo']?>
                   </a>
                 </h2>
+                <h4>
+                <a href="artigo_show.php?id=<?= $row['conteudo'] ?>" class="category"><?= $row['conteudo'] ?></a>
+                </h4>
               </div>
             </article>
-
+            
 <?php } ?>
 </header>';
-
 <?php
-//require_once("site/footer.php");
+require_once("site/footer.php");
 ?>

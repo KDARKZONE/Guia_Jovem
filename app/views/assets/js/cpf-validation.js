@@ -13,29 +13,13 @@ function removeError(index) {
   spans[index].style.display = 'none';
 }
 
-function noticeValidate() {
-  if (campos[0].value.length <= 15) {
-    setError(0);
-  } else {
-    removeError(0);
-  }
-}
-
-function descriptionValidate() {
-  if (campos[1].value.length <= 40) {
-    setError(1);
-  } else {
-    removeError(1);
-  }
-}
-
 function cpfValidate() {
   const cpfInput = document.querySelector('[name="cpf"]');
   const unmaskedValue = cpfInput.value.replace(/\D/g, '');
   const maskedValue = formatCPF(unmaskedValue);
   cpfInput.value = maskedValue;
 
-  if (unmaskedValue.length < 11) {
+  if (unmaskedValue.length !== 11) {
     setError(2);
   } else {
     removeError(2);
@@ -55,4 +39,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
   Inputmask(cpfMaskOptions).mask(cpfInput);
 
+  cpfInput.addEventListener('input', cpfValidate);
 });

@@ -97,6 +97,10 @@ body{
 /* .Login{
   
 } */
+.Login button{
+  border-radius: 2000px;
+  border: none;
+}
 ul li{
   list-style: none;
 }
@@ -107,9 +111,8 @@ ul li{
   text-align: center;
   background-color: #333;
   padding: 15px;
-  width: 10cm;
+  width: 5cm;
   cursor: pointer;
-  margin-bottom: 5px;
 }
 .DropDown_Menu{
   display: none;
@@ -118,9 +121,9 @@ ul li{
   position: absolute;
   display: block;
   right: 2%;
-  background-color: cyan;
-  border: 2px solid cyan;
+  background-color: #333;
   padding: 5px;
+  border-radius: 15px;
   animation-name: slow;
   animation-duration: 1s;
 }

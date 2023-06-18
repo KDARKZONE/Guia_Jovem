@@ -36,7 +36,7 @@ if(isset($_SESSION['Perfil']) && $_SESSION['autor'] == true){
         $stmt_INSERT->bindParam(':data_hora_post',$DataHora);
         $stmt_INSERT->bindParam(':titulo',$titulo);
         $stmt_INSERT->bindParam(':categoria',$categoria);
-        $stmt_INSERT->bindParam(':conteudo',$descricao);
+        $stmt_INSERT->bindParam(':conteudo',$conteudo);
         $stmt_INSERT->bindParam(':thumb',$New_Pasta);
         $stmt_INSERT->bindParam(':cpf',$cpf);
         if($stmt_INSERT->execute()){

@@ -80,8 +80,8 @@
                     <li> Insira a Informação</li>
                     <li> Insira a Informação</li>
                 </ul>
-            </nav>
-        </footer>  -->
+            </nav>-->
+        </footer>
     </body>
 
     <!-- Scripts  -->

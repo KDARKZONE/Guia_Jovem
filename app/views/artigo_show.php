@@ -24,31 +24,31 @@
     $comentario = $_POST['comentario'];
     // exit;
     $idComentario = $_POST['ID_comentario'];
-
-    $query = "DELETE FROM `guia_jovem`.`comentarios` WHERE ID_comentario = $idComentario";
-    $stmt = $dbh->prepare($query);
-    $stmt->execute();
+    $Nome = $_SESSION['Perfil']['nome'];
+    // $query = "DELETE FROM `guia_jovem`.`comentarios` WHERE ID_comentario = $idComentario";
+    // $stmt = $dbh->prepare($query);
+    // $stmt->execute();
 
 
     # cria um comando SQL para adicionar valores na tabela categorias 
     $query = "INSERT INTO `guia_jovem`.`comentarios`  
-    (`data_hora_comentario`, `comentario`, `id_post`, `id_perfil`)
-    VALUES (:data_hora_comentario, :comentario, :id_post, :id_perfil)";
+    (`data_hora_comentario`, `comentario`, `id_post`, `id_perfil`,`nome`)
+    VALUES (:data_hora_comentario, :comentario, :id_post, :id_perfil, :nome)";
 
     $stmt = $dbh->prepare($query);
     $stmt->bindValue(':data_hora_comentario', date('Y-m-d H:i:s'));
     $stmt->bindParam(':comentario', $comentario);
     $stmt->bindParam(':id_post', $id);
     $stmt->bindParam(':id_perfil', $idPerfil);
-
+    $stmt->bindParam(':nome',$Nome);
     # executa o comando SQL para inserir o resultado.
     $stmt->execute();
 
     # verifica se a quantiade de registros inseridos é maior que zero.
     # se sim, redireciona para a pagina de admin com mensagem de sucesso.
     # se não, redireciona para a pagina de cadastro com mensagem de erro.
-    if ($stmt->rowCount()) {
-      header('location: index.php?success=Comentário inserido com sucesso!');
+    if ($stmt->rowCount() > 0) {
+      header('location: user/index.php?success=Comentário inserido com sucesso!');
     } else {
       echo '<pre>';
       var_dump($stmt->errorInfo());
@@ -78,17 +78,26 @@
     }
     $caminho = 'autor/controllers/';
   ?>
-  <h1><?= $row['titulo']; ?></h1>
-  <section>
-    <img src="<?= $caminho . $row['thumb']; ?>" alt="<?= $row['titulo']; ?>">
-  </section>
-
-  <h2>Comentários</h2>
-  <form action="" method="post">
-    <input type="hidden" name="ID_comentario" value="<?= $row['ID_comentario'] ?>">
-    <textarea name="comentario" id="" cols="30" rows="10"><?= isset($row['comentario']) ? $row['comentario'] : '' ?></textarea>
-    <input type="submit" value="Enviar">
-  </form>
-<?php
-  require_once("site/footer.php");
-?>
+  <!-- Inicio do Layout dos Comentarios -->
+  <html>
+    <head>
+      <title>
+        Comentar Post
+      </title>
+    </head>
+    <body>
+    <h1><?= $row['titulo']; ?></h1>
+    <section>
+      <img src="<?= $caminho . $row['thumb']; ?>" alt="<?= $row['titulo']; ?>">
+    </section>
+    <h2>Comentários</h2>
+    <form action="" method="post">
+      <input type="hidden" name="ID_comentario" value="<?= $row['ID_comentario'] ?>">
+      <textarea name="comentario" id="" cols="30" rows="10"></textarea><br>
+      <?php 
+      while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+        echo $row['nome'].": ".$row['comentario']."<br>";
+      }
+      ?>
+      <input type="submit" value="Enviar">
+    </form>

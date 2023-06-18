@@ -1,5 +1,5 @@
 <?php
-     require_once "layouts/header.php";
+    require_once "header.php";
 ?>
 <body>
         <header class="cabeçario">
@@ -33,11 +33,11 @@
                     <nav>
                         <ul>
                             <li><a href="index.php">Home</a></li>
-                            <li><a href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem">Enem</a></li>
-                            <li><a href="https://sisfiesportal.mec.gov.br/">Fies</a></li>
-                            <li><a href="https://acessounico.mec.gov.br/prouni">Prouni</a></li>
+                            <li><a href="Meus_post.php">Meus Posts</a></li>
+                            <li><a href="comentarios.php">comentarios</a></li>
+                            <li><a href="postar.php">postar</a></li>
                         </ul>
-                    </nav>
+                    </nav> 
                 </div> 
                 <div class="redes_sociais">
                     <button><i class="fa-brands fa-facebook"></i></button>
@@ -54,37 +54,3 @@
                 </div>
             </div>
         </header>
-            <header class="post">
-                <section class="noticias">
-                    <div class="div">
-                        <fieldset>
-                            <legend>
-                                <div class="item-ilustrativo">
-                                    <img src="../assets/style/autor/img/logooo.png" class="img">
-                                    <div>
-                                        <p>Cadastro da Notícia</p>
-                                    </div>
-                                </div>
-                            </legend>
-                            <div class="content">
-                                <form id="form" method="POST" action="controllers/insert.php" enctype="multipart/form-data">
-                                <div>	
-                                    <input type='text' placeholder='Insira seu título aqui' name="titulo" class="inputs required" oninput="noticeValidate()" required>
-                                    <span class="span-required">Título</span>
-                                </div>
-                            <div>	
-                                <input type='text' placeholder='Insira sua notícia aqui' name="descrição" class="inputs required" oninput=" descriptionValidate()" required>
-                                <span class="span-required">Artigo</span>
-                            </div>
-                            <div>	
-                                <input type='file' name="imagem" class="" required>
-                            </div>
-                            <button type='submit' name="cadastrar">Cadastrar POST</button>
-                                </form>
-                        </div>
-                    </fieldset>
-                </div>
-            </section>
-        </header>
-    </body>
-    <script src="../assets/js/autor-js.js"></script>

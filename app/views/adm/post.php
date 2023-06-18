@@ -13,7 +13,7 @@
                     <td class="title">Conteudo:</td>
                     <td class="title">Editar/Deletar</td>
                 </tr>
-        <?php
+        <?php 
             require_once("../../models/database/conexao.php");
             $dbConnection = new Conexao();
             $db = $dbConnection->conexao();
@@ -32,7 +32,7 @@
                 echo "<input type='hidden' name='id' value='".$row['ID_post']."'>";
                 echo "<button type='submit'>Deletar</button>";
                 echo "</form>";
-                echo "<form action='controllers/delete_post.php' method='post' style='display:inline'>";
+                echo "<form action='controllers/editar_post.php' method='post' style='display:inline'>";
                 echo "<input type='hidden' name='id' value='".$row['ID_post']."'>";
                 echo "<button type='submit'>Editar</button>";
                 echo "</form>";

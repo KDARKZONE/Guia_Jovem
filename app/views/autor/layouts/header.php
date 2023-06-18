@@ -14,7 +14,8 @@
             <link rel="stylesheet" href="../assets/style/autor/css/cabeçario.css"> 
             <link rel="stylesheet" href="../assets/style/autor/css/cabeçario_vertical.css">
             <link rel="stylesheet" href="../assets/style/autor/css/form-autor.css">
-            <title>Guia Jovem</title>
+            <link rel="stylesheet" href="../assets/style/autor/css/Meus_post.css">
+            <title>'.$_SESSION['Perfil']['nome'].'</title>
         </head>
         <!-- fecha depois --> ';}
         else{
