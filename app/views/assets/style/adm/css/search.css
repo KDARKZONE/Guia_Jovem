@@ -65,7 +65,7 @@
 .search-box{
     padding-top: 100px;
     position: absolute;
-    top: 28%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: #333;
