@@ -59,7 +59,7 @@
             </article>
             
 <?php } ?>
-</header>';
+</header>   
 <?php
 require_once("site/footer.php");
 ?>
