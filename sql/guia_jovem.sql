@@ -41,13 +41,13 @@
 	  data_hora_post DATETIME NOT NULL,
 	  titulo TEXT NOT NULL,
 	  conteudo TEXT NOT NULL,
-	  categoria VARCHAR,
+	  categoria VARCHAR(50),
 	  thumb VARCHAR(200) NOT NULL,
 	  cpf VARCHAR(20) NOT NULL,
 	  ID_perfil INT NOT NULL,
 	  PRIMARY KEY (ID_post),
 	  FOREIGN KEY (cpf) REFERENCES autores(cpf),
-	  FOREIGN KEY (ID_perfil) REFERENCES perfis(ID_perfil);
+	  FOREIGN KEY (ID_perfil) REFERENCES perfis(ID_perfil)
 	);
 	CREATE TABLE IF NOT EXISTS comentarios (
 	  ID_comentario INT NOT NULL AUTO_INCREMENT,
