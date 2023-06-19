@@ -31,7 +31,7 @@ if(isset($_SESSION['Perfil']) && $_SESSION['autor'] == true){
         $stmt_SELECT->execute();
         $result = $stmt_SELECT->fetch(PDO::FETCH_ASSOC);
         $cpf = $result['cpf'];
-        $sql_INSERT = "INSERT INTO post (data_hora_post,titulo,categoria,conteudo,thumb,cpf) VALUES (:data_hora_post,:titulo, :categoria, :conteudo, :thumb,:cpf)";
+        $sql_INSERT = "INSERT INTO post (data_hora_post,titulo,categoria,conteudo,thumb,cpf,ID_perfil) VALUES (:data_hora_post,:titulo, :categoria, :conteudo, :thumb,:cpf,:ID_perfil)";
         $stmt_INSERT = $db->prepare($sql_INSERT);
         $stmt_INSERT->bindParam(':data_hora_post',$DataHora);
         $stmt_INSERT->bindParam(':titulo',$titulo);
