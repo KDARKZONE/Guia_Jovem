@@ -104,7 +104,7 @@
     <h2>Comentários</h2>
     <form action="" method="post">
       <input type="hidden" name="ID_comentario" value="<?= $row['ID_comentario'] ?>">
-      <textarea name="comentario" id="" cols="30" rows="10"></textarea><br>
+      <textarea name="comentario" id="" cols="50" rows="2,5"></textarea><br>
       <?php 
       $perfil_comentario = $_SESSION['Perfil']['ID_perfil'];
       require_once("../models/database/conexao.php");
