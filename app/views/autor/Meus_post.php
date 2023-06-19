@@ -8,10 +8,8 @@
                 <tr class="title-table">
                     <td class="title">Id:</td>
                     <td class="title">Data e hora de Publicação:</td>
-                    <td class="title">Thumb:</td>
                     <td class="title">Titulo:</td>
                     <td class="title">Categoria:</td>
-                    <td class="title">Conteudo:</td>
                     <td class="title">Editar/Deletar</td>
                 </tr>
            <?php
@@ -39,10 +37,8 @@
                echo "<tr>";
                echo "<td>".$row_cpf['ID_post']."</td>";
                echo "<td>".$row_cpf['data_hora_post']."</td>";
-               echo "<td>".$row_cpf['thumb']."</td>";
                echo "<td>".$row_cpf['titulo']."</td>";
                echo "<td>".$row_cpf['categoria']."</td>";
-               echo "<td>".$row_cpf['conteudo']."</td>";
                echo "<td class='btn'>";
                echo "<form action='controllers/delete.php' method='POST' style='display:inline'>";
                echo "<input type='hidden' name='id' value='".$row_cpf['ID_post']."'>";
