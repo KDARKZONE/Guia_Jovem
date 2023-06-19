@@ -37,7 +37,6 @@
     $stmt->bindParam(':foto_usuario', $New_Pasta);
     $stmt->bindParam(':usuario', $usuario);
     if ($stmt->execute()) {
-        session_destroy();
         die("<script>alert('Foto Enviada');
         window.location.href='../../index.php';</script>");
     } else {

@@ -46,7 +46,8 @@ require_once "layouts/header.php"
             </div>
             <div class="Login">
                 <div class="DropDown">
-                    <button><a href="controllers/edit.php"><?php
+                    <button><a href="controllers/edit.php">
+                <?php
                     @session_start();
                     $idPerfil = $_SESSION['Perfil']['ID_perfil'];
                     require_once("../../models/database/conexao.php");
@@ -69,7 +70,7 @@ require_once "layouts/header.php"
                         $row = $função->fetch(PDO::FETCH_ASSOC);
                         if ($row) {
                             if ($row['foto_usuario'] == null) {
-                                echo "Nula";
+                                echo "<img src='../assets/style/user/img/nula.png'>";
                             } else {
                                 $caminho = 'controllers/';
                                 echo "<img src=".$caminho.$row['foto_usuario'].">";
