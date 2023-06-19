@@ -92,39 +92,63 @@
   ?>
   <html>
     <heead>
-      <title>
-        Comentar Post
-      </title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/7bcc76ecaf.js" crossorigin="anonymous"></script>
+        <link rel="icon" href="../assets/style/user/img/logooo.png">
+        <link rel="stylesheet" href="../views/assets/style/user/css/body.css">
+        <link rel="stylesheet" href="../views/assets/style/user/css/cabeçario.css"> 
+        <link rel="stylesheet" href="../views/assets/style/user/css/cabeçario_vertical.css">
+        <link rel="stylesheet" href="../views/assets/style/user/css/DropDown.css">
+        <link rel="stylesheet" href="../views/assets/style/user/css/user.css">
+        <link rel="stylesheet" href="../views/assets/style/user/css/user_layout.css">
+        <link rel="stylesheet" href="../views/assets/style/comenter/comenter.css">
+        <title>Comentar Post</title>
     </head>
     <body>
-    <h1><?= $row['titulo']; ?></h1>
-    <section>
-      <img src="<?= $caminho . $row['thumb']; ?>" alt="<?= $row['titulo']; ?>">
-    </section>
-    <h2>Comentários</h2>
-    <form action="" method="post">
-      <input type="hidden" name="ID_comentario" value="<?= $row['ID_comentario'] ?>">
-      <textarea name="comentario" id="" cols="50" rows="2,5"></textarea><br>
-      <?php 
-      $perfil_comentario = $_SESSION['Perfil']['ID_perfil'];
-      require_once("../models/database/conexao.php");
-      $dbConnection = new Conexao();
-      $db = $dbConnection->conexao();
-      $sql = "SELECT*FROM  comentarios WHERE ID_post = :ID_post";
-      $stmt = $db->prepare($sql);
-      $stmt->bindParam(':ID_post',$_GET['id']);
-      if($stmt->execute()){
-        $comentarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        foreach ($comentarios as $comentario) {     
-          $sql = "SELECT*FROM usuarios_comuns WHERE ID_perfil = :ID_perfil";
-          $stmt = $db->prepare($sql);
-          $stmt->bindParam(':ID_perfil',$comentario['ID_perfil']);
-          $stmt->execute();
-          $usuario_comentario = $stmt->fetch(PDO::FETCH_ASSOC);
-          $text = $comentario['comentario'];
-          echo '<p class="comentario">'.$usuario_comentario["usuario"].": ".$text.'</p>'; echo "<br>";   
-          }
-      }
-      ?>
-      <input type="submit" value="Enviar" width="50px">
-    </form>
+      <header class="comenter-header">
+        <section class="comenter-section">
+          <article class="comenter-article">
+            <h1 class="post-titulo">
+              <?= $row['titulo']; ?>
+            </h1>
+            <section class="section-post">
+              <img src="<?= $caminho . $row['thumb']; ?>" alt="<?= $row['titulo']; ?>">
+              <p href="artigo_show.php?id=<?= $row['conteudo'] ?>" class="category"><?= $row['conteudo'] ?></p>
+            </section>
+          <h2>
+            Comentários
+          </h2>
+          <form action="" method="post">
+            <input type="hidden" name="ID_comentario" value="<?= $row['ID_comentario'] ?>">
+            <textarea name="comentario" id="" cols="50" rows="2,5"></textarea><br>
+            <?php 
+              $perfil_comentario = $_SESSION['Perfil']['ID_perfil'];
+              require_once("../models/database/conexao.php");
+              $dbConnection = new Conexao();
+              $db = $dbConnection->conexao();
+              $sql = "SELECT*FROM  comentarios WHERE ID_post = :ID_post";
+              $stmt = $db->prepare($sql);
+              $stmt->bindParam(':ID_post',$_GET['id']);
+              if($stmt->execute()){
+                $comentarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                foreach ($comentarios as $comentario) {     
+                  $sql = "SELECT*FROM usuarios_comuns WHERE ID_perfil = :ID_perfil";
+                  $stmt = $db->prepare($sql);
+                  $stmt->bindParam(':ID_perfil',$comentario['ID_perfil']);
+                  $stmt->execute();
+                  $usuario_comentario = $stmt->fetch(PDO::FETCH_ASSOC);
+                  $text = $comentario['comentario'];
+                  echo '<p class="comentario">'.$usuario_comentario["usuario"].": ".$text.'</p>   '; echo "<br>";   
+                  }
+              }
+            ?>
+            <button type="submit">Publicar</button>
+          </form>
+          </article>
+        </section>
+      </header>
+    </body>
+    </html>

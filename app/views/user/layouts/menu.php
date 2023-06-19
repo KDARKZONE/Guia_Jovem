@@ -77,13 +77,15 @@ require_once "layouts/header.php"
                             } else {
                                 $caminho = 'controllers/';
                                 echo "<img src=".$caminho.$row['foto_usuario'].">";
-                            }
+                            } 
+                    
                         } else {
-                            echo "Nenhuma foto encontrada";
+                            echo "<img src='../assets/style/user/img/nula.png'>";
                         }
                     }
                         ?>
-                        <div class="DropDown_Menu">
+                        </a></button>
+                        <div class="DropDown_Menu"> 
                             <a class="Informações"><?php echo  $_SESSION['Perfil']['nome'];?></a>
                             <a class="Informações"><form method="POST" action="controllers/logout.php"><input type="submit" value="Logout"></form></a>
                         </div>            
