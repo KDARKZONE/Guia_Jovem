@@ -122,7 +122,7 @@
           $stmt->execute();
           $usuario_comentario = $stmt->fetch(PDO::FETCH_ASSOC);
           $text = $comentario['comentario'];
-          echo $usuario_comentario["usuario"].": ".$text; echo "<br>";   
+          echo '<p class="comentario">'.$usuario_comentario["usuario"].": ".$text.'</p>   '; echo "<br>";   
           }
       }
       ?>
