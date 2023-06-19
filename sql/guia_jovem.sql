@@ -62,7 +62,8 @@
 
 	-- PERFIS
 		INSERT INTO perfis (nome, email, senha, nivel_acesso)
-VALUES ('teste', 'teste@gmail.com', 'Qm9sc29sdWxhMTMyMg==', 'usuario comum'),
+VALUES 
+  ('teste', 'teste@gmail.com', 'Qm9sc29sdWxhMTMyMg==', 'usuario comum'),
   ('Kauã', 'kauaalmeida8995@gmail.com', 'Qm9sc29sdWxhMTMyMg==', 'administrador'),
   ('autor', 'autor@gmail.com', 'Qm9sc29sdWxhMTMyMg==',  'autor'),
   ('Anderson', 'andersonpiresdacruz@gmail.com', 'Qm9sc29sdWxhMTMyMg==', 'administrador'),
