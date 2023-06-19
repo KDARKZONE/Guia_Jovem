@@ -2,12 +2,11 @@
   session_start();
   require_once('../models/login.php');
   require_once 'site/header.php';
-  // require_once 'site/menu.php';
+  require_once 'site/menu.php';
   if (!isset($_GET['id']) || !$_SESSION['Perfil']) {
-    header('location: index.php?error=Artigo não encontrado.');
-    exit;
+    echo "<script>alert('Para comentar e necessario que se cadastre');
+    window.location.href='index.php';</script>";
   }
-  require_once("../models/database/conexao.php");
 
   # cria a variavel $dbh que vai receber a conexão com o SGBD e banco de dados.
   require_once("../models/database/conexao.php");
