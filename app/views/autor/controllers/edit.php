@@ -31,6 +31,7 @@
                     <option value="Enem">Enem</option>
                     <option value="Prouni">Prouni</option>
                     <option value="Sisu">Sisu</option>
+                    <option value="Fies">Fies</option>
                     <option value="Cursos">Cursos Técnicos</option>
                 </select>
                 <label style="font-family: 'Fira Sans',sans-serif; color: white;">Imagem:</label><img name='new_conteudo' class="inputs required" src="<?php echo  $perfil['thumb']?>">                

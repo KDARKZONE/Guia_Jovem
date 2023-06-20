@@ -1,6 +1,6 @@
 <?php
-    require_once "layouts/header.php";
-    require_once "layouts/menu.php";
+    require_once "site/header.php";
+    require_once "site/menu.php";
 ?>
 
 <form method="POST">
@@ -26,5 +26,5 @@
         </fieldset>
 </header>
 <?php
-    require_once ("layouts/footer.php");
+    require_once ("site/footer.php");
 ?>

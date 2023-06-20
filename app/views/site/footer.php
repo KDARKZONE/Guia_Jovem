@@ -7,16 +7,11 @@
             
             <ul class="footer-list">
                 <li>
-                    <h3></h3>
-                </li>
-                <li>
-                    <a href="#" class="footer-link"></a>
-                </li>
-                <li>
-                    <a href="#" class="footer-link"></a>
-                </li>
-                <li>
-                    <a href="#" class="footer-link"></a>
+                    <h3><div class="redes_sociais">
+                <button><i class="fa-brands fa-facebook"></i></button>
+                <button><i class="fa-brands fa-twitter"></i></button>
+                <button><i class="fa-brands fa-instagram"></i></button>
+            </div></h3>
                 </li>
             </ul>
 

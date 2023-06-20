@@ -20,16 +20,18 @@
                                     <input type='text' placeholder='Insira seu título aqui' name="titulo" class="inputs required" oninput="noticeValidate()" required>
                                     <span class="span-required">Título</span>
                                 </div>
-                            <div>	
-                                <input type='text' placeholder='Insira sua notícia aqui' name="conteudo" class="inputs required" oninput=" descriptionValidate()" required>
+                            <div>
+                                <textarea placeholder='Insira sua notícia aqui' name='conteudo' style="font-family: 'Fira Sans',sans-serif" rows="7"name="conteudo" class="inputs required" oninput=" descriptionValidate()" required></textarea>
                                 <span class="span-required">Artigo</span>
                             </div>
                             <div>
-                                <input type="radio" name="categoria" value="Enem"> Enem 
-                                <input type="radio" name="categoria" value="Prouni"> Prouni 
-                                <input type="radio" name="categoria" value="Sisu"> Sisu 
-                                <input type="radio" name="categoria" value="Fies"> Fies
-                                <input type="radio" name="categoria" value="Cursos"> Cursos Técnicos
+                            <select name="categoria" class="inputs required">
+                                <option value="Enem">Enem</option>
+                                <option value="Prouni">Prouni</option>
+                                <option value="Sisu">Sisu</option>
+                                <option value="Fies">Fies</option>
+                                <option value="Cursos">Cursos Técnicos</option>
+                            </select>
                             </div>
                             <div>	
                                 <input type='file' name="imagem" class="" required>

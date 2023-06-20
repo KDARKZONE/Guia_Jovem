@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.body-search{
+    font-family: 'Poppins',sans-serif;
+    width: 100%;
+    margin: 0;
+    height: 100vh;
+    background-color: #333;
+}
+.body-search .header-search{
+    height: 100%;
+    position: 'relative';
+}
+.body-search .header-search .ul-search{
+    list-style:none;
+}
+.label-search .i-search{
+    font-size: 30px;
+    color: cyan;
+}
+.input-search{
+    display: none;
+}
+.nav-search{
+    background-color: black;
+    width: 350px;
+    left: -350px;
+    height: 100%;
+    position: fixed;
+    padding: 0px;
+    transition: all 0.5s;
+    z-index: 2;
+}
+.ul-search
+{
+    top: 65px;
+    position: absolute;
+    width: 98%;
+    background-color: black;
+
+}
+.ul-search .li-search{
+    margin-bottom: 5px;
+}
+
+.label-search{
+    background-color: #333;
+    padding: 15px;
+    position: fixed;
+    z-index: 3;
+    cursor:pointer;
+}
+.input-search:checked ~ nav{
+    transform: translateX(350px);
+}
+.input-search:checked ~ label{
+    background-color: black;
+}
+
+.search-box{
+    padding-top: 100px;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #333;
+    height: 40px;
+    padding: 10px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid cyan;
+}
+form .search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    color: white;
+    font-size: 15px;
+    line-height: 40px;
+    width:800px;
+    transition: .5s;
+}
+.search-btn{
+    /*width: 40px;
+    height: 40px;*/
+    border-radius: 50%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-btn{
+    text-decoration: none;
+    color: none;
+    padding-left: 5px;
+    border: none;
+    color: cyan;
+
+}
+.search-box .search.txt a i{
+    height: 20px;
+    width: 20px;
+}
+.Dados{
+    padding-top: 20%;
+    /* max-height: 100%; */
+}
+.Result{
+    border: none;
+    color: white;
+}
+a{
+    text-decoration:none;
+}

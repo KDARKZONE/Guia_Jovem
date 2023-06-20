@@ -12,6 +12,7 @@
                             <li><a href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem">Enem</a></li>
                             <li><a href="https://sisfiesportal.mec.gov.br/">Fies</a></li>
                             <li><a href="https://acessounico.mec.gov.br/prouni">Prouni</a></li>
+                            <li style="padding-top: 15px; padding-left:10px;"><a  href="pesquisar.php">Pesquisar</a></li> 
                             <li><a class="modal-link-responsive">Login</a></li>
                             <div class="redes_sociais">
                             <li class="botão"><button><i class="fa-brands fa-facebook"></i></button></li>
@@ -33,14 +34,11 @@
                         <li><a href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem">Enem</a></li>
                         <li><a href="https://sisfiesportal.mec.gov.br/">Fies</a></li>
                         <li><a href="https://acessounico.mec.gov.br/prouni">Prouni</a></li>
+                        <li style="padding-top: 15px; padding-left:10px;"><a  href="pesquisar.php">Pesquisar</a></li> 
                       </ul>
                 </nav>
             </div> 
-            <div class="redes_sociais">
-                <button><i class="fa-brands fa-facebook"></i></button>
-                <button><i class="fa-brands fa-twitter"></i></button>
-                <button><i class="fa-brands fa-instagram"></i></button>
-            </div>
+            
             <div class="Login">
                 <nav>
                     <ul>

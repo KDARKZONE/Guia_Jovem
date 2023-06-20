@@ -28,6 +28,7 @@ main {
 }
 
 footer {
+    padding-top: 10cm;
     width: 100%;
     color: var(--color-neutral-40);
 }

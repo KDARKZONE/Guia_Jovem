@@ -14,6 +14,7 @@
             <link rel="stylesheet" href="assets/style/site/css/cadastro_responsive.css">
             <link rel="stylesheet" href="assets/style/site/css/login.css">
             <link rel="stylesheet" href="assets/style/site/css/login_responsive.css">
+            <link rel="stylesheet" href="assets/style/site/css/search.css">
             <title>Guia Jovem</title>
         </head>
         <!-- fecha depois --> 
