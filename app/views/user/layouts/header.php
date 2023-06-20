@@ -16,6 +16,7 @@ echo '
             <link rel="stylesheet" href="../assets/style/user/css/DropDown.css">
             <link rel="stylesheet" href="../assets/style/user/css/user.css">
             <link rel="stylesheet" href="../assets/style/user/css/user_layout.css">
+            <link rel="stylesheet" href="../assets/style/user/css/search.css">
             <title>Guia Jovem</title>
         </head>';
 }

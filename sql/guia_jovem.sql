@@ -98,6 +98,4 @@ VALUES
 	-- AUTOR
 	INSERT INTO autores (cpf, data_de_nascimento, ID_perfil)
 	VALUES ('000.111.222-33', '2000-01-01', 3);
-	
-	INSERT INTO `post` (`ID_post`, `data_hora_post`, `titulo`, `conteudo`, `categoria`, `thumb`, `cpf`, `ID_perfil`) 
-	VALUES 	;
+

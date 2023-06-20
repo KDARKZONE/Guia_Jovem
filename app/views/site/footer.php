@@ -1,87 +1,61 @@
+<footer>
+        <div id="footer_content">
+            <div id="footer_contacts">
+                <h1>Guia_Jovem</h1>
+                <p>De jovem para jovem</p>
+            </div>
+            
+            <ul class="footer-list">
+                <li>
+                    <h3></h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link"></a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link"></a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link"></a>
+                </li>
+            </ul>
 
- <!-- RODAPÉ -->
- <footer>
-        <!-- <section class="T_R">
-            <b> Adicione um Titulo </b>
-        </section>
-        <nav class="P_C">
-            <b> Titulo </b>
-            <ul>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
+            <ul class="footer-list">
+                <li>
+                    <h3></h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link"></a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link"></a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link"></a>
+                </li>
             </ul>
-        </nav>
-        <nav class="S_C">
-            <b> Titulo </b>
-            <ul>
-                <li>Insira a Informação</li>
-                <li>Insira a Informação</li>
-                <li>Insira a Informação</li>
-                <li>Insira a Informação</li>
-                <li>Insira a Informação</li>
-                <li>Insira a Informação</li>
-            </ul>
-        </nav>
-        <nav class="T_C">
-            <b> Titulo </b>
-            <ul>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-                <li> Insira a Informação</li>
-            </ul>
-        </nav>
-            <nav class="Q_C">
-                <b> Titulo </b>
-                <ul>
-                    <li>Insira a Informação</li>
-                    <li>Insira a Informação</li>
-                    <li>Insira a Informação</li>
-                    <li>Insira a Informação</li>
-                    <li>Insira a Informação</li>
-                    <li>Insira a Informação</li>
-                </ul>
-            </nav>
-            <nav class="Qi_C">
-                <b> Titulo </b>
-                <ul>
-                    <li> Insira a Informação</li>
-                    <li> Insira a Informação</li>
-                    <li> Insira a Informação</li>
-                    <li> Insira a Informação</li>
-                    <li> Insira a Informação</li>
-                    <li> Insira a Informação</li>
-                </ul>
-            </nav>
-            <nav class="S_C">
-                <b> Titulo </b>
-                <ul>
-                    <li>Insira a Informação</li>
-                    <li>Insira a Informação</li>
-                    <li>Insira a Informação</li>
-                    <li>Insira a Informação</li>
-                    <li>Insira a Informação</li>
-                    <li>Insira a Informação</li>
-                </ul>
-            </nav>
-            <nav class="St_C">
-                <b> Titulo </b>
-                <ul>
-                    <li> Insira a Informação</li>
-                    <li> Insira a Informação</li>
-                    <li> Insira a Informação</li>
-                    <li> Insira a Informação</li>
-                    <li> Insira a Informação</li>
-                    <li> Insira a Informação</li>
-                </ul>
-            </nav>-->
-        </footer>
+
+            <div id="footer_subscribe">
+                <h3>Contate-nos</h3>
+
+                <p>
+                    Mande um email pra gente!
+                </p>
+
+                <div id="input_group">
+                    <input type="email" id="email">
+                    <button>
+                        <i class="fa-regular fa-envelope"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer_copyright">
+            &#169
+            2023 todos os direitos reservados Guia_Jovem
+        </div>
+    </footer>
     </body>
 
     <!-- Scripts  -->
