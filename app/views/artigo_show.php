@@ -98,22 +98,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/7bcc76ecaf.js" crossorigin="anonymous"></script>
         <link rel="icon" href="../assets/style/user/img/logooo.png">
-        <link rel="stylesheet" href="../views/assets/style/user/css/body.css">
-        <link rel="stylesheet" href="../views/assets/style/user/css/cabeçario.css"> 
-        <link rel="stylesheet" href="../views/assets/style/user/css/cabeçario_vertical.css">
-        <link rel="stylesheet" href="../views/assets/style/user/css/DropDown.css">
-        <link rel="stylesheet" href="../views/assets/style/user/css/user.css">
-        <link rel="stylesheet" href="../views/assets/style/user/css/user_layout.css">
-        <link rel="stylesheet" href="../views/assets/style/comenter/comenter.css">
+        <link rel="stylesheet" href="assets/style/comenter/comenter.css">
         <title>Comentar Post</title>
     </head>
     <body>
       <header class="comenter-header">
         <section class="comenter-section">
           <article class="comenter-article">
-            <h1 class="post-titulo">
-              <?= $row['titulo']; ?>
-            </h1>
+          <div class="post-titulo">  
+            <h1>
+                <?= $row['titulo']; ?>
+              </h1>
+          </div>
             <section class="section-post">
               <img src="<?= $caminho . $row['thumb']; ?>" alt="<?= $row['titulo']; ?>">
               <p href="artigo_show.php?id=<?= $row['conteudo'] ?>" class="category"><?= $row['conteudo'] ?></p>
@@ -123,8 +119,17 @@
           </h2>
           <form action="" method="post">
             <input type="hidden" name="ID_comentario" value="<?= $row['ID_comentario'] ?>">
-            <textarea name="comentario" id="" cols="50" rows="2,5"></textarea><br>
-            <?php 
+            <fieldset class="comenter">
+              <legend class="title-comenter">
+                <div class="style-title-comenter">
+                  <img src="assets/style/user/img/logooo.png" class="img">
+                  <p>Comentario</p></div></legend>
+              <input type="text" name="comentario" id="">
+            </fieldset>
+            <button type="submit" name="comentar">Publicar</button>
+              </form><br>
+            <?php
+              if(isset($_POST['comentar'])){
               $perfil_comentario = $_SESSION['Perfil']['ID_perfil'];
               require_once("../models/database/conexao.php");
               $dbConnection = new Conexao();
@@ -141,14 +146,26 @@
                   $stmt->execute();
                   $usuario_comentario = $stmt->fetch(PDO::FETCH_ASSOC);
                   $text = $comentario['comentario'];
-                  echo '<p class="comentario">'.$usuario_comentario["usuario"].": ".$text.'</p>   '; echo "<br>";   
+                  ?>
+                  <fieldset class="comentario">
+                    <legend class="comentario_perfil"> 
+                    <div class="perfil">
+                    <img src="assets/style/user/img/logooo.png" class="img">
+                    <p><?= $usuario_comentario["usuario"] ?></p>
+                    </div>
+                </legend>
+                    <?= $text ?>
+                  </fieldset><br> 
+                  <?php 
                   }
+                }
               }
-            ?>
-            <button type="submit">Publicar</button>
-          </form>
+              else{
+              return null;
+              }?>
           </article>
         </section>
       </header>
     </body>
     </html>
+   

@@ -7,7 +7,7 @@
 }
 body{
   font-family: 'Poppins',sans-serif;
-  background-color:#333;
+  background-color:#ffffff;
   color: cyan;
 }
 .container{ 
@@ -19,6 +19,35 @@ body{
     flex-wrap: wrap;
     width: 100%;
 
+}
+.container-autor {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5cm;
+} 
+
+@media (min-width: 576px) {
+  .container-autor {
+      width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container-autor {
+      width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container-autor {
+      width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-autor {
+      width: 1140px;
+  }
 }
 .cabeçario{
     background-color: #333;

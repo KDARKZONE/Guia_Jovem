@@ -2,16 +2,7 @@
     require_once "layouts/header.php";
     require_once "layouts/menu.php";
 ?>
-    <section class="noticia"> 
-        <div class="post">
-            <table id="usuariosTable" class="hidden">
-                <tr class="title-table">
-                    <td class="title">Id:</td>
-                    <td class="title">Data e hora de Publicação:</td>
-                    <td class="title">Titulo:</td>
-                    <td class="title">Categoria:</td>
-                    <td class="title">Editar/Deletar</td>
-                </tr>
+        <div class="container-autor" style="margin-top: 5cm; color: black;">
            <?php
            // Obtém o ID do perfil do autor logado
            $ID_perfil = $_SESSION['Perfil']['ID_perfil'];
@@ -33,25 +24,34 @@
            $stmt_cpf->bindParam(':cpf',$cpf);
            if($stmt_cpf->execute()){
            // Loop para exibir os anúncios do autor
+           echo'<table width="1200px">
+                    <tr>
+                        <th class="title">Id:</th>
+                        <th class="title">Data e hora de Publicação:</th>
+                        <th class="title">Titulo:</th>
+                        <th class="title">Categoria:</th>
+                        <th class="title">Editar/Deletar</th>
+                    </tr>';
            while ($row_cpf = $stmt_cpf->fetch(PDO::FETCH_ASSOC)) {
-               echo "<tr>";
-               echo "<td>".$row_cpf['ID_post']."</td>";
-               echo "<td>".$row_cpf['data_hora_post']."</td>";
-               echo "<td>".$row_cpf['titulo']."</td>";
-               echo "<td>".$row_cpf['categoria']."</td>";
-               echo "<td class='btn'>";
-               echo "<form action='controllers/delete.php' method='POST' style='display:inline'>";
-               echo "<input type='hidden' name='id' value='".$row_cpf['ID_post']."'>";
-               echo "<button type='submit'>Deletar</button>";
-               echo "</form>";
-               echo "<form action='controllers/edit.php' method='post' style='display:inline'>";
-               echo "<input type='hidden' name='id' value='".$row_cpf['ID_post']."'>";
-               echo "<button type='submit'>Editar</button>";
-               echo "</form>";
-               echo "</td>";
-               echo "</tr>";
+            echo'
+                    <tr>
+                    <td align="center">'.$row_cpf['ID_post'].'</td>
+                    <td align="center">'.$row_cpf['data_hora_post'].'</td>
+                    <td align="center">'.$row_cpf['titulo'].'</td>
+                    <td align="center">'.$row_cpf['categoria'].'</td>
+                    <td align="center" class="'.'btn'.'">
+                    <form action="controllers/delete.php" method="POST" style="display:inline">
+                    <input type="hidden" name="id" value='.$row_cpf["ID_post"].'>
+                    <button type="submit">Deletar</button>
+                    </form>
+                    <form action="controllers/edit.php" method="post" style="display:inline">
+                    <input type="hidden" name="id" value='.$row_cpf["ID_post"].'>
+                    <button type="submit">Editar</button>
+                    </form>
+                    </td>
+                    </tr>';
            }
+           echo'</table>';
         }
            ?>
         </div>
-    </section>
