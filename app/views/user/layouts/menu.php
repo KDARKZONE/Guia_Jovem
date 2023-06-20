@@ -15,7 +15,6 @@ require_once "layouts/header.php"
                             <li><a href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem"> Enem </a></li>
                             <li><a href="https://sisfiesportal.mec.gov.br/">Fies</a></li>
                             <li><a href="https://acessounico.mec.gov.br/prouni">Prouni</a></li>
-                            <li><a href="https://acessounico.mec.gov.br/">SISU</a></li>
 
                             <div class="redes_sociais">
                             <li class="botão"><button><i class="fa-brands fa-facebook"></i></button></li>
@@ -37,8 +36,7 @@ require_once "layouts/header.php"
                         <li><a href="index.php">Home</a></li>
                         <li><a href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem"> Enem </a></li>
                         <li><a href="https://sisfiesportal.mec.gov.br/">Fies</a></li>
-                       <li><a href="https://acessounico.mec.gov.br/prouni">Prouni</a></li>
-                       <li><a href="https://acessounico.mec.gov.br/">SISU</a></li>     
+                        <li><a href="https://acessounico.mec.gov.br/prouni">Prouni</a></li>   
                       </ul>
                 </nav>
             </div> 

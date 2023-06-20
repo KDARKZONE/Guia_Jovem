@@ -1,7 +1,7 @@
 <?php
     # caso o Administrador queira Saber os Nomes das Pessoas que estão no Banco Ordenado pela Primeira Letra do Nome
     echo "
-    <header class='post'>
+    <header class='post' style='margin: top -2cm;'>
         <section class='noticias'>";
         
         require_once("../../models/database/conexao.php");
@@ -10,7 +10,6 @@
         $sql = "SELECT * FROM post";
         $stmt = $db->prepare($sql);
         $stmt->execute();
-        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
           $caminho = '../autor/controllers/';
      @$Letra = $_POST['search'];
             $sql_curso = "SELECT*FROM post WHERE categoria = :categoria";
@@ -39,7 +38,6 @@
             </article>
             <?php
             }
-        }
 ?>       
 
 

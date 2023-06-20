@@ -34,8 +34,7 @@
                         <ul>
                             <li><a href="index.php">Home</a></li>
                             <li><a href="Meus_post.php">Meus Posts</a></li>
-                            <li><a href="comentarios.php">comentarios</a></li>
-                            <li><a href="postar.php">postar</a></li>
+                            <li><a href="postar.php">Postar Artigo</a></li>
                         </ul>
                     </nav> 
                 </div> 

@@ -26,7 +26,7 @@
 ?>
 <?php
   echo "
-        <header class='post'>
+        <header class='post' style='margin-top: 6cm;'>
             <section class='noticias'>";
 
             require_once("../models/database/conexao.php");

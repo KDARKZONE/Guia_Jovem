@@ -126,7 +126,7 @@
                   <p>Comentario</p></div></legend>
               <input type="text" name="comentario" id="">
             </fieldset>
-            <button type="submit" name="comentar">Publicar</button>
+            <button type="submit" name="comentar" style="margin-top: 20px;">Publicar</button>
               </form><br>
             <?php
               if(isset($_POST['comentar'])){
@@ -151,7 +151,7 @@
                     <legend class="comentario_perfil"> 
                     <div class="perfil">
                     <img src="assets/style/user/img/logooo.png" class="img">
-                    <p><?= $usuario_comentario["usuario"] ?></p>
+                    <p><?= @$usuario_comentario["usuario"] ?></p>
                     </div>
                 </legend>
                     <?= $text ?>

@@ -10,7 +10,7 @@
                                 <div class="item-ilustrativo">
                                     <img src="../assets/style/autor/img/logooo.png" class="img">
                                     <div>
-                                        <p>Cadastro da Notícia</p>
+                                        <p style="color:black;">Cadastro da Notícia</p>
                                     </div>
                                 </div>
                             </legend>
