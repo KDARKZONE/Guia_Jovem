@@ -1,12 +1,12 @@
 <?php
     if($_SERVER['REQUEST_METHOD'] === "POST"){
-        $id = $_POST['id'];
+        $id = $_POST['ID_perfil'];
         require_once("../../../models/database/conexao.php");
         $dbConnection = new Conexao();
         $db = $dbConnection->conexao();
-        $sql = "SELECT * FROM Perfis WHERE ID_perfil = :id";
+        $sql = "SELECT * FROM Perfis WHERE ID_perfil = :ID_perfil";
         $stmt = $db->prepare($sql);
-        $stmt->bindParam(':id',$id);
+        $stmt->bindParam(':ID_perfil',$id);
         $stmt->execute();
         $perfil = $stmt->fetch(PDO::FETCH_ASSOC);
         

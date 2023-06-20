@@ -29,11 +29,11 @@
                 echo "<td>".$row['conteudo']."</td>";
                 echo "<td class='btn'>";
                 echo "<form action='controllers/delete_post.php' method='POST' style='display:inline'>";
-                echo "<input type='hidden' name='id' value='".$row['ID_post']."'>";
+                echo "<input type='hidden' name='ID_post' value='".$row['ID_post']."'>";
                 echo "<button type='submit'>Deletar</button>";
                 echo "</form>";
                 echo "<form action='controllers/editar_post.php' method='post' style='display:inline'>";
-                echo "<input type='hidden' name='id' value='".$row['ID_post']."'>";
+                echo "<input type='hidden' name='ID_post' value='".$row['ID_post']."'>";
                 echo "<button type='submit'>Editar</button>";
                 echo "</form>";
                 echo "</td>";

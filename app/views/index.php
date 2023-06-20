@@ -28,7 +28,6 @@
   echo "
         <header class='post' style='margin-top: 6cm;'>
             <section class='noticias'>";
-
             require_once("../models/database/conexao.php");
             $dbConnection = new Conexao();
             $db = $dbConnection->conexao();
