@@ -16,12 +16,7 @@ require_once "layouts/header.php"
                             <li><a href="https://sisfiesportal.mec.gov.br/">Fies</a></li>
                             <li><a href="https://acessounico.mec.gov.br/prouni">Prouni</a></li>
                             <li><a href="pesquisar.php">Pesquisar</a></li>
-                            <div class="redes_sociais">
-                            <li class="botão"><button><i class="fa-brands fa-facebook"></i></button></li>
-                            <li class="botão"><button><i class="fa-brands fa-twitter"></i></button></li>
-                            <li class="botão"><button><i class="fa-brands fa-instagram"></i></button></li>
-                            </div>
-                        </ul>
+                         </ul>
                     </nav>
             </div>
         </div>
@@ -41,11 +36,6 @@ require_once "layouts/header.php"
                       </ul>
                 </nav>
             </div> 
-            <div class="redes_sociais">
-                <button><i class="fa-brands fa-facebook"></i></button>
-                <button><i class="fa-brands fa-twitter"></i></button>
-                <button><i class="fa-brands fa-instagram"></i></button>
-            </div>
             <div class="Login">
                 <div class="DropDown">
                     <button><a href="controllers/edit.php">

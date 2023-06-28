@@ -1,6 +1,6 @@
 <?php
     if($_SERVER['REQUEST_METHOD'] === "POST"){
-        $id = $_POST['ID_post'];
+        $id = $_POST['id'];
         require_once("../../../models/database/conexao.php");
         $dbConnection = new Conexao();
         $db = $dbConnection->conexao();
@@ -11,7 +11,7 @@
         $perfil = $stmt->fetch(PDO::FETCH_ASSOC);
 
         echo "<form action='update_post.php' method='POST'>";
-        echo "<input type='hidden' name='ID_post' value='".$perfil['ID_post']."'>";
+        echo "<input type='hidden' name='id' value='".$perfil['ID_post']."'>";
         echo "Nivel de Acesso:<input type='text' name='nivel_acesso' value='".$perfil['conteudo']."'>";
         echo "<button type='submit'>Salvar</button>";
         echo "</form>";
