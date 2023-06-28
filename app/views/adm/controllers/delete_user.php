@@ -18,6 +18,7 @@
         require_once("../../../models/database/conexao.php");
         $dbConnection = new Conexao();
         $db = $dbConnection->conexao();
+<<<<<<< HEAD
         // Excluir registros da tabela 'comentarios' relacionados ao ID_perfil
         $sqlDeleteComentarios = "DELETE FROM comentarios WHERE ID_perfil = :id";
         $stmtDeleteComentarios = $db->prepare($sqlDeleteComentarios);
@@ -48,6 +49,13 @@
         $stmtDeletePerfil->bindParam(':id', $id);
         $stmtDeletePerfil->execute();
         header("Location:../dados.php");
+=======
+        $sql = "DELETE FROM Perfis WHERE ID_perfil = :id";
+        $stmt = $db->prepare($sql);
+        $stmt->bindParam(':id',$id);
+        $stmt->execute();
+        header("Location:dados.php");
+>>>>>>> e4cb55b8a8f17a5149fc63cf1d77225a8ee548b6
         exit;
     }
     var_dump($stmtDeletePerfil);
