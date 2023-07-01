@@ -38,8 +38,7 @@
         $stmt = $db->prepare($sql);
         $stmt->bindParam(':id',$id);
         $stmt->execute();
-        header("Location:dados.php");
+        header("Location:../dados.php");
         exit;
     }
-    var_dump($stmtDeletePerfil);
 ?>
